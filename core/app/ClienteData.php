@@ -10,7 +10,6 @@ class ClienteData
         $this->nombre = "";
 		$this->telefono = "";
         $this->idgym ="";
-      
 	} 
 
 
