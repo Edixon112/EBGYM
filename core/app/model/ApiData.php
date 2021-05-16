@@ -1,31 +1,30 @@
 <?php
-class ClienteData
- {
-	public static $tablename = "cliente";
+class ApiData
+{
+	public static $tablename = "api";
 
 
-	public function ClienteData(){
+	public function ApiData(){
 		$this->id = ""; 
-        $this->cedula = "";
-        $this->nombre = "";
+        $this->token = "";
+        $this->idinstance = "";
 		$this->telefono = "";
         $this->idgym ="";
 	} 
 
 
     public function add(){
-		$sql = "insert into  ".self::$tablename." (telefono,cedula,nombre,idgym) ";
-		$sql .= "value (\"$this->telefono\",\"$this->cedula\",\"$this->nombre\",\"$this->idgym\")";
+		$sql = "insert into  ".self::$tablename." (token,idinstance,idgym) ";
+		$sql .= "value (\"$this->token\",\"$this->idinstance\",\"$this->idgym\")";
         return Executor::doit($sql);
 	}
 
 
     public function update(){
 		$sql = "update ".self::$tablename." set 
-        cedula=\"$this->cedula\", 
-        nombre=\"$this->nombre\", 
-		telefono=\"$this->telefono\", 
-        idgym=\"$this->idgym\" 
+        token=\"$this->token\", 
+        idinstance=\"$this->idinstance\", 
+        idgym=\"$this->idgym\"
         where id=$this->id";
 		return Executor::doit($sql);
 	}
@@ -34,15 +33,14 @@ class ClienteData
     public static function getAll(){
 		$sql = "select * from ".self::$tablename." order by id desc";
 		$query = Executor::doit($sql);
-		return Model::many($query[0],new ClienteData());
+		return Model::many($query[0],new ApiData());
 	}
 
 
     public static function getById($id){
 		$sql = "select * from ".self::$tablename." where id='".$id."'";
 		$query = Executor::doit($sql);
-		return Model::one($query[0],new ClienteData());
-
+		return Model::one($query[0],new ApiData());
 	}
 
 

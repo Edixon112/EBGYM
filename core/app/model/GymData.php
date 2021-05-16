@@ -1,31 +1,27 @@
 <?php
-class ClienteData
+class GymteData
  {
-	public static $tablename = "cliente";
+	public static $tablename = "gym";
 
 
-	public function ClienteData(){
+	public function GymteData(){
 		$this->id = ""; 
-        $this->cedula = "";
         $this->nombre = "";
-		$this->telefono = "";
-        $this->idgym ="";
+        $this->idadmin ="";
 	} 
 
 
     public function add(){
-		$sql = "insert into  ".self::$tablename." (telefono,cedula,nombre,idgym) ";
-		$sql .= "value (\"$this->telefono\",\"$this->cedula\",\"$this->nombre\",\"$this->idgym\")";
+		$sql = "insert into  ".self::$tablename." (,nombre,idadmin) ";
+		$sql .= "value (\"$this->nombre\",\"$this->idadmin\")";
         return Executor::doit($sql);
 	}
 
 
     public function update(){
-		$sql = "update ".self::$tablename." set 
-        cedula=\"$this->cedula\", 
-        nombre=\"$this->nombre\", 
-		telefono=\"$this->telefono\", 
-        idgym=\"$this->idgym\" 
+		$sql = "update ".self::$tablename." set
+        nombre=\"$this->nombre\",
+        idadmin=\"$this->idadmin\"
         where id=$this->id";
 		return Executor::doit($sql);
 	}
@@ -34,15 +30,14 @@ class ClienteData
     public static function getAll(){
 		$sql = "select * from ".self::$tablename." order by id desc";
 		$query = Executor::doit($sql);
-		return Model::many($query[0],new ClienteData());
+		return Model::many($query[0],new GymteData());
 	}
 
 
     public static function getById($id){
 		$sql = "select * from ".self::$tablename." where id='".$id."'";
 		$query = Executor::doit($sql);
-		return Model::one($query[0],new ClienteData());
-
+		return Model::one($query[0],new GymteData());
 	}
 
 
