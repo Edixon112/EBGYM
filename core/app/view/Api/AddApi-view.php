@@ -18,28 +18,28 @@
                     <!--info oculta-->
 				<!--input type="text" style="display: none" id="activo" name="activo" value="<?php //echo $activo=0;?>" readonly="true"  required /-->
                     <div class="col-md-6 mb-3">
-                       <label for="nombre">Nombre</label>
-                       <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su nombre" value="" required>
+                       <label for="token">Ingrese token</label>
+                       <input type="text" class="form-control" id="token" name="token" placeholder="Ingrese su token" value="" required>
                        <div class="valid-feedback">
-                          Nombre valido
+                          token valido
                        </div>
                        <div class="invalid-feedback">
-                          Por favor ingrese un nombre 
+                          Por favor ingrese un token
                        </div>
                     </div>
                     <div class="col-md-6 mb-3">
-                       <label for="apellido">Apellido</label>
-                       <input type="text" class="form-control" id="apellido" name="apellido"placeholder="ingrese su apellido" value="" required>
+                       <label for="idinstance">idinstance</label>
+                       <input type="text" class="form-control" id="idinstance" name="idinstance"placeholder="ingrese su idinstance" value="" required>
                        <div class="valid-feedback">
-                          Apellido valido
+                          idinstance valido
                        </div>
                        <div class="invalid-feedback">
-                          Por favor ingrese un apellido 
+                          Por favor ingrese un idinstance 
                        </div>
                     </div>
                     <div class="col-md-6 mb-3">
-                       <label for="apellido">Numero de Cedula</label>
-                       <input type="text" class="form-control" id="cedula" name="cedula"placeholder="ingrese su cedula" value="" required>
+                       <label for="telefono">Numero de Telefono</label>
+                       <input type="text" class="form-control" id="telefono" name="telefono"placeholder="ingrese su telefono" value="" required>
                        <div class="valid-feedback">
                           Numero de cedula valido
                        </div>
@@ -47,16 +47,7 @@
                           Por favor ingrese un numero cedula
                        </div>
                     </div>
-                    <div class="col-md-6 mb-3">
-                       <label for="apellido">telefono</label>
-                       <input  type="text" class="form-control" id="telefono" name="telefono"placeholder="ingrese su telefono" value="" required>
-                       <div class="valid-feedback">
-                          Numero valido 
-                       </div>
-                       <div class="invalid-feedback">
-                          Por favor ingrese un numero 
-                       </div>
-                    </div>
+
                     <div class="col-md-6 mb-3">
 		                <p>selecione gym</p>
 		                <div class="input-group mb-6">
@@ -71,14 +62,7 @@
                             </select>
 		            	</div>
 		            </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="validationCustom01">selecione tipo</label>
-                            <select type="text" class="form-control" name="tipo" id="tipo" required>
-                                <option value="1">tipo1</option>
-                                <option value="0" selected>tipo0</option>
-                            </select>
-                        </div>
-                    </div>       
+   
                 </div>   
                 <button class="btn btn-custom-primary" type="submit">Enviar</button> 
             </form>
