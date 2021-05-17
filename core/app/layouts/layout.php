@@ -89,10 +89,10 @@
                         </li>
                         <li> 
                            <a href="#"><i data-feather="user"></i>
-                           <span>Cliente</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <span>Admin</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                              <li><a href="index.php?view=Cliente/AddCliente">Añadir cliente ADMIN</a></li>
-                              <li><a href="index.php?view=Cliente/ViewCliente">Ver cliente ADMIN</a></li>
+                              <li><a href="index.php?view=Admin/AddAdmin">Añadir Admin </a></li>
+                              <li><a href="index.php?view=Admin/ViewAdmin">Ver Admin </a></li>
                               <li><a href="index.php?view=User/UserAddCliente">Ingresar cliente USER</a></li>
                            </ul>
                         </li>
@@ -215,7 +215,7 @@
                         <!--================================-->
                         <li class="list-inline-item dropdown">
                            <a  href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                           <span class="select-profile">Hi, <?php echo $user->nombre;?></span>
+                           <span class="select-profile">Hi <?php $persona= PersonaData::getById($user->idpersona); echo $persona->nombre." ".$persona->apellido ;?></span>
                            <img src="assets/images/avatar/avatar1.png" class="img-fluid wd-35 ht-35 rounded-circle" alt="">
                            </a>
                            <div class="dropdown-menu dropdown-menu-right dropdown-profile shadow-2">
@@ -225,16 +225,10 @@
                                        <img src="assets/images/avatar/avatar1.png" class="img-fluid wd-35 ht-35 rounded-circle" alt="">
                                     </div>
                                     <div class="profile-text">
-                                       <h6>John Deo</h6>
-                                       <span>email@example.com</span>
+                                     
                                     </div>
                                  </div>
-                                 <a href="#" class="dropdown-item"><i class="icon-user" aria-hidden="true"></i> My profile</a>
-                                 <a href="#" class="dropdown-item"><i class="icon-envelope" aria-hidden="true"></i> Messages <span class="badge badge-success ft-right mg-t-3">10+</span></a>
-                                 <a href="#" class="dropdown-item"><i class="icon-settings" aria-hidden="true"></i> settings</a>
-                                 <a href="#" class="dropdown-item"><i class="icon-share" aria-hidden="true"></i> My Activity <span class="badge badge-warning ft-right mg-t-3">5+</span></a>
-                                 <a href="#" class="dropdown-item"><i class="icon-cloud-download" aria-hidden="true"></i> My Download <span class="badge badge-success ft-right mg-t-3">10+</span></a>
-                                 <a href="#" class="dropdown-item"><i class="icon-heart" aria-hidden="true"></i> Support</a>
+                                 
                                  <a href="./logout.php" class="dropdown-item"><i class="icon-power" aria-hidden="true"></i> Sign-out</a>
                               </div>
                            </div>

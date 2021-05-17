@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="card-body collapse show" id="collapse7">
-            <form class="needs-validation" action="index.php?action=???" method="post" novalidate>
+            <form class="needs-validation" action="index.php?action=User/AddUser" method="post" novalidate>
                 <div class="form-row"> 
                     <!--info oculta-->
 				<!--input type="text" style="display: none" id="activo" name="activo" value="<?php //echo $activo=0;?>" readonly="true"  required /-->
@@ -27,6 +27,7 @@
                           Por favor ingrese un nombre 
                        </div>
                     </div>
+
                     <div class="col-md-6 mb-3">
                        <label for="apellido">Apellido</label>
                        <input type="text" class="form-control" id="apellido" name="apellido"placeholder="ingrese su apellido" value="" required>
@@ -37,6 +38,7 @@
                           Por favor ingrese un apellido 
                        </div>
                     </div>
+
                     <div class="col-md-6 mb-3">
                        <label for="apellido">Numero de Cedula</label>
                        <input type="text" class="form-control" id="cedula" name="cedula"placeholder="ingrese su cedula" value="" required>
@@ -47,6 +49,7 @@
                           Por favor ingrese un numero cedula
                        </div>
                     </div>
+
                     <div class="col-md-6 mb-3">
                        <label for="apellido">telefono</label>
                        <input  type="text" class="form-control" id="telefono" name="telefono"placeholder="ingrese su telefono" value="" required>
@@ -57,28 +60,65 @@
                           Por favor ingrese un numero 
                        </div>
                     </div>
+
+                    
+
+
                     <div class="col-md-6 mb-3">
-		                <p>selecione gym</p>
-		                <div class="input-group mb-6">
-                            <select class="selectpicker form-control" data-hide-disabled="true" data-live-search="true" name="idgym" id="idgym" id="inputGroupSelect01" required>
-                                <option > </option>
-                                <?php 
-                                   $gyms=GymData::getAll();
-                                   foreach ($gyms as $gym) {
-                                ?>                
-                                <option   value="<?php echo $gym->id;?>" ><?php echo $gym->nombre;?></option>
-                                <?php } ?>               
-                            </select>
-		            	</div>
-		            </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="validationCustom01">selecione tipo</label>
-                            <select type="text" class="form-control" name="tipo" id="tipo" required>
-                                <option value="1">tipo1</option>
-                                <option value="0" selected>tipo0</option>
-                            </select>
+		                <p>selecione Rol</p>
+                        <div class="input-group mb-6">
+                              <select class="selectpicker form-control" data-hide-disabled="true" data-live-search="true" name="rol" id="rol" id="inputGroupSelect01" required>
+                                 <option > </option>
+                                 <?php 
+                                    $Rol=RolData::getAll();
+                                    foreach ($Rol as $Rol) {
+                                 ?>                
+                                 <option   value="<?php echo $Rol->id;?>" ><?php echo $Rol->nombre;?></option>
+                                 <?php } ?>               
+                              </select>
                         </div>
-                    </div>       
+                     </div>
+
+
+                     
+                     <div class="col-md-6 mb-3">
+                        <p>User</p>
+                        <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                              <span class="input-group-text" id="basic-addon1">UserName</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="User" name="username" id="username"aria-label="User" aria-describedby="basic-addon1"required>
+                        </div>
+            
+                     </div>
+                     
+
+                     <div class="col-md-6 mb-3">
+                        <p>Password</p>
+                        <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                              <span class="input-group-text" id="basic-addon1">Password</span>
+                        </div>
+                        <input type="Password" class="form-control" placeholder="Password" name="password1" id="password1" aria-label="Password" aria-describedby="basic-addon1"required>
+                        </div>
+                     
+                     </div>
+
+                     <div class="col-md-6 mb-3">
+                        <p>Password</p>
+                        <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                              <span class="input-group-text" id="basic-addon1">Confirm Password</span>
+                        </div>
+                        <input type="Password" class="form-control" placeholder="Password" name="password2" id="password2" aria-label="Password" aria-describedby="basic-addon1"required>
+                        </div>
+                     
+                     </div>
+
+
+
+
+
                 </div>   
                 <button class="btn btn-custom-primary" type="submit">Enviar</button> 
             </form>

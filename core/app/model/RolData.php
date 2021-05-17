@@ -1,33 +1,26 @@
 <?php
-class EntrenadorData
+class RolData
  {
-	public static $tablename = "entrenador";
+	public static $tablename = "rol";
 
 
-	public function EntrenadorData(){
+	public function RolData(){
 		$this->id = ""; 
-        $this->cedula = "";
         $this->nombre = "";
-		$this->apellido = "";
-		$this->telefono = "";
-        $this->idgym ="";
+        $this->idprecio = "";
 	} 
 
 
     public function add(){
-		$sql = "insert into  ".self::$tablename." (telefono,cedula,nombre,apellido,idgym,) ";
-		$sql .= "value (\"$this->telefono\",\"$this->cedula\",\"$this->nombre\",\"$this->apellido\",\"$this->idgym\")";
+		$sql = "insert into  ".self::$tablename." (nombre) ";
+		$sql .= "value (\"$this->nombre\")";
         return Executor::doit($sql);
 	}
 
 
     public function update(){
 		$sql = "update ".self::$tablename." set 
-        cedula=\"$this->cedula\", 
-        nombre=\"$this->nombre\",
-		apellido=\"$this->apellido\", 
-        telefono=\"$this->telefono\", 
-        idgym=\"$this->idgym\" 
+        nombre=\"$this->nombre\"
         where id=$this->id";
 		return Executor::doit($sql);
 	}
@@ -36,14 +29,14 @@ class EntrenadorData
     public static function getAll(){
 		$sql = "select * from ".self::$tablename." order by id desc";
 		$query = Executor::doit($sql);
-		return Model::many($query[0],new EntrenadorData());
+		return Model::many($query[0],new RolData());
 	}
 
 
     public static function getById($id){
 		$sql = "select * from ".self::$tablename." where id='".$id."'";
 		$query = Executor::doit($sql);
-		return Model::one($query[0],new EntrenadorData());
+		return Model::one($query[0],new RolData());
 
 	}
 
