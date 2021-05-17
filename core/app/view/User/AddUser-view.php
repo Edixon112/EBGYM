@@ -61,9 +61,6 @@
                        </div>
                     </div>
 
-                    
-
-
                     <div class="col-md-6 mb-3">
 		                <p>selecione Rol</p>
                         <div class="input-group mb-6">
@@ -78,9 +75,7 @@
                               </select>
                         </div>
                      </div>
-
-
-                     
+                    
                      <div class="col-md-6 mb-3">
                         <p>User</p>
                         <div class="input-group mb-3">
@@ -114,11 +109,7 @@
                         </div>
                      
                      </div>
-
-
-
-
-
+                     
                 </div>   
                 <button class="btn btn-custom-primary" type="submit">Enviar</button> 
             </form>
