@@ -8,6 +8,7 @@ class AdminData
 		$this->id = ""; 
         $this->cedula = "";
         $this->nombre = "";
+		$this->apellido = "";
 		$this->telefono = "";
         $this->idgym ="";
         $this->tipo ="";
@@ -15,7 +16,7 @@ class AdminData
 
 
     public function add(){
-		$sql = "insert into  ".self::$tablename." (telefono,cedula,nombre,idgym,tipo) ";
+		$sql = "insert into  ".self::$tablename." (telefono,cedula,nombre,apellido,idgym,tipo) ";
 		$sql .= "value (\"$this->telefono\",\"$this->cedula\",\"$this->nombre\",\"$this->idgym\",\"$this->tipo\")";
         return Executor::doit($sql);
 	}
@@ -24,7 +25,8 @@ class AdminData
     public function update(){
 		$sql = "update ".self::$tablename." set 
         cedula=\"$this->cedula\", 
-        nombre=\"$this->nombre\", 
+        nombre=\"$this->nombre\",
+		apellido=\"$this->apellido\", 
 		telefono=\"$this->telefono\", 
         idgym=\"$this->idgym\",
         tipo=\"$this->tipo\" 
