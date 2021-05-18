@@ -1,16 +1,13 @@
 <?php
 
-
 echo $_POST["nombre"]."<br>";
-
 echo $_POST["apellido"]."<br>";
 echo $_POST["rol"]."<br>";
 echo $_POST["telefono"]."<br>";
 echo $_POST["cedula"]."<br>";
 echo sha1(md5($_POST["password1"]))."<br>";
-
-
 echo $_POST["username"]."<br>";
+
 
 $persona=new PersonaData();
 
@@ -30,8 +27,18 @@ $user->idpersona=$aux[1];
 
 $user->add();
 
+/*
+if($aux[0]==1){
 
-
-
-
+    core::alert("Rewgistro Exitoso");
+   
+    core::redir("./?view=Persona/UserPersona");
+ 
+ }else{
+ 
+    core::alert("Error al Registrar");
+ 
+    core::redir("./?view=Persona/UserPersona");
+ }
+*/
 ?>

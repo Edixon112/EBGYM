@@ -1,4 +1,4 @@
-<?php    $admins=AdminData::GetAll();    ?>
+<?php $personas=PersonaData::GetAll(); ?>
 <!-- Scrollable Table Start -->
 <div class="col-md-12 col-lg-12">
    <div class="card mg-b-20">
@@ -23,33 +23,31 @@
                   <th>Numero de Cedula</th>
                   <th>Numero de telefono</th>
                   <th>Gym</th>
-                  <th>tipo</th>
                   <th> </th>
                </tr>
             </thead>
             <tbody>
                <?php
-                  foreach($admins as $admin):
+                  foreach($personas as $persona):
                ?>
                <tr>
-                  <td><?php echo $admin->id;  ?></td>
-                  <td><?php echo $admin->nombre; ?></td>
-                  <td><?php echo $admin->apellido; ?></td>
-                  <td><?php echo $admin->cedula; ?></td>
-                  <td><?php echo $admin->telefono; ?></td>
-                  <td><?php echo $admin->idgym; ?></td>
-                  <td><?php echo $admin->tipo; ?></td>
+                  <td><?php echo $persona->id;  ?></td>
+                  <td><?php echo $persona->nombre; ?></td>
+                  <td><?php echo $persona->apellido; ?></td>
+                  <td><?php echo $persona->cedula; ?></td>
+                  <td><?php echo $persona->telefono; ?></td>
+                  <td><?php echo $persona->idgym; ?></td>
                   <td class="text-Center table-actions">
                      <div class="btn-group mg-t-5">  
 
-                        <form action="index.php?view=Admin/EditAdmin" method="post">   
-                           <input type="hidden" name="id" value=<?php echo $admin->id;?>>
+                        <form action="index.php?view=Persona/EditPersona" method="post">   
+                           <input type="hidden" name="id" value=<?php echo $persona->id;?>>
                            <input type="hidden" name="view" value=<?php echo $_GET["view"];?>>
                            <button class="btn btn-secondary" onclick="return pregunta()" ><a data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-pencil"></i></a></button>
                         </form>
 
-                        <form action="index.php?action=Admin/EliminarAdmin" method="post">   
-                           <input type="hidden" name="id" value=<?php echo $admin->id;?>>
+                        <form action="index.php?action=Persona/EliminarPersona" method="post">   
+                           <input type="hidden" name="id" value=<?php echo $persona->id;?>>
                            <input type="hidden" name="view" value=<?php echo $_GET["view"];?>>
                            <button class="btn btn-secondary" onclick="return pregunta()" ><a data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fa fa-trash"></i></a></button>
                         </form>
@@ -68,7 +66,6 @@
                      <th>Numero de Cedula</th>
                      <th>Numero de telefono</th>
                      <th>Gym</th>
-                     <th>tipo</th>
                      <th> </th>
                   </tr>
                </tfoot>
