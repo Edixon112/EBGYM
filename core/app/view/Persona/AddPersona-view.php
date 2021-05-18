@@ -63,6 +63,19 @@
                        </div>
                     </div>
 
+
+                    
+                    <div class="col-md-6 mb-3">
+		                <p>selecione Rol</p>
+                        <div class="input-group mb-6">
+                              <select class="selectpicker form-control" data-hide-disabled="true" data-live-search="true" name="rol" id="rol" id="inputGroupSelect01" required>
+                                 <option value="3"> Cliente</option>
+                                 <option value="4"> Entrenador</option>
+                                          
+                              </select>
+                        </div>
+                     </div>
+
                     <!--div class="col-md-6 mb-3">
 		                  <p>selecione Gym </p>
                         <div class="input-group mb-6">

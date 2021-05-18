@@ -97,7 +97,7 @@
                         </li>
                         <li> 
                            <a href="#"><i data-feather="calendar"></i>
-                           <span>---</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <span>GYM</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
                               <li></li>
                               <li></li>
@@ -105,7 +105,7 @@
                         </li>
                         <li>
                            <a href="#"><i data-feather="cloud-drizzle"></i>
-                           <span>---</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <span>Tipos de Planes</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
                               <li></li>
                               <li></li>
