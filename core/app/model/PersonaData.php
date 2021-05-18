@@ -26,7 +26,8 @@ class PersonaData
 		$sql = "update ".self::$tablename." set 
         nombre=\"$this->nombre\", 
         apelido=\"$this->apellido\", 
-		cedula=\"$this->cedula\"
+		cedula=\"$this->cedula\",
+		cedula=\"$this->telefono\"
         where id=$this->id";
 		return Executor::doit($sql);
 	}

@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="card-body collapse show" id="collapse7">
-            <form class="needs-validation" action="index.php?action=User/AddUser" method="post" novalidate>
+            <form class="needs-validation" action="index.php?action=Persona/AddPersona" method="post" novalidate>
                 <div class="form-row"> 
 
                     <!--info oculta-->
@@ -63,21 +63,20 @@
                        </div>
                     </div>
 
-                    <div class="col-md-6 mb-3">
-		                <p>selecione Rol</p>
+                    <!--div class="col-md-6 mb-3">
+		                  <p>selecione Gym </p>
                         <div class="input-group mb-6">
-                              <select class="selectpicker form-control" data-hide-disabled="true" data-live-search="true" name="idgym" id="idgym" id="inputGroupSelect01" required>
-                                 <option > </option>
-                                 <?php 
-                                    $idgym=idgymData::getAll();
-                                    foreach ($idgym as $idgym) {
-                                 ?>                
-                                 <option   value="<?php echo $idgym->id;?>" ><?php echo $idgym->nombre;?></option>
-                                 <?php } ?>               
-                              </select>
+                           <select class="selectpicker form-control" data-hide-disabled="true" data-live-search="true" name="idgym" id="idgym" id="inputGroupSelect01" required>
+                              <option > </option>
+                              <?php 
+                                 //$idgyms=GymData::getAll();
+                                 //foreach ($idgyms as $idgym) {
+                              ?>                
+                              <option   value="<?php //echo $idgym->id;?>" ><?php //echo $idgym->nombre;?></option>
+                              <?php //} ?>               
+                           </select>
                         </div>
-                     </div>
-                     
+                     </div-->  
                 </div>   
                 <button class="btn btn-custom-primary" type="submit">Enviar</button> 
             </form>

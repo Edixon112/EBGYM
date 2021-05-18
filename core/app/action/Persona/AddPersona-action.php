@@ -1,10 +1,6 @@
 <?php
-echo $_POST["nombre"]."<br>";
-echo $_POST["apellido"]."<br>";
-echo $_POST["telefono"]."<br>";
-echo $_POST["cedula"]."<br>";
 
-$persona=new PersonaData();
+$persona= new PersonaData();
 
 $persona->nombre=$_POST["nombre"];
 $persona->apellido=$_POST["apellido"];
