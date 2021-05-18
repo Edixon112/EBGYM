@@ -36,7 +36,7 @@
                   <td><?php echo $persona->apellido; ?></td>
                   <td><?php echo $persona->cedula; ?></td>
                   <td><?php echo $persona->telefono; ?></td>
-                  <td><?php echo $persona->idgym; ?></td>
+                  <td><?php echo "id del gym"/*$persona->idgym*/; ?></td>
                   <td class="text-Center table-actions">
                      <div class="btn-group mg-t-5">  
 

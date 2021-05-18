@@ -84,6 +84,7 @@
                            <span>user</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
                               <li><a href="index.php?view=User/ViewUser">User</a></li>
+                              <li><a href="index.php?view=User/AddUser">Agregar User</a></li>
                            </ul>
                         </li>
                         <li> 
@@ -91,6 +92,7 @@
                            <span>Persona</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
                               <li><a href="index.php?view=Persona/ViewPersona">Persona</a></li>
+                              <li><a href="index.php?view=Persona/AddPersona">Agregar Persona</a></li>
                            </ul>
                         </li>
                         <li> 
