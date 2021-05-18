@@ -30,12 +30,16 @@
                                     foreach ($persona as $persona) {
                                         if($persona->rol==3){
 
-                                          
+                                            $membresia=PlanData::getByIdCliente($persona->id);
+                                            $disponible=AsistenciaData::getByIdClienteLibre($persona->id);
                                             
+                                            if($membresia!=NULL){
+
 
                                  ?>                
                                  <option   value="<?php echo $persona->id;?>" ><?php echo $persona->nombre;?></option>
-                                 <?php } }?>               
+
+                                 <?php } } }?>               
                               </select>
                         </div>
                      </div>

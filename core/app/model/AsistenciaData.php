@@ -55,6 +55,13 @@ class AsistenciaData
 
 	}
 
+	public static function getByIdClienteLibre($id){
+		$sql = "select * from ".self::$tablename." where idcliente='".$id."'";
+		$query = Executor::doit($sql);
+		return Model::one($query[0],new AsistenciaData());
+
+	}
+
 
 
     public static function delById($id){
