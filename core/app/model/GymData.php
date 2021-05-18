@@ -1,10 +1,10 @@
 <?php
-class GymteData
+class GymData
  {
 	public static $tablename = "gym";
 
 
-	public function GymteData(){
+	public function GymData(){
 		$this->id = ""; 
         $this->nombre = "";
         $this->idadmin ="";
@@ -30,14 +30,14 @@ class GymteData
     public static function getAll(){
 		$sql = "select * from ".self::$tablename." order by id desc";
 		$query = Executor::doit($sql);
-		return Model::many($query[0],new GymteData());
+		return Model::many($query[0],new GymData());
 	}
 
 
     public static function getById($id){
 		$sql = "select * from ".self::$tablename." where id='".$id."'";
 		$query = Executor::doit($sql);
-		return Model::one($query[0],new GymteData());
+		return Model::one($query[0],new GymData());
 	}
 
 
