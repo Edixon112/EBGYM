@@ -83,17 +83,14 @@
                            <a href="#"><i data-feather="user-check"></i>
                            <span>user</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                              <li><a href="index.php?view=User/ViewUser">user</a></li>
-                              <li></li>
+                              <li><a href="index.php?view=User/ViewUser">User</a></li>
                            </ul>
                         </li>
                         <li> 
                            <a href="#"><i data-feather="user"></i>
-                           <span>---</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <span>Persona</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                              <li></li>
-                              <li></li>
-                              <li></li>
+                              <li><a href="index.php?view=Persona/ViewPersona">Persona</a></li>
                            </ul>
                         </li>
                         <li> 
