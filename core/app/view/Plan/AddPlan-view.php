@@ -28,7 +28,7 @@
                                     $cliente=PersonaData::getAll();
                                     foreach ($cliente as $cliente) {
                                         if($cliente->rol==3){
-                                            $plan=PlanData::getByCliente($cliente->id);
+                                            $plan=PlanData::getByIdCliente($cliente->id);
                                            if($plan==null){
 
                                            
