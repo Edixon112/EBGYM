@@ -83,49 +83,48 @@
                            <a href="#"><i data-feather="user-check"></i>
                            <span>user</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
+                           <li><a href="index.php?view=User/AddUser">Agregar User</a></li>
                               <li><a href="index.php?view=User/ViewUser">User</a></li>
-                              <li><a href="index.php?view=User/AddUser">Agregar User</a></li>
                            </ul>
                         </li>
                         <li> 
                            <a href="#"><i data-feather="user"></i>
                            <span>Persona</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
+                           <li><a href="index.php?view=Persona/AddPersona">Agregar Persona</a></li>
                               <li><a href="index.php?view=Persona/ViewPersona">Persona</a></li>
-                              <li><a href="index.php?view=Persona/AddPersona">Agregar Persona</a></li>
                            </ul>
                         </li>
                         <li> 
                            <a href="#"><i data-feather="calendar"></i>
                            <span>GYM</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                              <li></li>
-                              <li></li>
-                           </ul>
+                           <li><a href="index.php?view=Gym/AddGym">Agregar Gym</a></li>    
+                           <li><a href="index.php?view=Gym/viewGym">ver Gym</a></li>  
+                           </ul> 
                         </li>
                         <li>
                            <a href="#"><i data-feather="cloud-drizzle"></i>
                            <span>Tipos de Planes</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                              <li></li>
-                              <li></li>
-                              <li></li>
+                           <li><a href="index.php?view=Plan/AddPlan">Agregar Plan</a></li>                    
+                           <li><a href="index.php?view=Plan/viewPlan">ver Plan</a></li>                  
                            </ul>
                         </li>
                         <li>
                            <a href="#"><i data-feather="truck"></i>
-                           <span>---</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <span>precios</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                              <li>></li>
-                              <li></li>
+                           <li><a href="index.php?view=Precio/AddPrecio">Agregar Precio</a></li>                          
+                           <li><a href="index.php?view=Precio/viewPrecio">ver Precio</a></li>                     
                            </ul>
                         </li>
                         <li>
                            <a href="#"><i data-feather="list"></i>
-                           <span>---</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <span>Asistencia</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                                <li></li>
-                                <li></li>
+                           <li><a href="index.php?view=Asistencia/AddAsistencia">Agregar Asistencia</a></li>                           
+                           <li><a href="index.php?view=Asistencia/viewAsistencia">ver Asistencia</a></li>                     
                            </ul>
                         </li>
                         <li>

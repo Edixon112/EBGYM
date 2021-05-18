@@ -14,8 +14,8 @@ class AsistenciaData
 
 
     public function add(){
-		$sql = "insert into  ".self::$tablename." (idcliente,fechainicio,fechafin,idgym,) ";
-		$sql .= "value (\"$this->idcliente\",\"$this->fechainicio\",\"$this->fechafin\",\"$this->idgym\")";
+		$sql = "insert into  ".self::$tablename." (idcliente,fechainicio) ";
+		$sql .= "value (\"$this->idcliente\",\"$this->fechainicio\")";
         return Executor::doit($sql);
 	}
 
@@ -31,6 +31,16 @@ class AsistenciaData
 	}
 
 
+	
+    public function Out(){
+		$sql = "update ".self::$tablename." set
+		fechafin=\"$this->fechafin\"
+        where id=$this->id";
+		return Executor::doit($sql);
+	}
+
+
+
     public static function getAll(){
 		$sql = "select * from ".self::$tablename." order by id desc";
 		$query = Executor::doit($sql);
@@ -44,6 +54,7 @@ class AsistenciaData
 		return Model::one($query[0],new AsistenciaData());
 
 	}
+
 
 
     public static function delById($id){

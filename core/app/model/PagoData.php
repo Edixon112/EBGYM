@@ -7,15 +7,15 @@ class PagoData
 	public function PagoData(){
 		$this->id = ""; 
         $this->idcliente = "";
-        $this->monto = "";
+		$this->idasistencia=null;
         $this->idgym ="";
-        $this->fecha ="";
+        $this->fechainicio ="";
 	} 
 
 
     public function add(){
-		$sql = "insert into  ".self::$tablename." (idcliente,monto,idgym,fecha) ";
-		$sql .= "value (\"$this->idcliente\",\"$this->monto\",\"$this->idgym\",\"$this->fecha\")";
+		$sql = "insert into  ".self::$tablename." (idcliente,fechainicio,idasistencia) ";
+		$sql .= "value (\"$this->idcliente\",\"$this->fechainicio\",\"$this->idasistencia\")";
         return Executor::doit($sql);
 	}
 
@@ -40,6 +40,13 @@ class PagoData
 
     public static function getById($id){
 		$sql = "select * from ".self::$tablename." where id='".$id."'";
+		$query = Executor::doit($sql);
+		return Model::one($query[0],new PagoData());
+
+	}
+
+	public static function getByIdAsistencia($id){
+		$sql = "select * from ".self::$tablename." where idasistencia='".$id."'";
 		$query = Executor::doit($sql);
 		return Model::one($query[0],new PagoData());
 

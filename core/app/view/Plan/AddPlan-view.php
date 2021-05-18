@@ -28,11 +28,16 @@
                                     $cliente=PersonaData::getAll();
                                     foreach ($cliente as $cliente) {
                                         if($cliente->rol==3){
-                                        
-                                      
+                                            $plan=PlanData::getByCliente($cliente->id);
+                                           if($plan==null){
+
+                                           
                                  ?>                
+                                 
                                  <option   value="<?php echo $cliente->id;?>" ><?php echo $cliente->nombre;?></option>
-                                 <?php } }?>               
+                                 <?php }
+                                  }
+                                 }?>               
                               </select>
                         </div>
                      </div>
