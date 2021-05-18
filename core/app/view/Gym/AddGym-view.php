@@ -31,16 +31,20 @@
                     </div>
 
                     <div class="col-md-6 mb-3">
-		                <p>Seleccione Administrador</p>
+                    <label for="admin">Seleccione Administrador</label>
                         <div class="input-group mb-6">
                               <select class="selectpicker form-control" data-hide-disabled="true" data-live-search="true" name="admin" id="admin" id="inputGroupSelect01" required>
                                  <option > </option>
                                  <?php 
-                                    $persona=PersonaData::getAll();
-                                    foreach ($idgym as $idgym) {
+                                    $user=UserData::getAll();
+                                    foreach ($user as $user) {
+                                        
+                                        if($user->rol==2){
+                                            $persona=PersonaData::getById($user->idpersona);
+                                        
                                  ?>                
-                                 <option   value="<?php echo $persona->id;?>" ><?php echo $persona->nombre;?></option>
-                                 <?php } ?>               
+                                 <option   value="<?php echo $user->id;?>" ><?php echo $persona->nombre;?></option>
+                                 <?php }} ?>               
                               </select>
                         </div>
                      </div>

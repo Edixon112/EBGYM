@@ -12,7 +12,7 @@ class GymteData
 
 
     public function add(){
-		$sql = "insert into  ".self::$tablename." (,nombre,idadmin) ";
+		$sql = "insert into  ".self::$tablename." (nombre,idadmin) ";
 		$sql .= "value (\"$this->nombre\",\"$this->idadmin\")";
         return Executor::doit($sql);
 	}
