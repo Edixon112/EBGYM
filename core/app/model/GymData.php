@@ -29,17 +29,9 @@ class GymData
 
     public static function getAll(){
 		
-		$user = UserData::getById($_SESSION["user_id"]);
-		$gym=GymData::getByIdUser($user->id);
-
-		if($gym==null && $user->rol==1){
-
 			$sql = "select * from ".self::$tablename."  order by id desc";
 		
-		}else{
 
-			$sql = "select * from ".self::$tablename." where idgym='".$gym->id."' order by id desc";
-		}
 
 		$query = Executor::doit($sql);
 		return Model::many($query[0],new GymData());
@@ -48,17 +40,9 @@ class GymData
 
     public static function getById($id){
 
-		$user = UserData::getById($_SESSION["user_id"]);
-		$gym=GymData::getByIdUser($user->id);
-
-		if($gym==null && $user->rol==1){
-
+	
 			$sql = "select * from ".self::$tablename." where id='".$id."'";
 
-		}else{
-
-			$sql = "select * from ".self::$tablename." where id='".$id."' AND '".$gym->id."' ";
-		}
 
 		$query = Executor::doit($sql);
 		return Model::one($query[0],new GymData());
@@ -67,17 +51,9 @@ class GymData
 
 	public static function getByIdUser($id){
 
-		$user = UserData::getById($_SESSION["user_id"]);
-		$gym=GymData::getByIdUser($user->id);
-
-		if($gym==null && $user->rol==1){
-
 			$sql = "select * from ".self::$tablename." where idadmin='".$id."'";
 
-		}else{
-
-			$sql = "select * from ".self::$tablename." where idadmin='".$id."' AND '".$gym->id."' ";
-		}
+	
 		$query = Executor::doit($sql);
 		return Model::one($query[0],new GymData());
 	}
