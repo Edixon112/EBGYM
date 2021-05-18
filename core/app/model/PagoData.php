@@ -32,32 +32,21 @@ class PagoData
 
 
     public static function getAll(){
-		
-
-			$sql = "select * from ".self::$tablename."  order by id desc";
-		
+		$sql = "select * from ".self::$tablename."  order by id desc";
 		$query = Executor::doit($sql);
 		return Model::many($query[0],new PagoData());
 	}
 
 
     public static function getById($id){
-
-	
-			$sql = "select * from ".self::$tablename." where id='".$id."' ";
-
+		$sql = "select * from ".self::$tablename." where id='".$id."' ";
 		$query = Executor::doit($sql);
 		return Model::one($query[0],new PagoData());
 
 	}
 
 	public static function getByIdAsistencia($id){
-
 		$sql = "select * from ".self::$tablename." where idasistencia='".$id."' ";
-
-	
-		
-
 		$query = Executor::doit($sql);
 		return Model::one($query[0],new PagoData());
 

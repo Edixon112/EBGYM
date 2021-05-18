@@ -34,31 +34,21 @@ class PersonaData
 
 
     public static function getAll(){
-	
-			$sql = "select * from ".self::$tablename."  order by id desc";
-		
-	
+		$sql = "select * from ".self::$tablename."  order by id desc";
 		$query = Executor::doit($sql);
 		return Model::many($query[0],new PersonaData());
 	}
 
 
     public static function getById($id){
-
-	
-			$sql = "select * from ".self::$tablename." where id='".$id."' ";
-
-
+		$sql = "select * from ".self::$tablename." where id='".$id."' ";
 		$query = Executor::doit($sql);
 		return Model::one($query[0],new PersonaData());
 	}
 
 	
     public static function getByIdCliente($id){
-
-			$sql = "select * from ".self::$tablename." where idcliente=".$id."";
-
-
+		$sql = "select * from ".self::$tablename." where idcliente=".$id."";
 		$query = Executor::doit($sql);
 		return Model::one($query[0],new PersonaData());
 
