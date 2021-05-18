@@ -6,6 +6,7 @@ $persona->nombre=$_POST["nombre"];
 $persona->apellido=$_POST["apellido"];
 $persona->telefono=$_POST["telefono"];
 $persona->cedula=$_POST["cedula"];
+$persona->rol=$_POST["rol"];
 
 $aux=$persona->add();
 /*

@@ -11,13 +11,13 @@ class PersonaData
         $this->apelido = "";
         $this->telefono = "";
 		$this->idgym = "";
-
+		$this->rol="";
 	} 
 
 
     public function add(){
-		$sql = "insert into  ".self::$tablename." (cedula,nombre,apellido,telefono) ";
-		$sql .= "value (\"$this->cedula\",\"$this->nombre\",\"$this->apellido\",\"$this->telefono\")";
+		$sql = "insert into  ".self::$tablename." (cedula,nombre,apellido,telefono,rol) ";
+		$sql .= "value (\"$this->cedula\",\"$this->nombre\",\"$this->apellido\",\"$this->telefono\",\"$this->rol\")";
         return Executor::doit($sql);
 	}
 
