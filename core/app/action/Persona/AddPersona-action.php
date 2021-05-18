@@ -13,13 +13,13 @@ if($aux[0]==1){
 
     core::alert("Rewgistro Exitoso");
    
-    core::redir("./?view=Persona/UserPersona");
+    core::redir("./?view=Persona/ViewPersona");
  
  }else{
  
     core::alert("Error al Registrar");
  
-    core::redir("./?view=Persona/UserPersona");
+    core::redir("./?view=Persona/ViewPersona");
  }
 */
 ?>
