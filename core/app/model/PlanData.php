@@ -12,8 +12,8 @@ class PlanData
 
 
     public function add(){
-		$sql = "insert into  ".self::$tablename." (idcliente,idprecio) ";
-		$sql .= "value (\"$this->idcliente\",\"$this->idprecio\")";
+		$sql = "insert into  ".self::$tablename." (idcliente,idprecio,idgym) ";
+		$sql .= "value (\"$this->idcliente\",\"$this->idprecio\",\"$this->idgym\")";
         return Executor::doit($sql);
 	}
 
@@ -28,21 +28,57 @@ class PlanData
 
 
     public static function getAll(){
-		$sql = "select * from ".self::$tablename." order by id desc";
+		
+		$user = UserData::getById($_SESSION["user_id"]);
+		$gym=GymData::getByIdUser($user->id);
+
+		if($gym==null && $user->rol==1){
+
+			$sql = "select * from ".self::$tablename."  order by id desc";
+		
+		}else{
+
+			$sql = "select * from ".self::$tablename." where idgym='".$gym->id."' order by id desc";
+		}
+
 		$query = Executor::doit($sql);
 		return Model::many($query[0],new PlanData());
 	}
 
 
     public static function getById($id){
-		$sql = "select * from ".self::$tablename." where id='".$id."'";
+
+		$user = UserData::getById($_SESSION["user_id"]);
+		$gym=GymData::getByIdUser($user->id);
+
+		if($gym==null && $user->rol==1){
+
+			$sql = "select * from ".self::$tablename." where id='".$id."' ";
+
+		}else{
+
+			$sql = "select * from ".self::$tablename." where id='".$id."' AND '".$gym->id."' ";
+		}
+
 		$query = Executor::doit($sql);
 		return Model::one($query[0],new PlanData());
-
 	}
 
+
 	public static function getByIdCliente($id){
-		$sql = "select * from ".self::$tablename." where idcliente='".$id."'";
+
+		$user = UserData::getById($_SESSION["user_id"]);
+		$gym=GymData::getByIdUser($user->id);
+
+		if($gym==null && $user->rol==1){
+
+			$sql = "select * from ".self::$tablename." where idcliente='".$id."'";
+
+		}else{
+
+			$sql = "select * from ".self::$tablename." where idcliente='".$id."' AND '".$gym->id."' ";
+		}	
+
 		$query = Executor::doit($sql);
 		return Model::one($query[0],new PlanData());
 
