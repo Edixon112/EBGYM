@@ -10,7 +10,7 @@ class PersonaData
 		$this->nombre = "";
         $this->apelido = "";
         $this->telefono = "";
-		$this->idgym = null;
+		$this->idgym = "";
 
 	} 
 

@@ -81,67 +81,67 @@
                      <li>
                         <li> 
                            <a href="#"><i data-feather="user-check"></i>
-                           <span>Admin</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <span>user</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                              <li><a href="index.php?view=User/Mci_View_User">Ver ADMIN</a></li>
-                              <li><a href="index.php?view=User/Mci_Add_User">Ingresar ADMIN</a></li>
+                              <li><a href="index.php?view=User/ViewUser">user</a></li>
+                              <li></li>
                            </ul>
                         </li>
                         <li> 
                            <a href="#"><i data-feather="user"></i>
-                           <span>Admin</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <span>---</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                              <li><a href="index.php?view=Admin/AddAdmin">Añadir Admin </a></li>
-                              <li><a href="index.php?view=Admin/ViewAdmin">Ver Admin </a></li>
-                              <li><a href="index.php?view=User/UserAddCliente">Ingresar cliente USER</a></li>
+                              <li></li>
+                              <li></li>
+                              <li></li>
                            </ul>
                         </li>
                         <li> 
                            <a href="#"><i data-feather="calendar"></i>
-                           <span>Cita</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <span>---</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                              <li><a href="index.php?view=Cita/AdminViewCita">Ver Pedido Cliente ADMIN</a></li>
-                              <li><a href="index.php?view=Cita/UserCita">Ingresar Cita USER</a></li>
+                              <li></li>
+                              <li></li>
                            </ul>
                         </li>
                         <li>
                            <a href="#"><i data-feather="cloud-drizzle"></i>
-                           <span>Lavado</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <span>---</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                              <li><a href="index.php?view=Lavado/AddLavado">Añadir lavado ADMIN</a></li>
-                              <li><a href="index.php?view=Lavado/ViewLavado">Ver lavado ADMIN</a></li>
-                              <li><a href="index.php?view=Lavado/ViewCalendario">Ver calendario ADMIN</a></li>
+                              <li></li>
+                              <li></li>
+                              <li></li>
                            </ul>
                         </li>
                         <li>
                            <a href="#"><i data-feather="truck"></i>
-                           <span>Vehiculo</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <span>---</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                              <li><a href="index.php?view=Vehiculo/AddVehiculo">Añadir vehiculo</a></li>
-                              <li><a href="index.php?view=Vehiculo/ViewVehiculo">Ver vehiculo</a></li>
+                              <li>></li>
+                              <li></li>
                            </ul>
                         </li>
                         <li>
                            <a href="#"><i data-feather="list"></i>
-                           <span>Tipo De Vehiculo</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <span>---</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                                <li><a href="index.php?view=Tipo/AddTipo">Añadir tipo ADMIN</a></li>
-                                <li><a href="index.php?view=Tipo/ViewTipo">Ver tipo ADMIN</a></li>
+                                <li></li>
+                                <li></li>
                            </ul>
                         </li>
                         <li>
                            <a href="#"><i data-feather="tag"></i>
-                           <span>Precio</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <span>---</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                                <li><a href="index.php?view=Precio/AddPrecio">Añadir precio ADMIN</a></li>
-                                <li><a href="index.php?view=Precio/ViewPrecio">Ver precio ADMIN</a></li>
+                                <li></li>
+                                <li></li>
                            </ul>
                         </li>
                         <li>
                            <a href="#"><i data-feather="file"></i>
-                           <span>Factura</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <span>--</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                              <li><a href="index.php?view=ViewFactura">Ver Factura ADMIN</a></li>
+                              <li></li>
                            </ul>
                         </li>
                      </li>

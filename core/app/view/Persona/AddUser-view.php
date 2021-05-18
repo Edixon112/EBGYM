@@ -66,50 +66,16 @@
                     <div class="col-md-6 mb-3">
 		                <p>selecione Rol</p>
                         <div class="input-group mb-6">
-                              <select class="selectpicker form-control" data-hide-disabled="true" data-live-search="true" name="rol" id="rol" id="inputGroupSelect01" required>
+                              <select class="selectpicker form-control" data-hide-disabled="true" data-live-search="true" name="idgym" id="idgym" id="inputGroupSelect01" required>
                                  <option > </option>
                                  <?php 
-                                    $Rol=RolData::getAll();
-                                    foreach ($Rol as $Rol) {
+                                    $idgym=idgymData::getAll();
+                                    foreach ($idgym as $idgym) {
                                  ?>                
-                                 <option   value="<?php echo $Rol->id;?>" ><?php echo $Rol->nombre;?></option>
+                                 <option   value="<?php echo $idgym->id;?>" ><?php echo $idgym->nombre;?></option>
                                  <?php } ?>               
                               </select>
                         </div>
-                     </div>
-                    
-                     <div class="col-md-6 mb-3">
-                        <p>User</p>
-                        <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                              <span class="input-group-text" id="basic-addon1">UserName</span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="User" name="username" id="username"aria-label="User" aria-describedby="basic-addon1"required>
-                        </div>
-            
-                     </div>
-                     
-
-                     <div class="col-md-6 mb-3">
-                        <p>Password</p>
-                        <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                              <span class="input-group-text" id="basic-addon1">Password</span>
-                        </div>
-                        <input type="Password" class="form-control" placeholder="Password" name="password1" id="password1" aria-label="Password" aria-describedby="basic-addon1"required>
-                        </div>
-                     
-                     </div>
-
-                     <div class="col-md-6 mb-3">
-                        <p>Password</p>
-                        <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                              <span class="input-group-text" id="basic-addon1">Confirm Password</span>
-                        </div>
-                        <input type="Password" class="form-control" placeholder="Password" name="password2" id="password2" aria-label="Password" aria-describedby="basic-addon1"required>
-                        </div>
-                     
                      </div>
                      
                 </div>   
