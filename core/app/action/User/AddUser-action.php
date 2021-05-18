@@ -1,14 +1,5 @@
 <?php
 
-echo $_POST["nombre"]."<br>";
-echo $_POST["apellido"]."<br>";
-echo $_POST["rol"]."<br>";
-echo $_POST["telefono"]."<br>";
-echo $_POST["cedula"]."<br>";
-echo sha1(md5($_POST["password1"]))."<br>";
-echo $_POST["username"]."<br>";
-
-
 $persona=new PersonaData();
 
 $persona->nombre=$_POST["nombre"];
