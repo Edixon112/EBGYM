@@ -27,11 +27,12 @@
                                  <?php 
                                     $cliente=PersonaData::getAll();
                                     foreach ($cliente as $cliente) {
+                                        if($cliente->rol==3){
                                         
                                       
                                  ?>                
-                                 <option   value="<?php echo $cliente->id;?>" ><?php echo $cliente->id;?></option>
-                                 <?php } ?>               
+                                 <option   value="<?php echo $cliente->id;?>" ><?php echo $cliente->nombre;?></option>
+                                 <?php } }?>               
                               </select>
                         </div>
                      </div>
