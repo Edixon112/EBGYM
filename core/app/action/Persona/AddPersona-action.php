@@ -1,4 +1,7 @@
 <?php
+$user = UserData::getById($_SESSION["user_id"]);
+$gym=GymData::getByIdUser($user->id);
+
 
 $persona= new PersonaData();
 
@@ -7,6 +10,7 @@ $persona->apellido=$_POST["apellido"];
 $persona->telefono=$_POST["telefono"];
 $persona->cedula=$_POST["cedula"];
 $persona->rol=$_POST["rol"];
+$persona->idgym=$gym->id;
 
 $aux=$persona->add();
 /*

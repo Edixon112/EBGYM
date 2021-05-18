@@ -20,7 +20,7 @@
 				        <!--input type="text" style="display: none" id="activo" name="activo" value="<?php //echo $activo=0;?>" readonly="true"  required /-->
                     
                     <div class="col-md-6 mb-3">
-                       <label for="nombre">Nombre</label>
+                       <label for="nombre">Nombre de gym</label>
                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su nombre" value="" required>
                        <div class="valid-feedback">
                           Nombre valido
@@ -40,10 +40,10 @@
                                     foreach ($user as $user) {
                                         
                                         if($user->rol==2){
-                                            $persona=PersonaData::getById($user->idpersona);
+                                            $persona=PersonaData::getById($user->idpersona);    
                                         
                                  ?>                
-                                 <option   value="<?php echo $user->id;?>" ><?php echo $persona->nombre;?></option>
+                                 <option   value="<?php echo $user->id;?>" ><?php echo "$persona->nombre - $persona->apellido";?></option>
                                  <?php }} ?>               
                               </select>
                         </div>

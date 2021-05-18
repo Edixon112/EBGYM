@@ -21,6 +21,13 @@ class UserData
 	}
 
 
+	public function addGymId(){
+		$sql = "insert into  ".self::$tablename." (idgym) ";
+		$sql .= "value (\"$this->idgym\")";
+        return Executor::doit($sql);
+	}
+
+
     public function update(){
 		$sql = "update ".self::$tablename." set 
         pass=\"$this->pass\", 
