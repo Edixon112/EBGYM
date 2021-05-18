@@ -28,7 +28,11 @@
             </thead>
             <tbody>
                <?php
+               if($asistencias!=null){
+
+               
                   foreach($asistencias as $asistencia):
+
                   $persona=PersonaData::getById($asistencia->idcliente);
                   $membresia=PlanData::getByIdCliente($persona->id);
                   $precio=PrecioData::getById($membresia->idprecio);
@@ -65,18 +69,20 @@
                                                    
                                                    <div class="dropdown-menu dropdown-menu-right">
                                                     
-                                                    
+                                                <?php if($pago){ ?>    
                                                     <form action="index.php?action=Asistencia/OutAsistencia" method="post">
                                                                                    <input type="hidden" name="id" value="<?php echo $asistencia->id;  ?>">
                                                                                    <input type="hidden" name="view" value=<?php echo $_GET["view"];?>>
                                                                                    <button class="dropdown-item" ><i class="fa fa-cogs"></i> SALIDA</button>  
                                                       </form>
+                                                      <?php }else{?>
 
-                                                      <form action="index.php?view=" method="post">
-                                                                                   <input type="hidden" name="id2" value="">
+                                                      <form action="index.php?action=Pago/AddPago" method="post">
+                                                                                   <input type="hidden" name="id" value="<?php echo $asistencia->id;  ?>">
                                                                                    <input type="hidden" name="view" value=<?php echo $_GET["view"];?>>
                                                                                    <button class="dropdown-item" ><i class="fa fa-cogs"></i> PAGO</button>  
                                                       </form>
+                                                      <?php }?>
 
                                                    
                                                    </div>
@@ -90,7 +96,9 @@
                   </td>
                </tr> 
                <?php 
+               
                 endforeach;
+               }
                ?>
             </tbody>
                <tfoot>

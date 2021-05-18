@@ -66,7 +66,7 @@
          <!--================================-->
          <div class="page-sidebar">
             <div class="logo">
-               <a class="logo-img" href="index.php?">		
+               <a class="logo-img" href="index.php?view=Asistencia/AddAsistencia">		
                <img class="desktop-logo" src="assets/images/LOGOEB.jpeg" alt="">
                <img class="small-logo" src="assets/images/EB.jpeg" alt="">
                </a>			

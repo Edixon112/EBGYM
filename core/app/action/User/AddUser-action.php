@@ -16,7 +16,6 @@ $user->user=$_POST["username"];
 $user->pass=sha1(md5($_POST["password1"]));
 $user->idpersona=$aux[1];
 $user->rol=$_POST["rol"];
-$user->idgym=$_POST["idgym"];
 
 $user->add();
 

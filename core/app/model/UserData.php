@@ -9,14 +9,14 @@ class UserData
 		$this->user = "";
 		$this->pass = "";
         $this->rol = "";
-		$this->idgym = "";
+	
 		$this->idpersona = "";
 	} 
 
 
     public function add(){
-		$sql = "insert into  ".self::$tablename." (user,pass,rol,idgym,idpersona) ";
-		$sql .= "value (\"$this->user\",\"$this->pass\",\"$this->rol\",\"$this->idgym\",\"$this->idpersona\")";
+		$sql = "insert into  ".self::$tablename." (user,pass,rol,idpersona) ";
+		$sql .= "value (\"$this->user\",\"$this->pass\",\"$this->rol\",\"$this->idpersona\")";
         return Executor::doit($sql);
 	}
 
