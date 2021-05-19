@@ -1,10 +1,10 @@
-<?php $personas=PersonaData::GetAll(); ?>
+<?php $Gyms=GymData::GetAll(); ?>
 <!-- Scrollable Table Start -->
 <div class="col-md-12 col-lg-12">
    <div class="card mg-b-20">
       <div class="card-header">
          <h4 class="card-header-title">
-          Tabla Admin
+          Tabla Gym
          </h4>
          <div class="card-header-btn">
             <a href="#" data-toggle="collapse" class="btn card-collapse" data-target="#collapse7" aria-expanded="true"><i class="ion-ios-arrow-down"></i></a>
@@ -17,40 +17,37 @@
          <table id="dtHorizontalVerticalExample" class="table table-striped table-bordered table-sm " cellspacing="0" width="100%">
             <thead class="tx-dark tx-uppercase tx-10 tx-bold">
                <tr>
-                  <th>ID</th>
-                  <th>Nombre</th>
-                  <th>Apellido</th>
-                  <th>Numero de Cedula</th>
-                  <th>Numero de telefono</th>
-                  <th>Gym</th>
+                     <th>ID</th>
+                     <th>Nombre</th>
+                     <th>Admin</th>
+                     <th>Opciones</th>
                   <th> </th>
                </tr>
             </thead>
             <tbody>
                <?php
-                  foreach($personas as $persona):
+                  foreach($Gyms as $Gym):
                ?>
                <tr>
-                  <td><?php echo $persona->id;  ?></td>
-                  <td><?php echo $persona->nombre; ?></td>
-                  <td><?php echo $persona->apellido; ?></td>
-                  <td><?php echo $persona->cedula; ?></td>
-                  <td><?php echo $persona->telefono; ?></td>
-                  <td><?php echo "id del gym"/*$persona->idgym*/; ?></td>
+                  <td><?php echo $Gym->id;  ?></td>
+                  <td><?php echo $Gym->nombre; ?></td>
+                  <td><?php echo $Gym->idadmin; ?></td>
+                  <td><?php echo $Gym->idgym; ?></td>
                   <td class="text-Center table-actions">
                      <div class="btn-group mg-t-5">  
 
-                        <form action="index.php?view=Persona/EditPersona" method="post">   
-                           <input type="hidden" name="id" value=<?php echo $persona->id;?>>
+                        <form action="index.php?view=Gym/EditGym" method="post">   
+                           <input type="hidden" name="id" value=<?php echo $Gym->id;?>>
                            <input type="hidden" name="view" value=<?php echo $_GET["view"];?>>
                            <button class="btn btn-secondary" onclick="return pregunta()" ><a data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-pencil"></i></a></button>
                         </form>
 
-                        <form action="index.php?action=Persona/EliminarPersona" method="post">   
-                           <input type="hidden" name="id" value=<?php echo $persona->id;?>>
+                        <form action="index.php?action=Gym/EliminarGym" method="post">   
+                           <input type="hidden" name="id" value=<?php echo $Gym->id;?>>
                            <input type="hidden" name="view" value=<?php echo $_GET["view"];?>>
                            <button class="btn btn-secondary" onclick="return pregunta()" ><a data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fa fa-trash"></i></a></button>
                         </form>
+                        
                      </div>
                   </td>
                </tr> 
@@ -62,10 +59,8 @@
                   <tr>
                      <th>ID</th>
                      <th>Nombre</th>
-                     <th>Apellido</th>
-                     <th>Numero de Cedula</th>
-                     <th>Numero de telefono</th>
-                     <th>Gym</th>
+                     <th>Admin</th>
+                     <th>Opciones</th>
                      <th> </th>
                   </tr>
                </tfoot>
@@ -73,4 +68,4 @@
       </div>
    </div>
 </div>
-<!--/ Scrollable Table End -->
+<!--/ Scrollable Table End -->	

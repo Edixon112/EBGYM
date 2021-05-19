@@ -4,7 +4,7 @@
    <div class="card mg-b-20">
       <div class="card-header">
          <h4 class="card-header-title">
-          Tabla Admin
+          Tabla Asistencia
          </h4>
          <div class="card-header-btn">
             <a href="#" data-toggle="collapse" class="btn card-collapse" data-target="#collapse7" aria-expanded="true"><i class="ion-ios-arrow-down"></i></a>
@@ -30,7 +30,6 @@
                <?php
                if($asistencias!=null){
 
-               
                   foreach($asistencias as $asistencia):
 
                   $persona=PersonaData::getById($asistencia->idcliente);
@@ -61,45 +60,31 @@
                            <button class="btn btn-secondary" onclick="return pregunta()" ><a data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fa fa-trash"></i></a></button>
                         </form>
 
-
-
-
                         <span class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"></span>
-                                                   
-                                                   
-                                                   <div class="dropdown-menu dropdown-menu-right">
-                                                    
-                                                <?php if($pago){ ?>    
-                                                    <form action="index.php?action=Asistencia/OutAsistencia" method="post">
-                                                                                   <input type="hidden" name="id" value="<?php echo $asistencia->id;  ?>">
-                                                                                   <input type="hidden" name="view" value=<?php echo $_GET["view"];?>>
-                                                                                   <button class="dropdown-item" ><i class="fa fa-cogs"></i> SALIDA</button>  
-                                                      </form>
-                                                      <?php }else{?>
 
-                                                      <form action="index.php?action=Pago/AddPago" method="post">
-                                                                                   <input type="hidden" name="id" value="<?php echo $asistencia->id;  ?>">
-                                                                                   <input type="hidden" name="view" value=<?php echo $_GET["view"];?>>
-                                                                                   <button class="dropdown-item" ><i class="fa fa-cogs"></i> PAGO</button>  
-                                                      </form>
-                                                      <?php }?>
+                        <div class="dropdown-menu dropdown-menu-right">
+                           
+                            <?php if($pago){ ?>    
+                           <form action="index.php?action=Asistencia/OutAsistencia" method="post">
+                                 <input type="hidden" name="id" value="<?php echo $asistencia->id;  ?>">
+                                 <input type="hidden" name="view" value=<?php echo $_GET["view"];?>>
+                                 <button class="dropdown-item" ><i class="fa fa-cogs"></i> SALIDA</button>  
+                           </form>
+                             <?php }else{?>
 
-                                                   
-                                                   </div>
-
-                                                   
+                           <form action="index.php?action=Pago/AddPago" method="post">
+                               <input type="hidden" name="id" value="<?php echo $asistencia->id;  ?>">
+                               <input type="hidden" name="view" value=<?php echo $_GET["view"];?>>
+                               <button class="dropdown-item" ><i class="fa fa-cogs"></i> PAGO</button>  
+                           </form>
+                           <?php }?>
+                        </div>                             
                      </div>
-
-                    
-
-
                   </td>
                </tr> 
-               <?php 
-               
-                endforeach;
-               }
-               ?>
+
+               <?php      endforeach; } ?>
+
             </tbody>
                <tfoot>
                   <tr>

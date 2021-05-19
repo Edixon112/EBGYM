@@ -7,6 +7,4 @@ $gym->idadmin=$_POST["admin"];
 $gym->add();
 
 
-
-
 ?>

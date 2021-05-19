@@ -84,7 +84,7 @@
                            <span>user</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
                            <li><a href="index.php?view=User/AddUser">Agregar User</a></li>
-                              <li><a href="index.php?view=User/ViewUser">User</a></li>
+                              <li><a href="index.php?view=User/ViewUser">ver User</a></li>
                            </ul>
                         </li>
                         <li> 
@@ -92,9 +92,18 @@
                            <span>Persona</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
                            <li><a href="index.php?view=Persona/AddPersona">Agregar Persona</a></li>
-                              <li><a href="index.php?view=Persona/ViewPersona">Persona</a></li>
+                              <li><a href="index.php?view=Persona/ViewPersona">ver Persona</a></li>
                            </ul>
                         </li>
+                        <li>
+                           <a href="#"><i data-feather="tag"></i>
+                           <span>Pago</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <ul class="sub-menu">
+                           <li><a href="index.php?view=Pago/AddPago">Agregar Pago</a></li>
+                           <li><a href="index.php?view=Pago/ViewPago">ver Pago</a></li>
+                           </ul>
+                        </li>
+
                         <li> 
                            <a href="#"><i data-feather="calendar"></i>
                            <span>GYM</span><i class="accordion-icon fa fa-angle-left"></i></a>
@@ -125,14 +134,6 @@
                            <ul class="sub-menu">
                            <li><a href="index.php?view=Asistencia/AddAsistencia">Agregar Asistencia</a></li>                           
                            <li><a href="index.php?view=Asistencia/viewAsistencia">ver Asistencia</a></li>                     
-                           </ul>
-                        </li>
-                        <li>
-                           <a href="#"><i data-feather="tag"></i>
-                           <span>---</span><i class="accordion-icon fa fa-angle-left"></i></a>
-                           <ul class="sub-menu">
-                                <li></li>
-                                <li></li>
                            </ul>
                         </li>
                         <li>

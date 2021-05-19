@@ -30,10 +30,10 @@ class PlanData
     public static function getAll(){
 		
 		$user = UserData::getById($_SESSION["user_id"]);
-		$gym=GymData::getByIdUser($user->id);
-		
-		if( ($user->rol==2 && $gym!=null) ){
+		$gym = GymData::getByIdUser($user->id);
 
+		
+		if(($user->rol==2 && $gym!=null)) {
 
 			$sql = "select * from ".self::$tablename." where idgym='".$gym->id."' order by id desc";
 			$query = Executor::doit($sql);
@@ -44,9 +44,7 @@ class PlanData
 			$sql = "select * from ".self::$tablename." order by id desc";
 			$query = Executor::doit($sql);
 			return Model::many($query[0],new PlanData());
-	
 		}
-
 	}
 
 
