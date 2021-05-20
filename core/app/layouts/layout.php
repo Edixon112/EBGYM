@@ -79,6 +79,9 @@
                <div class="page-sidebar-menu">
                   <ul class="accordion-menu">
                      <li>
+                        <?php $user = UserData::getById($_SESSION["user_id"]);
+	                  	      if( $user->rol==1 ){
+                        ?>
                         <li> 
                            <a href="#"><i data-feather="user-check"></i>
                            <span>user</span><i class="accordion-icon fa fa-angle-left"></i></a>
@@ -87,6 +90,8 @@
                               <li><a href="index.php?view=User/ViewUser">ver User</a></li>
                            </ul>
                         </li>
+                        <?php } ?>
+
                         <li> 
                            <a href="#"><i data-feather="user"></i>
                            <span>Persona</span><i class="accordion-icon fa fa-angle-left"></i></a>

@@ -3,7 +3,7 @@
     <div class="card mg-b-20">
         <div class="card-header">
             <h4 class="card-header-title">
-            Registre sus Datos
+            Registre su Menbrecia
             </h4>
             <div class="card-header-btn">
                 <a href="#" data-toggle="collapse" class="btn card-collapse" data-target="#collapse7" aria-expanded="true"><i class="ion-ios-arrow-down"></i></a>
@@ -25,8 +25,13 @@
                               <select class="selectpicker form-control" data-hide-disabled="true" data-live-search="true" name="cliente" id="cliente" id="inputGroupSelect01" required>
                                  <option > </option>
                                  <?php 
-                                    $cliente=PersonaData::getAll();
-                                    foreach ($cliente as $cliente) {
+
+                                 
+                                 $personas=Persona_GymData::getAll();
+                                
+                                    foreach ($personas as $personas) {
+                                          
+                                    $cliente=PersonaData::getById($personas->idpersona);
                                         if($cliente->rol==3){
                                             $plan=PlanData::getByIdCliente($cliente->id);
                                            if($plan==null){

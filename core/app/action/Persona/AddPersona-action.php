@@ -10,9 +10,15 @@ $persona->apellido=$_POST["apellido"];
 $persona->telefono=$_POST["telefono"];
 $persona->cedula=$_POST["cedula"];
 $persona->rol=$_POST["rol"];
-$persona->idgym=$gym->id;
+
 
 $aux=$persona->add();
+
+$personagym=new Persona_GymData();
+$personagym->idpersona=$aux[1];
+$personagym->idgym=$gym->id;
+$personagym->add();
+
 /*
 if($aux[0]==1){
 

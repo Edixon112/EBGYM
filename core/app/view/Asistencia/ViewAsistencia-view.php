@@ -35,7 +35,7 @@
                   $persona=PersonaData::getById($asistencia->idcliente);
                   $membresia=PlanData::getByIdCliente($persona->id);
                   $precio=PrecioData::getById($membresia->idprecio);
-                  $pago=PagoData::getByIdAsistencia($asistencia->id);
+                  $pago=PagoData::getById($asistencia->idpago);
                ?>
                <tr>
                   <td><?php echo $asistencia->id;  ?></td>

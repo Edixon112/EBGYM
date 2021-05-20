@@ -26,11 +26,14 @@
                               <select class="selectpicker form-control" data-hide-disabled="true" data-live-search="true" name="idcliente" id="idcliente" id="inputGroupSelect01" required>
                                  <option > </option>
                                  <?php 
-                                    $persona=PersonaData::getAll();
-                                    if($persona!=null){
+
+                                 $personas=Persona_GymData::getAll();
+                                  
+                                    if($personas!=null){
 
                                     
-                                    foreach ($persona as $persona) {
+                                    foreach ($personas as $personas) {
+                                        $persona=PersonaData::getById($personas->idpersona);
                                         if($persona->rol==3){
 
                                             $membresia=PlanData::getByIdCliente($persona->id);

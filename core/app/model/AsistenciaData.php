@@ -10,6 +10,7 @@ class AsistenciaData
         $this->idcliente = "";
         $this->fechainicio = "";
 		$this->fechafin = "";
+		$this->idpago = "";
         $this->idgym ="";
 	} 
 
@@ -35,7 +36,8 @@ class AsistenciaData
 	
     public function Out(){
 		$sql = "update ".self::$tablename." set
-		fechafin=\"$this->fechafin\"
+		fechafin=\"$this->fechafin\",
+		idpago=\"$this->idpago\"
         where id=$this->id";
 		return Executor::doit($sql);
 	}

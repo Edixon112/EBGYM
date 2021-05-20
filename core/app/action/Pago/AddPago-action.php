@@ -7,15 +7,15 @@ $gym=GymData::getByIdUser($user->id);
 
     $asistencia=AsistenciaData::getById($_POST["id"]);
    $pago=new PagoData();
-   $pago->idasistencia=$_POST["id"];
    $pago->idcliente=$asistencia->idcliente;
    $pago->fechainicio=date("Y-m-d H:i:s"); 
    $pago->idgym=$gym->id;
-    $pago->add();
+    $aux=$pago->add();
 
             
         $asistencia->fechafin = date("Y-m-d H:i:s"); 
         $asistencia->idgym=$gym->id;
+        $asistencia->idpago=$aux[1];
 
 
         $aux=$asistencia->Out();

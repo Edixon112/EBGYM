@@ -10,14 +10,14 @@ class PersonaData
 		$this->nombre = "";
         $this->apelido = "";
         $this->telefono = "";
-		$this->idgym = "";
+	
 		$this->rol="";
 	} 
 
 
     public function add(){
-		$sql = "insert into  ".self::$tablename." (cedula,nombre,apellido,telefono,rol,idgym) ";
-		$sql .= "value (\"$this->cedula\",\"$this->nombre\",\"$this->apellido\",\"$this->telefono\",\"$this->rol\",\"$this->idgym\")";
+		$sql = "insert into  ".self::$tablename." (cedula,nombre,apellido,telefono,rol) ";
+		$sql .= "value (\"$this->cedula\",\"$this->nombre\",\"$this->apellido\",\"$this->telefono\",\"$this->rol\")";
         return Executor::doit($sql);
 	}
 
@@ -35,22 +35,11 @@ class PersonaData
 
 	public static function getAll(){
 
-		$user = UserData::getById($_SESSION["user_id"]);
-		$gym = GymData::getByIdUser($user->id);
-
 		
-		if(($user->rol==2 && $gym!=null)) {
-				
-		$sql = "select * from ".self::$tablename." where idgym='".$gym->id."' order by id desc";
+		$sql = "select * from ".self::$tablename." where order by id desc";
 		$query = Executor::doit($sql);
 		return Model::many($query[0],new PersonaData());
 
-		}else if ($user->rol==1) {
-
-			$sql = "select * from ".self::$tablename." order by id desc";
-			$query = Executor::doit($sql);
-			return Model::many($query[0],new PersonaData());
-		}
 	}
 
 
