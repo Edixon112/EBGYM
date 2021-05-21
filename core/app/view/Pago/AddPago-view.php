@@ -17,24 +17,24 @@
                 <div class="form-row"> 
 
                     <!--info oculta-->
-				        <!--input type="text" style="display: none" id="activo" name="activo" value="<?php //echo $activo=0;?>" readonly="true"  required /-->
+				    <!--input type="text" style="display: none" id="activo" name="activo" value="<?php //echo $activo=0;?>" readonly="true"  required /-->
                   
                     <div class="col-md-6 mb-3">
-                    <label for="admin">Seleccione cliente</label>
+                        <label for="admin">Seleccione cliente</label>
                         <div class="input-group mb-6">
-                            <select class="selectpicker form-control" data-hide-disabled="true" data-live-search="true" name="cliente" id="cliente" id="inputGroupSelect01" required>
-                               <option > </option>
-                               <?php 
-                                  $cliente=PersonaData::getAll();
-                                  foreach ($cliente as $cliente) {
-                                      if($cliente->rol==3){
-                                          $plan=PlanData::getByIdCliente($cliente->id);     
-                               ?>                
+                            <select class="selectpicker form-control" data-hide-disabled="true" data-live-search="true" name="idcliente" id="idcliente" id="inputGroupSelect01" required>
+                                <option > </option>
+                                <?php 
+                                $cliente=PersonaData::getAll();
+                                foreach ($cliente as $cliente) {
+                                    if($cliente->rol==3){
+                                    $plan=PlanData::getByIdCliente($cliente->id);     
+                                ?>                
                                <option   value="<?php echo $cliente->id;?>" ><?php echo $cliente->nombre;?></option>
                                <?php  } } ?>               
                             </select>
                         </div>
-                     </div>
+                    </div>
                      
                 </div>   
                 <button class="btn btn-custom-primary" type="submit">Enviar</button> 

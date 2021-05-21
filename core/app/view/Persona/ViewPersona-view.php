@@ -1,4 +1,4 @@
-<?php $personas=PersonaData::GetAll(); ?>
+<?php $personass=Persona_GymData::getAll(); ?>
 <!-- Scrollable Table Start -->
 <div class="col-md-12 col-lg-12">
    <div class="card mg-b-20">
@@ -28,7 +28,9 @@
             </thead>
             <tbody>
                <?php
-                  foreach($personas as $persona):
+                  foreach($personass as $personas):
+                     $persona=PersonaData::getById($personas->idpersona);
+                     $gym=GymData::getById($personas->idgym);
                ?>
                <tr>
                   <td><?php echo $persona->id;  ?></td>
@@ -36,7 +38,7 @@
                   <td><?php echo $persona->apellido; ?></td>
                   <td><?php echo $persona->cedula; ?></td>
                   <td><?php echo $persona->telefono; ?></td>
-                  <td><?php echo "id del gym"/*$persona->idgym*/; ?></td>
+                  <td><?php echo $gym->nombre; ?></td>
                   <td class="text-Center table-actions">
                      <div class="btn-group mg-t-5">  
 

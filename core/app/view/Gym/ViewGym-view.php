@@ -1,4 +1,4 @@
-<?php $Gyms=GymData::GetAll(); ?>
+<?php $gyms=GymData::getAll(); ?>
 <!-- Scrollable Table Start -->
 <div class="col-md-12 col-lg-12">
    <div class="card mg-b-20">
@@ -20,30 +20,31 @@
                      <th>ID</th>
                      <th>Nombre</th>
                      <th>Admin</th>
+                     <th>Id Admin</th>
                      <th>Opciones</th>
-                  <th> </th>
                </tr>
             </thead>
             <tbody>
                <?php
-                  foreach($Gyms as $Gym):
+                  foreach($gyms as $gym):
+                     $user=UserData::getById($gym->idadmin);
                ?>
                <tr>
-                  <td><?php echo $Gym->id;  ?></td>
-                  <td><?php echo $Gym->nombre; ?></td>
-                  <td><?php echo $Gym->idadmin; ?></td>
-                  <td><?php echo $Gym->idgym; ?></td>
+                  <td><?php echo $gym->id;  ?></td>
+                  <td><?php echo $gym->nombre; ?></td>
+                  <td><?php echo $user->user; ?></td>
+                  <td><?php echo $gym->idadmin; ?></td>
                   <td class="text-Center table-actions">
                      <div class="btn-group mg-t-5">  
 
                         <form action="index.php?view=Gym/EditGym" method="post">   
-                           <input type="hidden" name="id" value=<?php echo $Gym->id;?>>
+                           <input type="hidden" name="id" value=<?php echo $gym->id;?>>
                            <input type="hidden" name="view" value=<?php echo $_GET["view"];?>>
                            <button class="btn btn-secondary" onclick="return pregunta()" ><a data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-pencil"></i></a></button>
                         </form>
 
                         <form action="index.php?action=Gym/EliminarGym" method="post">   
-                           <input type="hidden" name="id" value=<?php echo $Gym->id;?>>
+                           <input type="hidden" name="id" value=<?php echo $gym->id;?>>
                            <input type="hidden" name="view" value=<?php echo $_GET["view"];?>>
                            <button class="btn btn-secondary" onclick="return pregunta()" ><a data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fa fa-trash"></i></a></button>
                         </form>
@@ -60,8 +61,8 @@
                      <th>ID</th>
                      <th>Nombre</th>
                      <th>Admin</th>
+                     <th>Id Admin</th>
                      <th>Opciones</th>
-                     <th> </th>
                   </tr>
                </tfoot>
          </table>

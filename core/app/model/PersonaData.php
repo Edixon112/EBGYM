@@ -8,10 +8,9 @@ class PersonaData
 		$this->id = ""; 
 		$this->cedula = "";
 		$this->nombre = "";
-        $this->apelido = "";
+        $this->apellido = "";
         $this->telefono = "";
-	
-		$this->rol="";
+		$this->rol= "";
 	} 
 
 
@@ -32,14 +31,10 @@ class PersonaData
 		return Executor::doit($sql);
 	}
 
-
-	public static function getAll(){
-
-		
-		$sql = "select * from ".self::$tablename." where order by id desc";
+	public static function getAll(){	
+		$sql = "select * from ".self::$tablename." order by id desc";
 		$query = Executor::doit($sql);
 		return Model::many($query[0],new PersonaData());
-
 	}
 
 

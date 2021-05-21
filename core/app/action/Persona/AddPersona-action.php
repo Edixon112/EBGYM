@@ -1,9 +1,9 @@
-<?php
+ <?php
 $user = UserData::getById($_SESSION["user_id"]);
-$gym=GymData::getByIdUser($user->id);
+$gym = GymData::getByIdUser($user->id);
 
 
-$persona= new PersonaData();
+$persona = new PersonaData();
 
 $persona->nombre=$_POST["nombre"];
 $persona->apellido=$_POST["apellido"];
@@ -14,15 +14,15 @@ $persona->rol=$_POST["rol"];
 
 $aux=$persona->add();
 
-$personagym=new Persona_GymData();
+$personagym = new Persona_GymData();
 $personagym->idpersona=$aux[1];
 $personagym->idgym=$gym->id;
 $personagym->add();
 
-/*
+
 if($aux[0]==1){
 
-    core::alert("Rewgistro Exitoso");
+    core::alert("Registro Exitoso");
    
     core::redir("./?view=Persona/ViewPersona");
  
@@ -32,5 +32,5 @@ if($aux[0]==1){
  
     core::redir("./?view=Persona/ViewPersona");
  }
-*/
+
 ?>

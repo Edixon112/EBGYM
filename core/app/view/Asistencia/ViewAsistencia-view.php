@@ -1,4 +1,4 @@
-<?php $asistencias=AsistenciaData::GetAll(); ?>
+<?php $asistencias=AsistenciaData::getAll(); ?>
 <!-- Scrollable Table Start -->
 <div class="col-md-12 col-lg-12">
    <div class="card mg-b-20">

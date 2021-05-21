@@ -1,4 +1,4 @@
-<?php $pagos=PagoData::GetAll(); ?>
+<?php $pagos=PagoData::getAll(); ?>
 <!-- Scrollable Table Start -->
 <div class="col-md-12 col-lg-12">
    <div class="card mg-b-20">

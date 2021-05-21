@@ -3,7 +3,7 @@
     <div class="card mg-b-20">
         <div class="card-header">
             <h4 class="card-header-title">
-            Registre sus Datos
+            Registere Precios Manejados por el Gym 
             </h4>
             <div class="card-header-btn">
                 <a href="#" data-toggle="collapse" class="btn card-collapse" data-target="#collapse7" aria-expanded="true"><i class="ion-ios-arrow-down"></i></a>
@@ -20,24 +20,24 @@
 				        <!--input type="text" style="display: none" id="activo" name="activo" value="<?php //echo $activo=0;?>" readonly="true"  required /-->
                     
                     <div class="col-md-6 mb-3">
-                       <label for="nombre">tipo de pago</label>
-                       <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su nombre" value="" required>
+                       <label for="nombre">Nombre de precio</label>
+                       <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese Nombre " value="" required>
                        <div class="valid-feedback">
-                          Nombre valido
+                          nombre valido
                        </div>
                        <div class="invalid-feedback">
-                          Por favor ingrese un nombre 
+                          Por favor ingrese un nombre de precio
                        </div>
                     </div>
 
                     <div class="col-md-6 mb-3">
                        <label for="precio">Precio</label>
-                       <input type="text" class="form-control" id="precio" name="precio" placeholder="Ingrese su nombre" value="" required>
+                       <input type="text" class="form-control" id="precio" name="precio" placeholder="Ingrese Precio" value="" required>
                        <div class="valid-feedback">
-                          Nombre valido
+                          precio valido
                        </div>
                        <div class="invalid-feedback">
-                          Por favor ingrese un nombre 
+                          Por favor ingrese un precio
                        </div>
                     </div>
 

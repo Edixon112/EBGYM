@@ -1,15 +1,15 @@
 <?php
- $user = UserData::getById($_SESSION["user_id"]);
+$user = UserData::getById($_SESSION["user_id"]);
 $gym=GymData::getByIdUser($user->id);
 
 if($_POST["pago"]=="si"){
 
     $pago=new PagoData();
    
-    $pago->idcliente=$_POST["idcliente"];
-    $pago->fechainicio=date("Y-m-d H:i:s"); 
+    $pago->idcliente = $_POST["idcliente"];
+    $pago->fechainicio = date("Y-m-d H:i:s"); 
     $pago->idgym=$gym->id;
-$aux=$pago->add();
+    $aux=$pago->add();
 }
 
 
@@ -22,11 +22,7 @@ $asistencia->fechainicio = date("Y-m-d H:i:s");
 $asistencia->idgym=$gym->id;
 $asistencia->idpago=$aux[1];
 
-$aux=$asistencia->add();
-
-
-
-
+$aux1=$asistencia->add();
 
 
 ?>

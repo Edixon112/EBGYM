@@ -109,6 +109,9 @@
                            </ul>
                         </li>
 
+                        <?php $user = UserData::getById($_SESSION["user_id"]);
+	                  	      if( $user->rol==1 ){
+                        ?>
                         <li> 
                            <a href="#"><i data-feather="calendar"></i>
                            <span>GYM</span><i class="accordion-icon fa fa-angle-left"></i></a>
@@ -117,20 +120,22 @@
                            <li><a href="index.php?view=Gym/viewGym">ver Gym</a></li>  
                            </ul> 
                         </li>
+                        <?php } ?>
+
                         <li>
                            <a href="#"><i data-feather="cloud-drizzle"></i>
-                           <span>Tipos de Planes</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <span>Planes</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                           <li><a href="index.php?view=Plan/AddPlan">Agregar Plan</a></li>                    
-                           <li><a href="index.php?view=Plan/viewPlan">ver Plan</a></li>                  
+                           <li><a href="index.php?view=Plan/AddPlan">Agregar planes y precios</a></li>                    
+                           <li><a href="index.php?view=Plan/viewPlan">ver Planes</a></li>                  
                            </ul>
                         </li>
                         <li>
                            <a href="#"><i data-feather="truck"></i>
                            <span>precios</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                           <li><a href="index.php?view=Precio/AddPrecio">Agregar Precio</a></li>                          
-                           <li><a href="index.php?view=Precio/viewPrecio">ver Precio</a></li>                     
+                           <li><a href="index.php?view=Precio/AddPrecio">Agregar Precios y planes</a></li>                          
+                           <li><a href="index.php?view=Precio/viewPrecio">ver Precios</a></li>                     
                            </ul>
                         </li>
                         <li>

@@ -9,7 +9,6 @@ class UserData
 		$this->user = "";
 		$this->pass = "";
         $this->rol = "";
-	
 		$this->idpersona = "";
 	} 
 

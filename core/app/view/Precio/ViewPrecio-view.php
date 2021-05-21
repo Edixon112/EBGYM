@@ -1,4 +1,4 @@
-<?php $precios=PrecioData::GetAll(); ?>
+<?php $precios=PrecioData::getAll(); ?>
 <!-- Scrollable Table Start -->
 <div class="col-md-12 col-lg-12">
    <div class="card mg-b-20">
@@ -22,7 +22,6 @@
                      <th>Precio</th>
                      <th>idgym</th>
                      <th>Opciones</th>
-                  <th> </th>
                </tr>
             </thead>
             <tbody>
@@ -63,7 +62,6 @@
                      <th>Precio</th>
                      <th>idgym</th>
                      <th>Opciones</th>
-                     <th> </th>
                   </tr>
                </tfoot>
          </table>
