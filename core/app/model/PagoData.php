@@ -7,7 +7,7 @@ class PagoData
 	public function PagoData(){
 		$this->id = ""; 
         $this->idcliente = "";
-		$this->idasistencia=null;
+		$this->idasistencia= "";
         $this->idgym ="";
         $this->fechainicio ="";
 	} 
@@ -58,6 +58,15 @@ class PagoData
 		return Model::one($query[0],new PagoData());
 
 	}
+
+
+	public static function getByIdCliente($id){
+		$sql = "select * from ".self::$tablename." where idcliente='".$id."' ";
+		$query = Executor::doit($sql);
+		return Model::one($query[0],new PagoData());
+
+	}
+
 
 	public static function getByIdAsistencia($id){
 		$sql = "select * from ".self::$tablename." where idasistencia='".$id."' ";

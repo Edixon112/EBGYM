@@ -72,6 +72,15 @@ class AsistenciaData
 
 	}
 
+
+	public static function getByIdPersona($id){
+		$sql = "select * from ".self::$tablename." where idcliente='".$id."'";
+		$query = Executor::doit($sql);
+		return Model::one($query[0],new AsistenciaData());
+
+	}
+
+
 	public static function getByIdClienteLibre($id){
 		$sql = "select * from ".self::$tablename." where idcliente='".$id."' and fechafin='0000-00-00 00:00:00' ";
 		$query = Executor::doit($sql);

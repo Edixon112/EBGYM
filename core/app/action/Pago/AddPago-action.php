@@ -1,16 +1,19 @@
 <?php
 
+date_default_timezone_set("America/Bogota");
+
 $user = UserData::getById($_SESSION["user_id"]);
 
 $gym = GymData::getByIdUser($user->id);
 
-$asistencia = AsistenciaData::getById($_POST["idcliente"]);
+$asistencia = AsistenciaData::getByIdPersona($_POST["id"]);
 
 $pago = new PagoData();
 
 $pago->idcliente=$asistencia->idcliente;
 $pago->fechainicio = date("Y-m-d H:i:s"); 
 $pago->idgym=$gym->id;
+$pago->idasistencia=$asistencia->id;
 
 $aux=$pago->add();
 
@@ -19,7 +22,20 @@ $asistencia->fechafin = date("Y-m-d H:i:s");
 $asistencia->idgym=$gym->id;
 $asistencia->idpago=$aux[1];
 
-$aux=$asistencia->Out();
+$aux2=$asistencia->Out();
+
+if($aux[0]==1){
+
+    core::alert("Pago Registrado");
+   
+    core::redir("./?view=Pago/ViewPago");
+ 
+}else{
+ 
+    core::alert("Error al Registrar Pago");
+ 
+    core::redir("./?view=Pago/ViewPago");
+}
 
 
 ?>

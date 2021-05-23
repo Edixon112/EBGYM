@@ -26,18 +26,19 @@
                                 <option > </option>
                                 <?php 
                                 $cliente=PersonaData::getAll();
-                                foreach ($cliente as $cliente) {
-                                    if($cliente->rol==3){
-                                    $plan=PlanData::getByIdCliente($cliente->id);     
+                                $asistencia=AsistenciaData::getAll();
+                                if ($asistencia!=NULL){foreach ($cliente as $cliente) {
+                                    $asistencia1=AsistenciaData::getByIdPersona($cliente->id);
+                                    if($cliente->rol==3 and $asistencia1->idcliente!=NULL){
                                 ?>                
                                <option   value="<?php echo $cliente->id;?>" ><?php echo $cliente->nombre;?></option>
-                               <?php  } } ?>               
+                               <?php } } } ?>               
                             </select>
                         </div>
                     </div>
                      
                 </div>   
-                <button class="btn btn-custom-primary" type="submit">Enviar</button> 
+                <button class="btn btn-custom-primary" type="submit">Enviar Pago</button> 
             </form>
         </div>
     </div>

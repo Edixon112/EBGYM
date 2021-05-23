@@ -92,6 +92,15 @@
                         </li>
                         <?php } ?>
 
+                        <li>
+                           <a href="#"><i data-feather="truck"></i>
+                           <span>precios</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <ul class="sub-menu">
+                           <li><a href="index.php?view=Precio/AddPrecio">Agregar Precios y planes</a></li>                          
+                           <li><a href="index.php?view=Precio/viewPrecio">ver Precios</a></li>                     
+                           </ul>
+                        </li>
+
                         <li> 
                            <a href="#"><i data-feather="user"></i>
                            <span>Persona</span><i class="accordion-icon fa fa-angle-left"></i></a>
@@ -100,6 +109,25 @@
                               <li><a href="index.php?view=Persona/ViewPersona">ver Persona</a></li>
                            </ul>
                         </li>
+
+                        <li>
+                           <a href="#"><i data-feather="cloud-drizzle"></i>
+                           <span>Planes</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <ul class="sub-menu">
+                           <li><a href="index.php?view=Plan/AddPlan">Agregar planes y precios</a></li>                    
+                           <li><a href="index.php?view=Plan/viewPlan">ver Planes</a></li>                  
+                           </ul>
+                        </li>
+
+                        <li>
+                           <a href="#"><i data-feather="list"></i>
+                           <span>Asistencia</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <ul class="sub-menu">
+                           <li><a href="index.php?view=Asistencia/AddAsistencia">Agregar Asistencia</a></li>                           
+                           <li><a href="index.php?view=Asistencia/viewAsistencia">ver Asistencia</a></li>                     
+                           </ul>
+                        </li>
+
                         <li>
                            <a href="#"><i data-feather="tag"></i>
                            <span>Pago</span><i class="accordion-icon fa fa-angle-left"></i></a>
@@ -122,30 +150,6 @@
                         </li>
                         <?php } ?>
 
-                        <li>
-                           <a href="#"><i data-feather="cloud-drizzle"></i>
-                           <span>Planes</span><i class="accordion-icon fa fa-angle-left"></i></a>
-                           <ul class="sub-menu">
-                           <li><a href="index.php?view=Plan/AddPlan">Agregar planes y precios</a></li>                    
-                           <li><a href="index.php?view=Plan/viewPlan">ver Planes</a></li>                  
-                           </ul>
-                        </li>
-                        <li>
-                           <a href="#"><i data-feather="truck"></i>
-                           <span>precios</span><i class="accordion-icon fa fa-angle-left"></i></a>
-                           <ul class="sub-menu">
-                           <li><a href="index.php?view=Precio/AddPrecio">Agregar Precios y planes</a></li>                          
-                           <li><a href="index.php?view=Precio/viewPrecio">ver Precios</a></li>                     
-                           </ul>
-                        </li>
-                        <li>
-                           <a href="#"><i data-feather="list"></i>
-                           <span>Asistencia</span><i class="accordion-icon fa fa-angle-left"></i></a>
-                           <ul class="sub-menu">
-                           <li><a href="index.php?view=Asistencia/AddAsistencia">Agregar Asistencia</a></li>                           
-                           <li><a href="index.php?view=Asistencia/viewAsistencia">ver Asistencia</a></li>                     
-                           </ul>
-                        </li>
                         <li>
                            <a href="#"><i data-feather="file"></i>
                            <span>--</span><i class="accordion-icon fa fa-angle-left"></i></a>

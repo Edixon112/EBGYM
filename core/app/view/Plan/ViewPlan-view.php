@@ -19,19 +19,22 @@
                <tr>
                      <th>ID</th>
                      <th>Cliente</th>
+                     <th>Plan</th>
                      <th>Precio</th>
                      <th>Opciones</th>
-                  <th> </th>
                </tr>
             </thead>
             <tbody>
                <?php
                   foreach($plans as $plan):
+                     $cliente=PersonaData::getById($plan->idcliente);
+                     $precio=PrecioData::getById($plan->idprecio);
                ?>
                <tr>
                   <td><?php echo $plan->id;  ?></td>
-                  <td><?php echo $plan->idcliente; ?></td>
-                  <td><?php echo $plan->idprecio; ?></td>
+                  <td><?php echo $cliente->nombre; ?></td>
+                  <td><?php echo $precio->nombre; ?></td>
+                  <td><?php echo $precio->precio; ?></td>
                   <td class="text-Center table-actions">
                      <div class="btn-group mg-t-5">  
 
@@ -58,9 +61,9 @@
                   <tr>
                      <th>ID</th>
                      <th>Cliente</th>
+                     <th>Plan</th>
                      <th>Precio</th>
                      <th>Opciones</th>
-                     <th> </th>
                   </tr>
                </tfoot>
          </table>

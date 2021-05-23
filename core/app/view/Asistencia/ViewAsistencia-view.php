@@ -43,7 +43,7 @@
                   <td><?php echo $asistencia->fechainicio; ?></td>
                   <td><?php echo $asistencia->fechafin; ?></td>
                   <td><?php echo $precio->nombre;?></td>
-                  <td><?php if($pago){echo "Pagado";}?></td>
+                  <td><?php if($pago){echo "Pagado";}else echo "Pendiente"; ?></td>
 
                   <td class="text-Center table-actions">
                      <div class="btn-group mg-t-5">  

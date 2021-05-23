@@ -45,12 +45,8 @@
                                  ?>                
                                  <option   value="<?php echo $persona->id;?>" ><?php echo $persona->nombre;?></option>
 
-                                 <?php 
-                                    } 
-                                    } 
-                                    }
-                                }
-                                 ?>               
+                                 <?php } } } } ?>  
+                                              
                               </select>
                         </div>
                      </div>

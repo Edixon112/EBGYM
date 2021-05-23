@@ -22,7 +22,6 @@
                     <th>Asistencia</th>
                     <th>Fecha De Inicio</th>
                     <th>Opciones</th>
-                    <th> </th>
                </tr>
             </thead>
             <tbody>
@@ -30,7 +29,7 @@
                   foreach($pagos as $pago):
                ?>
                <tr>
-                  <td><?php echo $pago->id;  ?></td>
+                  <td><?php echo $pago->id; ?></td>
                   <td><?php echo $pago->idcliente; ?></td>
                   <td><?php echo $pago->idasistencia; ?></td>
                   <td><?php echo $pago->fechainicio; ?></td>
@@ -63,7 +62,6 @@
                     <th>Asistencia</th>
                     <th>Fecha De Inicio</th>
                     <th>Opciones</th>
-                    <th> </th>
                  </tr>
                </tfoot>
          </table>
