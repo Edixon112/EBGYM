@@ -28,5 +28,6 @@ $asistencia->idpago=$aux[1];
 
 $aux1=$asistencia->add();
 
+core::redir("./?view=Asistencia/ViewAsistencia");
 
 ?>

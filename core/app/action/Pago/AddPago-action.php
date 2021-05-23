@@ -24,18 +24,6 @@ $asistencia->idpago=$aux[1];
 
 $aux2=$asistencia->Out();
 
-if($aux[0]==1){
-
-    core::alert("Pago Registrado");
-   
-    core::redir("./?view=Pago/ViewPago");
- 
-}else{
- 
-    core::alert("Error al Registrar Pago");
- 
-    core::redir("./?view=Pago/ViewPago");
-}
-
+core::redir("./?view=Pago/ViewPago");
 
 ?>
