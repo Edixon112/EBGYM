@@ -28,9 +28,18 @@
             </thead>
             <tbody>
                <?php
+
                if($asistencias!=null){
 
                   foreach($asistencias as $asistencia):
+
+                  $fechatemp = new DateTime('0000-00-00 00:00:00');
+                  $tiempo = $fechatemp->format('Y-m-d H:i:s');
+
+                  $auxiliar = new DateTime($asistencia->fechafin);
+                  $fechafin = $auxiliar->format('Y-m-d H:i:s');
+
+                  if($fechafin!=$tiempo){
 
                   $persona=PersonaData::getById($asistencia->idcliente);
                   $membresia=PlanData::getByIdCliente($persona->id);
@@ -83,7 +92,7 @@
                   </td>
                </tr> 
 
-               <?php      endforeach; } ?>
+               <?php     } endforeach; } ?>
 
             </tbody>
                <tfoot>

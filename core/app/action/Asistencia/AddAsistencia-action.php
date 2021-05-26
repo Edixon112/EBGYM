@@ -1,6 +1,7 @@
 <?php
 $user = UserData::getById($_SESSION["user_id"]);
 $gym=GymData::getByIdUser($user->id);
+date_default_timezone_set("America/Bogota");
 
 if($_POST["pago"]=="si"){
 
@@ -13,20 +14,31 @@ if($_POST["pago"]=="si"){
 }
 
 
-date_default_timezone_set("America/Bogota");
 
-$asistencia = new AsistenciaData();
-$tiempo = new DateTime('0000-00-00 00:00:00');
+    $asistencia = new AsistenciaData();
+    $tiempo = new DateTime('0000-00-00 00:00:00');
+    
+    $asistencia->idcliente = $_POST["idcliente"]; 
+    $asistencia->fechainicio = date("Y-m-d H:i:s"); 
+    $asistencia->idgym=$gym->id;
+    $asistencia->fechafin = $tiempo->format('Y-m-d H:i:s');
+    
+            if($_POST["pago"]=="si"){
+                 $asistencia->idpago=$aux[1];
 
-$asistencia->idcliente = $_POST["idcliente"]; 
-$asistencia->fechainicio = date("Y-m-d H:i:s"); 
-$asistencia->idgym=$gym->id;
-$asistencia->fechafin = $tiempo->format('Y-m-d H:i:s');
-if($_POST["pago"]=="si"){
-$asistencia->idpago=$aux[1];
-}else $asistencia->idpago=NULL;
+                 $asistencia->add();
+    
+            }
+            if($_POST["pago"]=="no"){
+                $asistencia->idpago=NULL;
+                $asistencia->addSinPago();
+            }
+            
+    
+  
 
-$aux1=$asistencia->add();
+
+
 
 core::redir("./?view=Asistencia/ViewAsistencia");
 

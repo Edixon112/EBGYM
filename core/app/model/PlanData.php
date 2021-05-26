@@ -20,7 +20,6 @@ class PlanData
 
     public function update(){
 		$sql = "update ".self::$tablename." set 
-        idcliente=\"$this->idcliente\", 
         idprecio=\"$this->idprecio\" 
         where id=$this->id";
 		return Executor::doit($sql);

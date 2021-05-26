@@ -7,23 +7,21 @@ class PagoData
 	public function PagoData(){
 		$this->id = ""; 
         $this->idcliente = "";
-		$this->idasistencia= "";
         $this->idgym ="";
         $this->fechainicio ="";
 	} 
 
 
     public function add(){
-		$sql = "insert into  ".self::$tablename." (idcliente,fechainicio,idasistencia,idgym) ";
-		$sql .= "value (\"$this->idcliente\",\"$this->fechainicio\",\"$this->idasistencia\",\"$this->idgym\")";
+		$sql = "insert into  ".self::$tablename." (idcliente,fechainicio,idgym) ";
+		$sql .= "value (\"$this->idcliente\",\"$this->fechainicio\",\"$this->idgym\")";
         return Executor::doit($sql);
 	}
 
 
     public function update(){
 		$sql = "update ".self::$tablename." set 
-        idcliente=\"$this->idcliente\", 
-        monto=\"$this->monto\", 
+        idcliente=\"$this->idcliente\",  
         idgym=\"$this->idgym\",
         fecha=\"$this->fecha\" 
         where id=$this->id";

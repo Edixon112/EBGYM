@@ -66,7 +66,7 @@
          <!--================================-->
          <div class="page-sidebar">
             <div class="logo">
-               <a class="logo-img" href="index.php?view=Asistencia/AddAsistencia">		
+               <a class="logo-img" href="index.php?view=Bienvenida">		
                <img class="desktop-logo" src="assets/images/LOGOEB.jpeg" alt="">
                <img class="small-logo" src="assets/images/EB.jpeg" alt="">
                </a>			
@@ -93,11 +93,11 @@
                         <?php } ?>
 
                         <li>
-                           <a href="#"><i data-feather="truck"></i>
-                           <span>precios</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <a href="#"><i data-feather="dollar-sign"></i>
+                           <span>Tipos de pagos y planes</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                           <li><a href="index.php?view=Precio/AddPrecio">Agregar Precios y planes</a></li>                          
-                           <li><a href="index.php?view=Precio/viewPrecio">ver Precios</a></li>                     
+                           <li><a href="index.php?view=Precio/AddPrecio">Agregar pagos  y planes</a></li>                          
+                           <li><a href="index.php?view=Precio/viewPrecio">ver tipos de pagos</a></li>                     
                            </ul>
                         </li>
 
@@ -111,11 +111,11 @@
                         </li>
 
                         <li>
-                           <a href="#"><i data-feather="cloud-drizzle"></i>
-                           <span>Planes</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <a href="#"><i data-feather="calendar"></i>
+                           <span>Agregar Planes</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                           <li><a href="index.php?view=Plan/AddPlan">Agregar planes y precios</a></li>                    
-                           <li><a href="index.php?view=Plan/viewPlan">ver Planes</a></li>                  
+                           <li><a href="index.php?view=Plan/AddPlan">Agregar planes a clietes</a></li>                    
+                           <li><a href="index.php?view=Plan/viewPlan">ver Planes de clietes</a></li>                  
                            </ul>
                         </li>
 
@@ -124,16 +124,17 @@
                            <span>Asistencia</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
                            <li><a href="index.php?view=Asistencia/AddAsistencia">Agregar Asistencia</a></li>                           
-                           <li><a href="index.php?view=Asistencia/viewAsistencia">ver Asistencia</a></li>                     
+                           <li><a href="index.php?view=Asistencia/viewAsistencia">ver Asistencia</a></li>
+                           <li><a href="index.php?view=Asistencia/viewsalida">ver salida</a></li>                  
                            </ul>
                         </li>
 
                         <li>
                            <a href="#"><i data-feather="tag"></i>
-                           <span>Pago</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <span>Pago mensual</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                           <li><a href="index.php?view=Pago/AddPago">Agregar Pago</a></li>
-                           <li><a href="index.php?view=Pago/ViewPago">ver Pago</a></li>
+                           <li><a href="index.php?view=Pago/AddPago">Agregar Pago mensual</a></li>
+                           <li><a href="index.php?view=Pago/ViewPago">ver Pago mensual</a></li>
                            </ul>
                         </li>
 
@@ -263,7 +264,7 @@
                <!-- Main Wrapper Start -->
                <!--==============LAS LLAMADAS A LOS DEMAS==================-->
                		
-                <?php   View::load("ViewPrincipal"); ?>
+                <?php   View::load("Bienvenida"); ?>
 
                <!--/ Main Wrapper End -->
                </div>

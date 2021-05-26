@@ -24,9 +24,9 @@ class PersonaData
     public function update(){
 		$sql = "update ".self::$tablename." set 
         nombre=\"$this->nombre\", 
-        apelido=\"$this->apellido\", 
+        apellido=\"$this->apellido\", 
 		cedula=\"$this->cedula\",
-		cedula=\"$this->telefono\"
+		telefono=\"$this->telefono\"
         where id=$this->id";
 		return Executor::doit($sql);
 	}

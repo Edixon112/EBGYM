@@ -40,11 +40,14 @@
                                     foreach ($user as $user) {
                                         
                                         if($user->rol==2){
+                                            $gym = GymData::getByIdUser($user->id);
+                                            if($gym == null){
+ 
                                             $persona=PersonaData::getById($user->idpersona);    
                                         
                                  ?>                
                                  <option   value="<?php echo $user->id;?>" ><?php echo "$persona->nombre - $persona->apellido";?></option>
-                                 <?php }} ?>               
+                                 <?php }}} ?>               
                               </select>
                         </div>
                      </div>

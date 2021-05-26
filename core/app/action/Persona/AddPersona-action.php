@@ -2,7 +2,6 @@
 $user = UserData::getById($_SESSION["user_id"]);
 $gym = GymData::getByIdUser($user->id);
 
-
 $persona = new PersonaData();
 
 $persona->nombre=$_POST["nombre"];
@@ -16,6 +15,7 @@ $aux=$persona->add();
 
 $personagym = new Persona_GymData();
 $personagym->idpersona=$aux[1];
+$lol=$aux[1];
 $personagym->idgym=$gym->id;
 $personagym->add();
 

@@ -19,18 +19,17 @@ $user->rol=$_POST["rol"];
 
 $user->add();
 
-/*
 if($aux[0]==1){
 
-    core::alert("Rewgistro Exitoso");
+    core::alert("Registro Exitoso");
    
-    core::redir("./?view=Persona/UserPersona");
+    core::redir("./?view=User/ViewUser");
  
  }else{
  
     core::alert("Error al Registrar");
  
-    core::redir("./?view=Persona/UserPersona");
+    core::redir("./?view=User/ViewUser");
  }
-*/
+
 ?>

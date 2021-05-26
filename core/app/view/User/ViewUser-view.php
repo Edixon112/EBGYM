@@ -24,14 +24,17 @@
                   <th>Numero de Cedula</th>
                   <th>Numero de telefono</th>
                   <th>Gym</th>
+                  <th>Rol</th>
                   <th> </th>
                </tr>
             </thead>
             <tbody>
-               <?php
-                    
+               <?php  
                   foreach($users as $user):
-                  $persona=PersonaData::GetByid($user->idpersona);  
+                  $persona=PersonaData::getById($user->idpersona);
+                  $rol=RolData::getById($user->rol);
+                  $rolsu=$rol->id;
+                  if($rolsu != 3 || $rolsu != 4  ){
                ?>
                <tr>
                   <td><?php echo $user->id;  ?></td>
@@ -40,7 +43,17 @@
                   <td><?php echo $persona->apellido; ?></td>
                   <td><?php echo $persona->cedula; ?></td>
                   <td><?php echo $persona->telefono; ?></td>
-                  <td><?php echo "id del gym"/*$user->idgym*/; ?></td>
+                  <td><?php if($rolsu != 1 ){  
+                              $gym=GymData::getByIdUser($user->id);
+                              if($gym){
+                              echo"$gym->nombre";
+                              }else{
+                                 echo"Falta gym a este ADM";
+                              };
+                           }else{
+                              echo"";
+                           };?></td>
+                  <td><?php echo $rol->nombre; ?></td>
                   <td class="text-Center table-actions">
                      <div class="btn-group mg-t-5">  
 
@@ -59,6 +72,7 @@
                   </td>
                </tr> 
                <?php 
+                  }
                 endforeach;
                ?>
             </tbody>
@@ -71,6 +85,7 @@
                      <th>Numero de Cedula</th>
                      <th>Numero de telefono</th>
                      <th>Gym</th>
+                     <th>Rol</th>
                      <th> </th>
                   </tr>
                </tfoot>

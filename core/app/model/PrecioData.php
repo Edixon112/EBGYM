@@ -22,8 +22,7 @@ class PrecioData
     public function update(){
 		$sql = "update ".self::$tablename." set 
         nombre=\"$this->nombre\", 
-        precio=\"$this->precio\",
-        idgym=\"$this->idgym\"
+        precio=\"$this->precio\"
         where id=$this->id";
 		return Executor::doit($sql);
 	}

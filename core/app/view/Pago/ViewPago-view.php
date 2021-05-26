@@ -19,7 +19,7 @@
                <tr>
                     <th>ID</th>
                     <th>Cliente</th>
-                    <th>Asistencia</th>
+            
                     <th>Fecha De Inicio</th>
                     <th>Opciones</th>
                </tr>
@@ -31,7 +31,7 @@
                <tr>
                   <td><?php echo $pago->id; ?></td>
                   <td><?php echo $pago->idcliente; ?></td>
-                  <td><?php echo $pago->idasistencia; ?></td>
+                 
                   <td><?php echo $pago->fechainicio; ?></td>
                   <td class="text-Center table-actions">
                      <div class="btn-group mg-t-5">  
@@ -59,7 +59,7 @@
                  <tr>
                     <th>ID</th>
                     <th>Cliente</th>
-                    <th>Asistencia</th>
+               
                     <th>Fecha De Inicio</th>
                     <th>Opciones</th>
                  </tr>

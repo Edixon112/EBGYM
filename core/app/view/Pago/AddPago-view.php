@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="card-body collapse show" id="collapse7">
-            <form class="needs-validation" action="index.php?action=Pago/AddPago" method="post" novalidate>
+            <form class="needs-validation" action="index.php?action=Pago/AddPagoMensual" method="post" novalidate>
                 <div class="form-row"> 
 
                     <!--info oculta-->

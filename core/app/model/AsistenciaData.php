@@ -16,10 +16,17 @@ class AsistenciaData
 
 
     public function add(){
-		$sql = "insert into  ".self::$tablename." (idcliente,fechainicio,idgym) ";
-		$sql .= "value (\"$this->idcliente\",\"$this->fechainicio\",\"$this->idgym\")";
+		$sql = "insert into  ".self::$tablename." (idcliente,fechainicio,fechafin,idgym,idpago) ";
+		$sql .= "value (\"$this->idcliente\",\"$this->fechainicio\",\"$this->fechafin\",\"$this->idgym\",\"$this->idpago\")";
         return Executor::doit($sql);
 	}
+
+	public function addSinPago(){
+		$sql = "insert into  ".self::$tablename." (idcliente,fechainicio,fechafin,idgym) ";
+		$sql .= "value (\"$this->idcliente\",\"$this->fechainicio\",\"$this->fechafin\",\"$this->idgym\")";
+        return Executor::doit($sql);
+	}
+
 
 
     public function update(){

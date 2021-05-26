@@ -9,20 +9,18 @@ $persona->cedula=$_POST["cedula"];
 
 $aux=$persona->update();
 
-/*
+
 if($aux[0]==1){
 
-    core::alert("Rewgistro Exitoso");
+    core::alert("Modificacion Exitosa");
    
     core::redir("./?view=Persona/ViewPersona");
  
  }else{
  
-    core::alert("Error al Registrar");
+    core::alert("Error al Modificar");
  
     core::redir("./?view=Persona/ViewPersona");
  }
-*/
-
 
 ?>

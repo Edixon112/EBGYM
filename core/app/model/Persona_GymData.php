@@ -55,12 +55,14 @@ class Persona_GymData
 
 	}
 
-  
 
-
+	public static function getByIdPersona($id){
+		$sql = "select * from ".self::$tablename." where idpersona='".$id."'";
+		$query = Executor::doit($sql);
+		return Model::one($query[0],new Persona_GymData());
+	}
 
     
-
 	public static function getByIdUser($id){
 		$sql = "select * from ".self::$tablename." where idgym='".$id."'";
 		$query = Executor::doit($sql);

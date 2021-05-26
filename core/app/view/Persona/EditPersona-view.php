@@ -46,7 +46,7 @@
 
                     <div class="col-md-6 mb-3">
                        <label for="apellido">Numero de Cedula</label>
-                       <input type="text" class="form-control" id="cedula" name="cedula"placeholder="ingrese su cedula" value="value="<?php echo $persona->cedula ?>"" required>
+                       <input type="text" class="form-control" id="cedula" name="cedula"placeholder="ingrese su cedula" value="<?php echo $persona->cedula ?>" required>
                        <div class="valid-feedback">
                           Numero de cedula valido
                        </div>
@@ -57,7 +57,7 @@
 
                     <div class="col-md-6 mb-3">
                        <label for="apellido">telefono</label>
-                       <input  type="text" class="form-control" id="telefono" name="telefono"placeholder="ingrese su telefono" value="value="<?php echo $persona->telefono ?>"" required>
+                       <input  type="text" class="form-control" id="telefono" name="telefono"placeholder="ingrese su telefono" value="<?php echo $persona->telefono ?>" required>
                        <div class="valid-feedback">
                           Numero valido 
                        </div>
@@ -81,7 +81,7 @@
                         </div>
                      </div-->  
                 </div>   
-                <button class="btn btn-custom-primary" type="submit">Enviar</button> 
+                <button class="btn btn-custom-primary" type="submit">Editar</button> 
             </form>
         </div>
     </div>
