@@ -10,19 +10,28 @@ $asistencia = AsistenciaData::getById($_POST["id"]);
 
 $pago = new PagoData();
 
-$pago->idcliente=$asistencia->idcliente;
-$pago->fechainicio = date("Y-m-d H:i:s"); 
-$pago->idgym=$gym->id;
+$pago->idcliente = $asistencia->idcliente;
+$pago->fechainicio = date("Y-m-d H:i:s");
+$pago->idgym = $gym->id;
+$pago->estado = 1;
 
-$aux=$pago->add();
 
-            
-$asistencia->fechafin = date("Y-m-d H:i:s"); 
-$asistencia->idgym=$gym->id;
-$asistencia->idpago=$aux[1];
+$aux = $pago->add();
 
-$aux2=$asistencia->Out();
 
-core::redir("./?view=Pago/ViewPago");
+$asistencia->fechafin = date("Y-m-d H:i:s");
+$asistencia->idgym = $gym->id;
+$asistencia->idpago = $aux[1];
 
-?>
+$aux2 = $asistencia->Out();
+
+$direccion = $_POST["view"];
+
+
+if ($direccion == 'Asistencia/ViewAsistencia') {
+
+    core::redir("./?view=Asistencia/viewAsistencia");
+} else {
+
+    core::redir("./?view=Pago/ViewPago");
+}

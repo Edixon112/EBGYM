@@ -15,12 +15,24 @@ $aux=$persona->add();
 
 $personagym = new Persona_GymData();
 $personagym->idpersona=$aux[1];
+
 $lol=$aux[1];
 $personagym->idgym=$gym->id;
 $personagym->add();
 
 
-if($aux[0]==1){
+$plan= New PlanData();
+
+
+$plan->idcliente=$aux[1];
+$plan->idprecio=$_POST["precio"];
+$plan->idgym=$gym->id;
+
+$Aux2=$plan->add();
+
+
+
+if($Aux2[0]==1){
 
     core::alert("Registro Exitoso");
    

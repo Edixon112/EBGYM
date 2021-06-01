@@ -7,7 +7,6 @@ class RolData
 	public function RolData(){
 		$this->id = ""; 
         $this->nombre = "";
-        $this->idprecio = "";
 	} 
 
 

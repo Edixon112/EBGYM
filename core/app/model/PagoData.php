@@ -9,13 +9,22 @@ class PagoData
         $this->idcliente = "";
         $this->idgym ="";
         $this->fechainicio ="";
+		$this->estado=2;
 	} 
 
 
     public function add(){
-		$sql = "insert into  ".self::$tablename." (idcliente,fechainicio,idgym) ";
-		$sql .= "value (\"$this->idcliente\",\"$this->fechainicio\",\"$this->idgym\")";
+		$sql = "insert into  ".self::$tablename." (idcliente,fechainicio,idgym,estado) ";
+		$sql .= "value (\"$this->idcliente\",\"$this->fechainicio\",\"$this->idgym\",\"$this->estado\")";
         return Executor::doit($sql);
+	}
+
+
+	public function updateEstado(){
+		$sql = "update ".self::$tablename." set 
+        estado=\"$this->estado\" 
+        where id=$this->id";
+		return Executor::doit($sql);
 	}
 
 
@@ -61,9 +70,19 @@ class PagoData
 	public static function getByIdCliente($id){
 		$sql = "select * from ".self::$tablename." where idcliente='".$id."' ";
 		$query = Executor::doit($sql);
+		return Model::many($query[0],new PagoData());
+
+	}
+
+	
+	public static function getByIdCliente2($id){
+		$sql = "select * from ".self::$tablename." where idcliente='".$id."' order by id desc limit 1 ";
+		$query = Executor::doit($sql);
 		return Model::one($query[0],new PagoData());
 
 	}
+
+
 
 
 	public static function getByIdAsistencia($id){

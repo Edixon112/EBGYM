@@ -3,7 +3,7 @@
     <div class="card mg-b-20">
         <div class="card-header">
             <h4 class="card-header-title">
-            Registre sus Datos
+            Registre Los Datos Del Cliente
             </h4>
             <div class="card-header-btn">
                 <a href="#" data-toggle="collapse" class="btn card-collapse" data-target="#collapse7" aria-expanded="true"><i class="ion-ios-arrow-down"></i></a>
@@ -65,31 +65,34 @@
 
 
                     
-                    <div class="col-md-6 mb-3">
+                    <div style="display: none" class="col-md-6 mb-3">
 		                <p>selecione Rol</p>
                         <div class="input-group mb-6">
                               <select class="selectpicker form-control" data-hide-disabled="true" data-live-search="true" name="rol" id="rol" id="inputGroupSelect01" required>
                                  <option value="3"> Cliente</option>
-                                 <option value="4"> Entrenador</option>
+                                <!-- <option value="4"> Entrenador</option>-->
                                           
                               </select>
                         </div>
                      </div>
 
-                    <!--div class="col-md-6 mb-3">
-		                  <p>selecione Gym </p>
+                   
+                     <div class="col-md-6 mb-3">
+                    <label for="admin">Seleccione Tipo de membresia</label>
                         <div class="input-group mb-6">
-                           <select class="selectpicker form-control" data-hide-disabled="true" data-live-search="true" name="idgym" id="idgym" id="inputGroupSelect01" required>
-                              <option > </option>
-                              <?php 
-                                 //$idgyms=GymData::getAll();
-                                 //foreach ($idgyms as $idgym) {
-                              ?>                
-                              <option   value="<?php //echo $idgym->id;?>" ><?php //echo $idgym->nombre;?></option>
-                              <?php //} ?>               
-                           </select>
+                              <select class="selectpicker form-control" data-hide-disabled="true" data-live-search="true" name="precio" id="precio" id="inputGroupSelect01" required>
+                                 <option > </option>
+                                 <?php 
+                                    $precio=PrecioData::getAll();
+                                    foreach ($precio as $precio) {
+                                       
+                                 ?>                
+                                 <option   value="<?php echo $precio->id;?>" ><?php echo $precio->nombre;?></option>
+                                 <?php } ?>               
+                              </select>
                         </div>
-                     </div-->  
+                     </div>
+                     
                 </div>   
                 <button class="btn btn-custom-primary" type="submit">Enviar</button> 
             </form>

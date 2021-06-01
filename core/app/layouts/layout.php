@@ -94,38 +94,40 @@
 
                         <li>
                            <a href="#"><i data-feather="dollar-sign"></i>
-                           <span>Tipos de pagos y planes</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <span>Precios del GIM</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                           <li><a href="index.php?view=Precio/AddPrecio">Agregar pagos  y planes</a></li>                          
-                           <li><a href="index.php?view=Precio/viewPrecio">ver tipos de pagos</a></li>                     
+                           <li><a href="index.php?view=Precio/AddPrecio"> Agregar Precios</a></li>                          
+                           <li><a href="index.php?view=Precio/viewPrecio">ver Precios</a></li>                     
                            </ul>
                         </li>
 
                         <li> 
                            <a href="#"><i data-feather="user"></i>
-                           <span>Persona</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <span>Clientes</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                           <li><a href="index.php?view=Persona/AddPersona">Agregar Persona</a></li>
-                              <li><a href="index.php?view=Persona/ViewPersona">ver Persona</a></li>
+                           <li><a href="index.php?view=Persona/AddPersona">Registrar Clientes</a></li>
+                              <li><a href="index.php?view=Persona/ViewPersona">ver Clientes Registrados</a></li>
+                              <li><a href="index.php?view=Plan/ViewPlan">Modificar registro</a></li>
                            </ul>
                         </li>
 
-                        <li>
+                        <!-- li >
                            <a href="#"><i data-feather="calendar"></i>
                            <span>Agregar Planes</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
                            <li><a href="index.php?view=Plan/AddPlan">Agregar planes a clietes</a></li>                    
                            <li><a href="index.php?view=Plan/viewPlan">ver Planes de clietes</a></li>                  
                            </ul>
-                        </li>
+                        </li-->
 
                         <li>
                            <a href="#"><i data-feather="list"></i>
-                           <span>Asistencia</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <span>Entrada y Salida Del GIM</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                           <li><a href="index.php?view=Asistencia/AddAsistencia">Agregar Asistencia</a></li>                           
-                           <li><a href="index.php?view=Asistencia/viewAsistencia">ver Asistencia</a></li>
-                           <li><a href="index.php?view=Asistencia/viewsalida">ver salida</a></li>                  
+                           <li><a href="index.php?view=Asistencia/AddAsistencia">Agregar Entrada</a></li>                           
+                           <li><a href="index.php?view=Asistencia/viewAsistencia">Clientes Dentro del GIM</a></li>
+                           <li><a href="index.php?view=Asistencia/viewsalida">Clientes Fuera Del GIM</a></li>                  
+                           <li><a href="index.php?view=Pago/ViewPagoMora">Ver Clientes en Mora</a></li>                  
                            </ul>
                         </li>
 
@@ -143,21 +145,21 @@
                         ?>
                         <li> 
                            <a href="#"><i data-feather="calendar"></i>
-                           <span>GYM</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <span>GIM</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                           <li><a href="index.php?view=Gym/AddGym">Agregar Gym</a></li>    
-                           <li><a href="index.php?view=Gym/viewGym">ver Gym</a></li>  
+                           <li><a href="index.php?view=Gym/AddGym">Agregar GIM</a></li>    
+                           <li><a href="index.php?view=Gym/viewGym">ver GIM</a></li>  
                            </ul> 
                         </li>
                         <?php } ?>
 
-                        <li>
+                        <!--li>
                            <a href="#"><i data-feather="file"></i>
-                           <span>--</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <span>Administracion Egresos / Ingresos</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
                               <li></li>
                            </ul>
-                        </li>
+                        </li-->
                      </li>
                   </ul>
                </div>

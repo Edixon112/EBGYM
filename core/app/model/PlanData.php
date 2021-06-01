@@ -8,6 +8,7 @@ class PlanData
 		$this->id = ""; 
         $this->idcliente = "";
         $this->idprecio = "";
+		$this->idgym="";
 	} 
 
 

@@ -4,7 +4,7 @@
    <div class="card mg-b-20">
       <div class="card-header">
          <h4 class="card-header-title">
-          Tabla pago
+          Clientes en mora
          </h4>
          <div class="card-header-btn">
             <a href="#" data-toggle="collapse" class="btn card-collapse" data-target="#collapse7" aria-expanded="true"><i class="ion-ios-arrow-down"></i></a>
@@ -26,14 +26,16 @@
             <tbody>
                <?php
                   foreach($pagos as $pago):
-                  $cliente=PersonaData::getById($pago->idcliente);
+                     $cliente=PersonaData::getById($pago->idcliente);
+                     $estado=$pago->estado;
+                     if ($estado == 2){
                ?>
                <tr>
-                  <td><?php echo $pago->id; ?></td>
-                  <td><?php echo $cliente->nombre; ?></td>
-                  <td><?php echo $pago->fechainicio; ?></td>
+                  <td class="text-dark"><?php echo $pago->id; ?></td>
+                  <td class="text-danger"><?php echo $cliente->nombre; ?></td>
+                  <td class="text-danger"><?php echo $pago->fechainicio; ?></td>
                   <td class="text-Center table-actions">
-                     <div class="btn-group mg-t-5">  
+                     <div class="btn-group ">  
 
                         <form action="index.php?view=Pago/EditPago" method="post">   
                            <input type="hidden" name="id" value=<?php echo $pago->id;?>>
@@ -46,11 +48,18 @@
                            <input type="hidden" name="view" value=<?php echo $_GET["view"];?>>
                            <button class="btn btn-secondary mg-r-5 mg-b-10" onclick="return pregunta()" ><a data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fa fa-trash"></i></a></button>
                         </form>
+
+                        <form action="index.php?action=Pago/CancelarMora" method="post">   
+                           <input type="hidden" name="id" value=<?php echo $pago->id;?>>
+                           <input type="hidden" name="view" value=<?php echo $_GET["view"];?>>
+                           <button class="btn btn-success mg-r-5 mg-b-10" onclick="return pregunta()" ><a data-toggle="tooltip" data-placement="top" title="Pagar"><i class="fa fa-money"></i></a></button>
+                        </form>
                         
                      </div>
                   </td>
                </tr> 
-               <?php 
+               <?php
+               } 
                 endforeach;
                ?>
             </tbody>
@@ -58,7 +67,6 @@
                  <tr>
                     <th>ID</th>
                     <th>Cliente</th>
-               
                     <th>Fecha De Inicio</th>
                     <th>Opciones</th>
                  </tr>

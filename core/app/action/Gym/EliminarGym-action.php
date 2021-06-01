@@ -1,7 +1,5 @@
-<?php 
+<?php
 
-$gym=GymData::delById($_POST["id"]);
+$gym = GymData::delById($_POST["id"]);
 
 core::redir("./?view=Gym/ViewGym");
-
-?>
