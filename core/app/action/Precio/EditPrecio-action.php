@@ -11,13 +11,13 @@ if($aux[0]==1){
 
     core::alert("Modificacion Exitosa");
    
-    core::redir("./?view=Precio/ViewPrecio");
+    core::redir("./?view=Precio/AddPrecio");
  
  }else{
  
     core::alert("Error al Modificar");
  
-    core::redir("./?view=Precio/ViewPrecio");
+    core::redir("./?view=Precio/AddPrecio");
  }
 
 ?>

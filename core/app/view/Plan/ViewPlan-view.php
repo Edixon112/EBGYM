@@ -13,9 +13,9 @@
             <a href="#" data-toggle="remove" class="btn card-remove"><i class="ion-android-close"></i></a>
          </div>
       </div>
-      <div class="table-responsive">
-         <table id="dtHorizontalVerticalExample" class="table table-striped table-bordered table-sm " cellspacing="0" width="100%">
-            <thead class="tx-dark tx-uppercase tx-10 tx-bold">
+      <div class="card-body pd-0 collapse show">
+         <table id="dtHorizontalVerticalExample" class="table table-responsive-sm" cellspacing="0" width="100%">
+            <thead class="thead-colored thead-primary">
                <tr>
                      <th>ID</th>
                      <th>Cliente</th>
@@ -41,7 +41,7 @@
                         <form action="index.php?view=Plan/EditPlan" method="post">   
                            <input type="hidden" name="id" value=<?php echo $plan->id;?>>
                            <input type="hidden" name="view" value=<?php echo $_GET["view"];?>>
-                           <button class="btn btn-secondary mg-r-5 mg-b-10" onclick="return pregunta()" ><a data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-pencil"></i></a></button>
+                           <button class="btn btn-primary mg-r-5 mg-b-10" onclick="return pregunta()" ><a data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-pencil"></i></a></button>
                         </form>
 
                         <form action="index.php?action=Plan/EliminarPlan" method="post">   
@@ -57,7 +57,7 @@
                 endforeach;
                ?>
             </tbody>
-               <tfoot>
+               <tfoot  class="thead-colored thead-primary" >
                   <tr>
                      <th>ID</th>
                      <th>Cliente</th>

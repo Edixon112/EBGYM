@@ -96,8 +96,7 @@
                            <a href="#"><i data-feather="dollar-sign"></i>
                            <span>Precios del GIM</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                           <li><a href="index.php?view=Precio/AddPrecio"> Agregar Precios</a></li>                          
-                           <li><a href="index.php?view=Precio/viewPrecio">ver Precios</a></li>                     
+                           <li><a href="index.php?view=Precio/AddPrecio"> Agregar y Ver Precios</a></li>                                         
                            </ul>
                         </li>
 

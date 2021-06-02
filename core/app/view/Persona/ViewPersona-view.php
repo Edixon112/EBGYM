@@ -13,9 +13,9 @@
             <a href="#" data-toggle="remove" class="btn card-remove"><i class="ion-android-close"></i></a>
          </div>
       </div>
-      <div class="table-responsive">
-         <table id="dtHorizontalVerticalExample" class="table table-striped table-bordered table-sm " cellspacing="0" width="100%">
-            <thead class="tx-dark tx-uppercase tx-10 tx-bold">
+      <div class="card-body pd-0 collapse show">
+         <table id="dtHorizontalVerticalExample" class="table table-responsive-sm" cellspacing="0" width="100%">
+            <thead class="thead-colored thead-primary">
                <tr>
                   <th>ID</th>
                   <th>Nombre</th>
@@ -60,7 +60,7 @@
                 endforeach;
                ?>
             </tbody>
-               <tfoot>
+               <tfoot class="thead-colored thead-primary">
                   <tr>
                      <th>ID</th>
                      <th>Nombre</th>

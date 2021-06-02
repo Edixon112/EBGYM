@@ -24,7 +24,7 @@
                         <label for="admin">Seleccione cliente</label>
                         <div class="input-group mb-6">
                             <select class="selectpicker form-control" data-hide-disabled="true" data-live-search="true" name="idcliente" id="idcliente" id="inputGroupSelect01" required>
-                                <option> </option>
+                                
 
                                 <?php
 
