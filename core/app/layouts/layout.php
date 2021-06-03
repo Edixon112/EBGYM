@@ -129,8 +129,8 @@
                            <span>Entrada y Salida Del GIM</span><i class="accordion-icon fa fa-angle-left"></i></a>
                         <ul class="sub-menu">
                            <li><a href="index.php?view=Asistencia/AddAsistencia">Agregar Entrada</a></li>
-                           <li><a href="index.php?view=Asistencia/viewAsistencia">Clientes Dentro del GIM</a></li>
-                           <li><a href="index.php?view=Asistencia/viewsalida">Clientes Fuera Del GIM</a></li>
+                           <li><a href="index.php?view=Asistencia/ViewAsistencia">Clientes Dentro del GIM</a></li>
+                           <li><a href="index.php?view=Asistencia/ViewSalida">Clientes Fuera Del GIM</a></li>
                            <li><a href="index.php?view=Pago/ViewPagoMora">Ver Clientes en Mora</a></li>
                         </ul>
                      </li>
