@@ -130,7 +130,7 @@
                         <ul class="sub-menu">
                            <li><a href="index.php?view=Asistencia/AddAsistencia">Agregar Entrada</a></li>
                            <li><a href="index.php?view=Asistencia/ViewAsistencia">Clientes Dentro del GIM</a></li>
-                           <li><a href="index.php?view=Asistencia/ViewSalida">Clientes Fuera Del GIM</a></li>
+                           <li><a href="index.php?view=Asistencia/ViewSalidas">Clientes Fuera Del GIM</a></li>
                            <li><a href="index.php?view=Pago/ViewPagoMora">Ver Clientes en Mora</a></li>
                         </ul>
                      </li>
