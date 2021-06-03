@@ -22,7 +22,7 @@
                         <p>selecione Cliente </p>
                         <div class="input-group mb-6">
                             <select onChange="cambios(this)" class="selectpicker form-control" data-hide-disabled="true" data-live-search="true" name="idcliente" id="idcliente" id="inputGroupSelect01" required>
-                                <option> </option>
+
                                 <?php
 
                                 $personas = Persona_GymData::getAll();
@@ -61,7 +61,7 @@
                                                         if (($fecha >= $fecha_inicio) && ($fecha <= $fecha_fin)) {
 
                                 ?>
-                                                            <option id="opcion" name="opcion" value="<?php echo $persona->id; ?>"><?php echo $persona->nombre . " - " . $precio->nombre; ?></option>
+                                                            <option  value="<?php echo $persona->id; ?>"><?php echo $persona->nombre . " - " . $precio->nombre; ?></option>
 
                                                     <?php
                                                         } else {
@@ -70,7 +70,7 @@
                                                     }
                                                 } else {
                                                     ?>
-                                                    <option id="opcion" name="opcion" value="<?php echo $persona->id; ?>"><?php echo $persona->nombre . " - " . $precio->nombre;; ?></option>
+                                                    <option  value="<?php echo $persona->id; ?>"><?php echo $persona->nombre . " - " . $precio->nombre;; ?></option>
 
                                 <?php
                                                 }

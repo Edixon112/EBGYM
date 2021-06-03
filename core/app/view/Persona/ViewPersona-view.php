@@ -4,7 +4,7 @@
    <div class="card mg-b-20">
       <div class="card-header">
          <h4 class="card-header-title">
-          Tabla Admin
+          Tabla de todos los Clientes registrados
          </h4>
          <div class="card-header-btn">
             <a href="#" data-toggle="collapse" class="btn card-collapse" data-target="#collapse7" aria-expanded="true"><i class="ion-ios-arrow-down"></i></a>

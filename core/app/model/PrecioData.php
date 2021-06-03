@@ -56,6 +56,13 @@ class PrecioData
 	}
 
 
+	public static function getByIdGym($id){
+		$sql = "select * from ".self::$tablename." where idgym='".$id."' ";
+		$query = Executor::doit($sql);
+		return Model::many($query[0],new PrecioData());
+	}
+
+
     public static function delById($id){
 		$sql = "delete from ".self::$tablename." where id=$id";
 		return	Executor::doit($sql);
