@@ -96,7 +96,7 @@
         // aca capturamos los cambios realizados en un capo especifico del select llamado value en este caso 
         // la variable parametros contiene esa informacion de value
         var parametros = {
-            //sel llega desde cambios y para el valor afectado en value
+            //sel llega desde cambios y pasa el valor afectado en value
             "id": sel.value
 
         };
@@ -115,8 +115,11 @@
             data: parametros
         }).responseText;
         //la variale toma el valor de 
+        //getelementbyid toma lo que consiga con el nombre colocado en ("aqui"); entonces x es igual al div con ese nombre
         var x = document.getElementById("pagos");
+        //tabla trae un valor dede el $.jax ese valor puede ser en este caso DIARIO O MENSUAL por la logia a donde envia
         if (tabla == "DIARIO") {
+            //tomamos esa informacion y validamos si es corecta para mostrar solo los MENSUALES
 
             x.style.display = "inline";
 
@@ -126,12 +129,7 @@
         }
 
 
-
-
-
         //document.getElementById("divprueba2").innerHTML = tabla;
-
-
 
     }
 </script>

@@ -99,7 +99,7 @@
 
                      <li>
                         <a href="#"><i data-feather="dollar-sign"></i>
-                           <span>Precios del GIM</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <span>Precios del GYM</span><i class="accordion-icon fa fa-angle-left"></i></a>
                         <ul class="sub-menu">
                            <li><a href="index.php?view=Precio/AddPrecio"> Agregar y Ver Precios</a></li>
                         </ul>
@@ -126,11 +126,11 @@
 
                      <li>
                         <a href="#"><i data-feather="list"></i>
-                           <span>Entrada y Salida Del GIM</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <span>Entrada y Salida Del GYM</span><i class="accordion-icon fa fa-angle-left"></i></a>
                         <ul class="sub-menu">
                            <li><a href="index.php?view=Asistencia/AddAsistencia">Agregar Entrada</a></li>
-                           <li><a href="index.php?view=Asistencia/ViewAsistencia">Clientes Dentro del GIM</a></li>
-                           <li><a href="index.php?view=Asistencia/ViewSalidas">Clientes Fuera Del GIM</a></li>
+                           <li><a href="index.php?view=Asistencia/ViewAsistencia">Clientes Dentro del GYM</a></li>
+                           <li><a href="index.php?view=Asistencia/ViewSalidas">Clientes Fuera Del GYM</a></li>
                            <li><a href="index.php?view=Pago/ViewPagoMora">Ver Clientes en Mora</a></li>
                         </ul>
                      </li>
@@ -149,21 +149,22 @@
                      ?>
                         <li>
                            <a href="#"><i data-feather="calendar"></i>
-                              <span>GIM</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                              <span>GYM</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                              <li><a href="index.php?view=Gym/AddGym">Agregar GIM</a></li>
-                              <li><a href="index.php?view=Gym/viewGym">ver GIM</a></li>
+                              <li><a href="index.php?view=Gym/AddGym">Agregar GYM</a></li>
+                              <li><a href="index.php?view=Gym/viewGym">ver GYM</a></li>
                            </ul>
                         </li>
                      <?php } ?>
 
-                     <!--li>
+                     <li>
                            <a href="#"><i data-feather="file"></i>
-                           <span>Administracion Egresos / Ingresos</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <span>Administracion GYM</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                              <li></li>
+                              <li><a href="index.php?view=Administracion/Viewingresos">Ingresos</a></li>
                            </ul>
-                        </li-->
+                           </ul>
+                        </li>
                      </li>
                      </ul>
                   </div>

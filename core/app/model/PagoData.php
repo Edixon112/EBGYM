@@ -30,9 +30,8 @@ class PagoData
 
     public function update(){
 		$sql = "update ".self::$tablename." set 
-        idcliente=\"$this->idcliente\",  
-        idgym=\"$this->idgym\",
-        fecha=\"$this->fecha\" 
+		estado=\"$this->estado\",
+        fechainicio=\"$this->fechainicio\" 
         where id=$this->id";
 		return Executor::doit($sql);
 	}
@@ -57,6 +56,28 @@ class PagoData
 			return Model::many($query[0],new PagoData());
 		}
 	}
+
+
+	public static function getFecha($fecha1,$fecha2){
+
+		$user = UserData::getById($_SESSION["user_id"]);
+		$gym = GymData::getByIdUser($user->id);
+
+		
+		if(($user->rol==2 && $gym!=null)) {
+				
+		$sql = " select * from ".self::$tablename."  where fechainicio between '$fecha1' and '$fecha2' and idgym='".$gym->id."' ";
+		$query = Executor::doit($sql);
+		return Model::many($query[0],new AsistenciaData());
+
+		}else if ($user->rol==1) {
+
+			$sql = " select * from ".self::$tablename."  where fechainicio between '$fecha1' and '$fecha2' ";
+			$query = Executor::doit($sql);
+			return Model::many($query[0],new AsistenciaData());
+		}
+	}
+
 
 
     public static function getById($id){

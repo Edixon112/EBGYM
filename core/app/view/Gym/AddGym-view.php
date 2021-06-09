@@ -20,7 +20,7 @@
 
                     <div class="col-md-6 mb-3">
                         <label for="nombre">Nombre de gym</label>
-                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su nombre" value="" required>
+                        <input onkeyup="javascript:this.value=this.value.toUpperCase();" type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su nombre" value="" required>
                         <div class="valid-feedback">
                             Nombre valido
                         </div>

@@ -20,7 +20,7 @@
 
 					<div class="col-md-6 mb-3">
 						<label for="nombre">Nombre</label>
-						<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su nombre" value="" required>
+						<input onkeyup="javascript:this.value=this.value.toUpperCase();" type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su nombre" value="" required>
 						<div class="valid-feedback">
 							Nombre valido
 						</div>
@@ -31,7 +31,7 @@
 
 					<div class="col-md-6 mb-3">
 						<label for="apellido">Apellido</label>
-						<input type="text" class="form-control" id="apellido" name="apellido" placeholder="ingrese su apellido" value="" required>
+						<input onkeyup="javascript:this.value=this.value.toUpperCase();" type="text" class="form-control" id="apellido" name="apellido" placeholder="ingrese su apellido" value="" required>
 						<div class="valid-feedback">
 							Apellido valido
 						</div>
@@ -83,7 +83,7 @@
 							<div class="input-group-prepend">
 								<span class="input-group-text" id="basic-addon1">UserName</span>
 							</div>
-							<input type="text" class="form-control" placeholder="User" name="username" id="username" aria-label="User" aria-describedby="basic-addon1" required>
+							<input onkeyup="javascript:this.value=this.value.toUpperCase();" type="text" class="form-control" placeholder="User" name="username" id="username" aria-label="User" aria-describedby="basic-addon1" required>
 						</div>
 
 					</div>

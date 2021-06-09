@@ -21,7 +21,7 @@
 
                <div class="col-md-6 mb-3">
                   <label for="nombre">Nombre</label>
-                  <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su nombre" value="" required>
+                  <input onkeyup="javascript:this.value=this.value.toUpperCase();" type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su nombre" value="" required>
                   <div class="valid-feedback">
                      Nombre valido
                   </div>
@@ -32,7 +32,7 @@
 
                <div class="col-md-6 mb-3">
                   <label for="apellido">Apellido</label>
-                  <input type="text" class="form-control" id="apellido" name="apellido" placeholder="ingrese su apellido" value="" required>
+                  <input onkeyup="javascript:this.value=this.value.toUpperCase();" type="text" class="form-control" id="apellido" name="apellido" placeholder="ingrese su apellido" value="" required>
                   <div class="valid-feedback">
                      Apellido valido
                   </div>
@@ -43,7 +43,7 @@
 
                <div class="col-md-6 mb-3">
                   <label for="apellido">Numero de Cedula</label>
-                  <input type="text" class="form-control" id="cedula" name="cedula" placeholder="ingrese su cedula" value="" required>
+                  <input  type="text" class="form-control" id="cedula" name="cedula" placeholder="ingrese su cedula" value="" required>
                   <div class="valid-feedback">
                      Numero de cedula valido
                   </div>
@@ -54,7 +54,7 @@
 
                <div class="col-md-6 mb-3">
                   <label for="apellido">telefono</label>
-                  <input type="text" class="form-control" id="telefono" name="telefono" placeholder="ingrese su telefono" value="" required>
+                  <input  type="text" class="form-control" id="telefono" name="telefono" placeholder="ingrese su telefono" value="" required>
                   <div class="valid-feedback">
                      Numero valido
                   </div>

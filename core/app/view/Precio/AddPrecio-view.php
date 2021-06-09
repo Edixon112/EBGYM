@@ -23,15 +23,20 @@
                   <div class="input-group mb-6">
                      <select class="selectpicker form-control" data-hide-disabled="true" data-live-search="true" name="nombre" id="nombre" id="inputGroupSelect01" required>
 
+                        <option value="DIARIO_5MIL">DIARIO_5MIL</option>
+                        <option value="DIARIO_3MIL">DIARIO_3MIL</option>
                         <option value="DIARIO">DIARIO</option>
-                        <option value="MENSUAL">MENSUAL</option>
+                        <option value="MENSUAL">MENSUAL </option>
+                        <option value="MENSUAL">MENSUAL_40MIL </option>
+                        <option value="MENSUAL">MENSUAL_35MIL </option>
+                        <option value="15_DIAS">15_DIAS </option>
 
                      </select>
                   </div>
                </div>
 
                <div class="col-md-6 mb-3">
-                  <label for="precio">precio</label>
+                  <label for="precio">Precio</label>
                   <input type="text" class="form-control" id="precio" name="precio" placeholder="Ingrese Precio" value="" required>
                   <div class="valid-feedback">
                      Monto valido

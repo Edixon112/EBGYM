@@ -72,6 +72,7 @@ class AsistenciaData
 	}
 
 
+
     public static function getById($id){
 		$sql = "select * from ".self::$tablename." where id='".$id."'";
 		$query = Executor::doit($sql);

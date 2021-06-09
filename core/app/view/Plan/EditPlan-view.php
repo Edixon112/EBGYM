@@ -24,8 +24,8 @@
 				    <input type="text" style="display: none" id="id" name="id" value="<?php echo $plan->id;?>" readonly="true"  required>
 
                   <div class="col-md-6 mb-3">
-                    <label for="apellido">nombre</label>
-                    <input  type="text" class="form-control" id="idnombre" name="idnombre" placeholder="ingrese su nombre" value="<?php echo $persona->nombre ?>" readonly required>
+                    <label for="">Nombre</label>
+                    <input onkeyup="javascript:this.value=this.value.toUpperCase();" type="text" class="form-control" id="idnombre" name="idnombre" placeholder="ingrese su nombre" value="<?php echo $persona->nombre ?>" readonly required>
                     <div class="valid-feedback">
                        nombre valido 
                     </div>
@@ -35,7 +35,7 @@
                   </div>
                  
                   <div class="col-md-6 mb-3">
-		               <label>selecione nuevo tipo de membrecia </label>
+		               <label> Selecione nuevo tipo de membrecia </label>
                      <div class="input-group mb-6 ">
                         <select class="selectpicker form-control" data-hide-disabled="true" data-live-search="true" name="idprecio" id="idprecio" id="inputGroupSelect01" required>
                            <option > </option>

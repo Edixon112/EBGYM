@@ -7,7 +7,7 @@ date_default_timezone_set("America/Bogota");
 $membresia = PlanData::getByIdCliente($_POST["idcliente"]);
 $precio = PrecioData::getById($membresia->idprecio);
 
-if ($precio->nombre == "DIARIO") {
+if ($precio->nombre == "DIARIO" || $precio->nombre == "DIARIO_3MIL" || $precio->nombre == "DIARIO_5MIL" ) {
 
 
     if ($_POST["pago"] == "si") {

@@ -40,7 +40,8 @@
                                     $membresia = PlanData::getByIdCliente($cliente->id);
                                     $precio = PrecioData::getById($membresia->idprecio);
 
-                                    if ($precio->nombre != "DIARIO") {
+                                    if ($precio->nombre != "DIARIO" XOR $precio->nombre != "DIARIO_3MIL" XOR $precio->nombre != "DIARIO_5MIL" ) {
+
                                         $ahora = date("Y-m-d H:i:s");
                                         $fechaPAGO = $pago->fechainicio;
                                         $unmesdespues = date("d-m-Y", strtotime($fechaPAGO . "+ 1 month"));
@@ -88,7 +89,7 @@
 
                     <div class="col-md-5 mb-2 ">
                         <div class="col-md-5 mb-2">
-                            <label for="">Colocar Fecha Manual </label>
+                            <label for="">Colocar Fecha Manual <a class="text-danger"> Maximo un mes antes </a> </label>
                         </div>
 
                         <div class="col-md-5">
