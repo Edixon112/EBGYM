@@ -2,6 +2,6 @@
 
 $pago=PagoData::delById($_POST["id"]);
 
-core::redir("./?view=Pago/ViewPago");
+core::redir("./?view=Plan/ViewPlan");
 
 ?>

@@ -10,12 +10,14 @@ class PagoData
         $this->idgym ="";
         $this->fechainicio ="";
 		$this->estado=2;
+		$this->inscripcion=1;
+		$this->abono="";
 	} 
 
 
     public function add(){
-		$sql = "insert into  ".self::$tablename." (idcliente,fechainicio,idgym,estado) ";
-		$sql .= "value (\"$this->idcliente\",\"$this->fechainicio\",\"$this->idgym\",\"$this->estado\")";
+		$sql = "insert into  ".self::$tablename." (idcliente,fechainicio,idgym,estado,abono) ";
+		$sql .= "value (\"$this->idcliente\",\"$this->fechainicio\",\"$this->idgym\",\"$this->estado\",\"$this->abono\")";
         return Executor::doit($sql);
 	}
 
@@ -32,6 +34,13 @@ class PagoData
 		$sql = "update ".self::$tablename." set 
 		estado=\"$this->estado\",
         fechainicio=\"$this->fechainicio\" 
+        where id=$this->id";
+		return Executor::doit($sql);
+	}
+
+	public function updateInscription(){
+		$sql = "update ".self::$tablename." set 
+		estado=\"$this->inscripcion\"
         where id=$this->id";
 		return Executor::doit($sql);
 	}

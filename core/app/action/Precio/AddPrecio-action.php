@@ -16,10 +16,10 @@ if ($aux[0] == 1) {
 
     core::alert("Precio Registrado");
 
-    core::redir("./?view=Precio/addPrecio");
+    core::redir("./?view=Precio/AddPrecio");
 } else {
 
     core::alert("Error al Registrar Precio");
 
-    core::redir("./?view=Precio/addPrecio");
+    core::redir("./?view=Precio/AddPrecio");
 }

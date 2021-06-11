@@ -40,6 +40,16 @@ class AsistenciaData
 	}
 
 
+
+	public function updateupdateFechainicio(){
+		$sql = "update ".self::$tablename." set 
+        fechainicio=\"$this->fechainicio\"
+        where id=$this->id";
+		return Executor::doit($sql);
+	}
+
+
+
 	
     public function Out(){
 		$sql = "update ".self::$tablename." set

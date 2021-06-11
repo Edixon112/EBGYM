@@ -98,7 +98,6 @@
                                 <option value="no"> no </option>
                             </select>
                         </div>
-
                     </div>
 
 
@@ -114,6 +113,33 @@
                         </div>
                     </div>
 
+
+                    <div class="col-md-5 mb-2 ">
+                        <div class="col-md-5 mb-2">
+                            <label for=""> <a class="text-danger"> Colocar Abono </a> </label>
+                        </div>
+
+                        <div class="col-md-5">
+                            <select onChange="cambios2(this)" class="selectpicker form-control" data-hide-disabled="true" data-live-search="true" name="validacionabono" id="validacionabono" id="inputGroupSelect01" required>
+                                <option value="si"> si </option>
+                                <option value="no"> no </option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6 mb-4 " id="abono" name="abono" >
+                        <label for="">Ingrese Abono</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="abono" name="abono" placeholder="" value="" required>
+                            <div class="valid-feedback">
+                                abono valido
+                            </div>
+                            <div class="invalid-feedback">
+                                Por favor ingrese un abono
+                            </div>
+                        </div>
+                    </div>
                     
 
                 </div>
@@ -126,6 +152,34 @@
 
 
 <script>
+
+function cambios2(sel) {
+        /*
+                var tabla = $.ajax({
+                    url: './?action=Asistencia/Validacion',
+                    type: 'post',
+                    dataType: 'text',
+                    async: false,
+                    data: parametros
+                }).responseText;
+        */
+
+        var x = document.getElementById("abono");
+
+        if (sel.value == "si") {
+
+            x.style.display = "inline";
+
+        } else {
+
+            x.style.display = "none";
+
+        }
+        //document.getElementById("divprueba2").innerHTML = tabla;
+    }
+
+
+
     function cambios(sel) {
         /*
                 var tabla = $.ajax({
@@ -150,4 +204,5 @@
         }
         //document.getElementById("divprueba2").innerHTML = tabla;
     }
+
 </script>
