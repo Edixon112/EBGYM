@@ -72,14 +72,14 @@
 
                         <div class="col-md-2 mg-t-3 mg-lg-t-0">
                             <div class="custom-control custom-radio">
-                                <input onChange="cambios2(this)" name="pago" type="radio" value="1">
+                                <input onChange="cambios2(this)" name="pago" checked="" type="radio" value="1">
                                 <label>Si</label>
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="custom-control custom-radio">
-                                <input onChange="cambios2(this)" name="pago" checked="" type="radio" value="2">
+                                <input onChange="cambios2(this)" name="pago"  type="radio" value="2">
                                 <label>No</label>
                             </div>
                         </div>
@@ -114,7 +114,7 @@
 
 
                    
-                    <div class="col-md-6 mb-4 " id="abono" name="abono" >
+                    <div class="col-md-6 mb-4 " id="abono" name="abono" style="display: none" >
                         <label for="">Ingrese Abono</label>
                         <div class="input-group">
                             <input type="text" class="form-control" id="abono" name="abono" placeholder="" value="" >
