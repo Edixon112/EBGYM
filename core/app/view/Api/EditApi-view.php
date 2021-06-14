@@ -62,11 +62,9 @@
                                 <?php
                                 $gym = GymData::getAll();
                                 foreach ($gym as $gym) {
-                                    $api = ApiData::getById($gym->id);
-                                    if ($api == null) {
                                 ?>
-                                        <option value="<?php echo $gym->id; ?>"><?php echo "$gym->nombre"; ?></option>
-                                <?php }
+                                    <option value="<?php echo $gym->id; ?>"><?php echo "$gym->nombre"; ?></option>
+                                <?php
                                 } ?>
                             </select>
                         </div>
