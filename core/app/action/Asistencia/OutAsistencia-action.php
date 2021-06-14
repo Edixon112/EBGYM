@@ -17,10 +17,10 @@ $aux = $asistencia->Out();
 if ($aux[0] == 1) {
 
 
-    core::redir("./?view=Asistencia/viewAsistencia");
+    core::redir("./?view=Asistencia/ViewAsistencia");
 } else {
 
     core::alert("Error al Registrar salida");
 
-    core::redir("./?view=Asistencia/viewAsistencia");
+    core::redir("./?view=Asistencia/ViewAsistencia");
 }
