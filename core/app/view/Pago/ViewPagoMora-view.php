@@ -37,9 +37,9 @@
                   ?>
                         <tr>
                            <td class="text-dark"><?php echo $pago->id; ?></td>
-                           <td class="text-danger"><?php echo $cliente->nombre; ?></td>
-                           <td class="text-danger"><?php echo $pago->fechainicio; ?></td>
-                           <td class="text-danger"><?php echo $pago->abono; ?></td>
+                           <td class="text-dark"><?php echo $cliente->nombre; ?></td>
+                           <td class="text-dark"><?php echo $pago->fechainicio; ?></td>
+                           <td class="text-dark"><?php echo $pago->abono; ?></td>
                            <td class="text-danger"><?php echo $precio->precio - $pago->abono; ?></td>
 
                            <td class="text-Center table-actions">
