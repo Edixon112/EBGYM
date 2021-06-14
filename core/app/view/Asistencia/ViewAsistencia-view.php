@@ -85,7 +85,7 @@
 
                                        <?php } else { ?>
 
-                                          <form action="index.php?action=Asistencia/EditAsistencia" method="post">
+                                          <form action="index.php?view=Asistencia/EditAsistencia" method="post">
                                              <input type="hidden" name="id" value="<?php echo $asistencia->id;  ?>">
                                              <input type="hidden" name="view" value=<?php echo $_GET["view"]; ?>>
                                              <button class="dropdown-item"><i class="fa fa fa-sign-out"></i> pago</button>
