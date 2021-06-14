@@ -40,7 +40,7 @@
                                     $membresia = PlanData::getByIdCliente($cliente->id);
                                     $precio = PrecioData::getById($membresia->idprecio);
 
-                                    if ($precio->nombre != "DIARIO" XOR $precio->nombre != "DIARIO_3MIL" XOR $precio->nombre != "DIARIO_5MIL" ) {
+                                    if ($precio->nombre != "DIARIO" ) {
 
                                         $ahora = date("Y-m-d H:i:s");
                                         $fechaPAGO = $pago->fechainicio;
