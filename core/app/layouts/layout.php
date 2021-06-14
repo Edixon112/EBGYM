@@ -176,7 +176,7 @@
                         <ul class="sub-menu">
                            <li><a href="index.php?view=Administracion/ViewIngresos">Ingresos</a></li>
                         </ul -->
-                        
+
                      </ul>
                      </li>
                      </li>
@@ -543,14 +543,16 @@
       <script>
          function eliminar1() {
 
-            var x = document.getElementById("eliminar");
 
-            if (!confirm('Realmente desea eliminar?')) {
-               event.preventDefault();
-               x.style.display = "inline";
+            if (confirm('¿Está Seguro? ')) {
+
+               return true;
+
             } else {
-               x.style.display = "none";
+               
+               return false;
             }
+
          }
       </script>
 
