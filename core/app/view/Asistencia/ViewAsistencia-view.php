@@ -59,7 +59,7 @@
                               <td class="text-Center table-actions">
                                  <div class="btn-group mg-t-5">
 
-                                    <form action="index.php?view=Asistencia/EditAsistencias" method="post">
+                                    <form action="index.php?view=Asistencia/EditAsistencia" method="post">
                                        <input type="hidden" name="id" value=<?php echo $asistencia->id; ?>>
                                        <input type="hidden" name="view" value=<?php echo $_GET["view"]; ?>>
                                        <button class="btn btn-secondary mg-r-5 mg-b-10" onclick="return pregunta()"><a data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-pencil"></i></a></button>
