@@ -94,13 +94,13 @@
                         <div class="col-md-5">
                             <select onChange="cambios(this)" class="selectpicker form-control" data-hide-disabled="true" data-live-search="true" name="validacion" id="validacion" id="inputGroupSelect01" required>
                                 <option value="si"> si </option>
-                                <option value="no"> no </option>
+                                <option value="no" selected > no </option>
                             </select>
                         </div>
                     </div>
 
 
-                    <div class="col-md-4 mb-4" id=fecha name=fecha>
+                    <div class="col-md-4 mb-4" id=fecha name=fecha style="display: none">
                         <label for="cc">Ingrese Fecha Manual </label>
                         <div class="input-group">
                             <div class="input-group-prepend" class="accordion-icon fa fa-calendar-o">
