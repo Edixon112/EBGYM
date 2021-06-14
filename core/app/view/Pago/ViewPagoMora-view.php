@@ -30,8 +30,8 @@
                   <?php
                   foreach ($pagos as $pago) :
                      $cliente = PersonaData::getById($pago->idcliente);
-                     $plan=PlanData::getByIdCliente($cliente->id);
-                     $precio=PrecioData::getbyId($plan->idprecio);
+                     $plan = PlanData::getByIdCliente($cliente->id);
+                     $precio = PrecioData::getbyId($plan->idprecio);
                      $estado = $pago->estado;
                      if ($estado == 2) {
                   ?>
@@ -66,7 +66,7 @@
                                  <form action="index.php?action=Pago/Abono" method="post">
                                     <input type="hidden" name="id" value=<?php echo $pago->id; ?>>
                                     <input type="hidden" name="view" value=<?php echo $_GET["view"]; ?>>
-                                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#m_modal_4"><a data-toggle="tooltip" data-placement="top" title="Pagar"><i class="fa fa-money"></i></a></button>
+                                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#m_modal_4"><a data-toggle="tooltip" data-placement="top" title="Abonar"><i class="fa fa-money"></i></a></button>
 
 
                                     <!--   ---------------------------            MODAL             ----------------------     -->
@@ -80,12 +80,6 @@
                                                 </button>
                                              </div>
                                              <div class="modal-body">
-
-
-
-
-
-
 
                                                 <!--   ---------------------------                         ----------------------     -->
                                                 <div class="col-md-6 mb-4 " id="abono" name="abono">
@@ -103,8 +97,6 @@
 
 
                                                 <!--   ---------------------------                         ----------------------     -->
-
-
 
                                              </div>
                                              <div class="modal-footer">
@@ -142,9 +134,3 @@
    </div>
 </div>
 <!--/ Scrollable Table End -->
-
-<!--   ---------------------------                         ----------------------     -->
-<div class="col-md-6 mb-3">
-   <p>Añadir mas</p>
-   <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#m_modal_4">Añadir mas Trabajos</button>
-</div>

@@ -72,14 +72,14 @@
 
                         <div class="col-md-2 mg-t-3 mg-lg-t-0">
                             <div class="custom-control custom-radio">
-                                <input name="pago" type="radio" value="1">
+                                <input onChange="cambios2(this)" name="pago" type="radio" value="1">
                                 <label>Si</label>
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="custom-control custom-radio">
-                                <input name="pago" checked="" type="radio" value="2">
+                                <input onChange="cambios2(this)" name="pago" checked="" type="radio" value="2">
                                 <label>No</label>
                             </div>
                         </div>
@@ -140,7 +140,30 @@
 
 <script>
 
+function cambios2(sel) {
+        /*
+                var tabla = $.ajax({
+                    url: './?action=Asistencia/Validacion',
+                    type: 'post',
+                    dataType: 'text',
+                    async: false,
+                    data: parametros
+                }).responseText;
+        */
 
+        var x = document.getElementById("abono");
+
+        if (sel.value == "2") {
+
+            x.style.display = "inline";
+
+        } else {
+
+            x.style.display = "none";
+
+        }
+        //document.getElementById("divprueba2").innerHTML = tabla;
+    }
 
     function cambios(sel) {
         /*
