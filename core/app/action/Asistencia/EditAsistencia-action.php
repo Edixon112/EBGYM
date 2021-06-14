@@ -19,4 +19,5 @@ if ($aux[0] == 1) {
 
    // core::redir("./?view=Asistencia/ViewAsistencia");
 }*/
+
 ?>

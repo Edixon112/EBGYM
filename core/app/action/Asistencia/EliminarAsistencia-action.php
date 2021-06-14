@@ -2,4 +2,11 @@
 
 $asistencia = AsistenciaData::delById($_POST["id"]);
 
-core::redir("./?view=Asistencia/ViewAsistencia");
+if ($direccion == 'Asistencia/ViewAsistencia') {
+
+    core::redir("./?view=Asistencia/ViewAsistencia");
+} else {
+
+    core::redir("./?view=Asistencia/ViewSalidas");
+}
+
