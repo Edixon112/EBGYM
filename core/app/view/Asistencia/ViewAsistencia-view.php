@@ -65,10 +65,10 @@
                                        <button class="btn btn-secondary mg-r-5 mg-b-10" onclick="return pregunta()"><a data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-pencil"></i></a></button>
                                     </form>
 
-                                    <form action="index.php?action=Asistencia/EliminarAsistencia" method="post">
+                                    <form action="index.php?action=Asistencia/EliminarAsistencia" method="post" id="eliminar">
                                        <input type="hidden" name="id" value=<?php echo $asistencia->id; ?>>
                                        <input type="hidden" name="view" value=<?php echo $_GET["view"]; ?>>
-                                       <button class="btn btn-secondary mg-r-5 mg-b-10" onclick="return pregunta()"><a data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fa fa-trash"></i></a></button>
+                                       <button class="btn btn-secondary mg-r-5 mg-b-10" onclick="eliminar1()"> <a data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fa fa-trash"></i></a></button>
                                     </form>
 
                                     <span class="btn btn-secondary dropdown-toggle mg-r-5 mg-b-10" data-toggle="dropdown"></span>

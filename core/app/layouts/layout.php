@@ -89,10 +89,10 @@
                            ?>
                         <li>
                            <a href="#"><i data-feather="user-check"></i>
-                              <span>user</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                              <span>User</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
                               <li><a href="index.php?view=User/AddUser">Agregar User</a></li>
-                              <li><a href="index.php?view=User/ViewUser">ver User</a></li>
+                              <li><a href="index.php?view=User/ViewUser">Ver User</a></li>
                            </ul>
                         </li>
                      <?php } ?>
@@ -110,7 +110,7 @@
                            <span>Clientes</span><i class="accordion-icon fa fa-angle-left"></i></a>
                         <ul class="sub-menu">
                            <li><a href="index.php?view=Persona/AddPersona">Registrar Clientes</a></li>
-                           <li><a href="index.php?view=Persona/ViewPersona">ver Clientes Registrados</a></li>
+                           <li><a href="index.php?view=Persona/ViewPersona">Ver Clientes Registrados</a></li>
                            <li><a href="index.php?view=Plan/ViewPlan">Modificar registro</a></li>
                         </ul>
                      </li>
@@ -139,7 +139,7 @@
                            <span>Pago mensual</span><i class="accordion-icon fa fa-angle-left"></i></a>
                         <ul class="sub-menu">
                            <li><a href="index.php?view=Pago/AddPago">Agregar Pago mensual</a></li>
-                           <li><a href="index.php?view=Pago/ViewPago">ver Pago mensual</a></li>
+                           <li><a href="index.php?view=Pago/ViewPago">Ver Pago mensual</a></li>
                            <li><a href="index.php?view=Pago/ViewPagoMora">Ver Clientes en Mora</a></li>
                         </ul>
                      </li>
@@ -152,19 +152,19 @@
                               <span>GYM</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
                               <li><a href="index.php?view=Gym/AddGym">Agregar GYM</a></li>
-                              <li><a href="index.php?view=Gym/viewGym">ver GYM</a></li>
+                              <li><a href="index.php?view=Gym/viewGym">Ver GYM</a></li>
                            </ul>
                         </li>
                      <?php } ?>
 
-                     <li>
-                           <a href="#"><i data-feather="file"></i>
+                     <!-- li>
+                        <a href="#"><i data-feather="file"></i>
                            <span>Administracion GYM</span><i class="accordion-icon fa fa-angle-left"></i></a>
-                           <ul class="sub-menu">
-                              <li><a href="index.php?view=Administracion/Viewingresos">Ingresos</a></li>
-                           </ul>
-                           </ul>
-                        </li>
+                        <ul class="sub-menu">
+                           <li><a href="index.php?view=Administracion/ViewIngresos">Ingresos</a></li>
+                        </ul -->
+                     </ul>
+                     </li>
                      </li>
                      </ul>
                   </div>
@@ -237,7 +237,7 @@
                            <li class="list-inline-item dropdown">
                               <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                  <span class="select-profile">Hola <?php $persona = PersonaData::getById($user->idpersona);
-                                                                  echo $persona->nombre . " " . $persona->apellido; ?></span>
+                                                                     echo $persona->nombre . " " . $persona->apellido; ?></span>
                                  <img src="assets/images/avatar/avatar1.png" class="img-fluid wd-35 ht-35 rounded-circle" alt="">
                               </a>
                               <div class="dropdown-menu dropdown-menu-right dropdown-profile shadow-2">
@@ -524,6 +524,20 @@
             });
             $('.dataTables_length').addClass('bs-select');
          });
+      </script>
+
+      <script>
+         function eliminar1() {
+
+            var x = document.getElementById("eliminar");
+
+            if (!confirm('Realmente desea eliminar?')) {
+               event.preventDefault();
+               x.style.display = "inline";
+            } else {
+               x.style.display = "none";
+            }
+         }
       </script>
 
    </body>
