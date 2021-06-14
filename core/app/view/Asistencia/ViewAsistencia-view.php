@@ -76,21 +76,18 @@
                                     <div class="dropdown-menu dropdown-menu-right">
 
                                        <?php if ($pago) { ?>
-
                                           <form action="index.php?action=Asistencia/OutAsistencia" method="post">
                                              <input type="hidden" name="id" value="<?php echo $asistencia->id;  ?>">
                                              <input type="hidden" name="view" value=<?php echo $_GET["view"]; ?>>
                                              <button class="dropdown-item"><i class="fa fa fa-sign-out"></i> SALIDA</button>
                                           </form>
-
                                        <?php } else { ?>
 
-                                          <form action="index.php?view=Asistencia/EditAsistencia" method="post">
+                                          <form action="index.php?action=Pago/AddPago" method="post">
                                              <input type="hidden" name="id" value="<?php echo $asistencia->id;  ?>">
                                              <input type="hidden" name="view" value=<?php echo $_GET["view"]; ?>>
-                                             <button class="dropdown-item"><i class="fa fa fa-sign-out"></i> pago</button>
+                                             <button class="dropdown-item"><i class="fa fa-money"></i> PAGO</button>
                                           </form>
-                  
                                        <?php } ?>
                                     </div>
                                  </div>

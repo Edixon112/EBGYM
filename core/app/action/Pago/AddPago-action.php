@@ -30,7 +30,7 @@ $direccion = $_POST["view"];
 
 if ($direccion == 'Asistencia/ViewAsistencia') {
 
-    core::redir("./?view=Asistencia/viewAsistencia");
+    core::redir("./?view=Asistencia/VewAsistencia");
 } else {
 
     core::redir("./?view=Pago/ViewPago");
