@@ -152,7 +152,20 @@
                               <span>GYM</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
                               <li><a href="index.php?view=Gym/AddGym">Agregar GYM</a></li>
-                              <li><a href="index.php?view=Gym/viewGym">Ver GYM</a></li>
+                              <li><a href="index.php?view=Gym/ViewGym">Ver GYM</a></li>
+                           </ul>
+                        </li>
+                     <?php } ?>
+
+                     <?php $user = UserData::getById($_SESSION["user_id"]);
+                     if ($user->rol == 1) {
+                     ?>
+                        <li>
+                           <a href="#"><i data-feather="calendar"></i>
+                              <span>API</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <ul class="sub-menu">
+                              <li><a href="index.php?view=Api/AddApi">Agregar API</a></li>
+                              <li><a href="index.php?view=Api/ViewApi">Ver API</a></li>
                            </ul>
                         </li>
                      <?php } ?>
