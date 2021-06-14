@@ -23,12 +23,8 @@
                   <div class="input-group mb-6">
                      <select class="selectpicker form-control" data-hide-disabled="true" data-live-search="true" name="nombre" id="nombre" id="inputGroupSelect01" required>
 
-                        <option value="DIARIO_5MIL">DIARIO_5MIL</option>
-                        <option value="DIARIO_3MIL">DIARIO_3MIL</option>
                         <option value="DIARIO">DIARIO</option>
                         <option value="MENSUAL">MENSUAL </option>
-                        <option value="MENSUAL_40MIL">MENSUAL_40MIL </option>
-                        <option value="MENSUAL_35MIL">MENSUAL_35MIL </option>
                         <option value="15_DIAS">15_DIAS </option>
 
                      </select>

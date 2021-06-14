@@ -40,7 +40,7 @@
                                     $membresia = PlanData::getByIdCliente($cliente->id);
                                     $precio = PrecioData::getById($membresia->idprecio);
 
-                                    if ($precio->nombre != "DIARIO" XOR $precio->nombre != "DIARIO_3MIL" XOR $precio->nombre != "DIARIO_5MIL" ) {
+                                    if ($precio->nombre != "DIARIO" ) {
 
                                         $ahora = date("Y-m-d H:i:s");
                                         $fechaPAGO = $pago->fechainicio;
@@ -72,14 +72,14 @@
 
                         <div class="col-md-2 mg-t-3 mg-lg-t-0">
                             <div class="custom-control custom-radio">
-                                <input onChange="cambios2(this)" name="pago" type="radio" value="1">
+                                <input onChange="cambios2(this)" name="pago" checked="" type="radio" value="1">
                                 <label>Si</label>
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="custom-control custom-radio">
-                                <input onChange="cambios2(this)" name="pago" checked="" type="radio" value="2">
+                                <input onChange="cambios2(this)" name="pago"  type="radio" value="2">
                                 <label>No</label>
                             </div>
                         </div>
@@ -94,13 +94,13 @@
                         <div class="col-md-5">
                             <select onChange="cambios(this)" class="selectpicker form-control" data-hide-disabled="true" data-live-search="true" name="validacion" id="validacion" id="inputGroupSelect01" required>
                                 <option value="si"> si </option>
-                                <option value="no"> no </option>
+                                <option value="no" selected > no </option>
                             </select>
                         </div>
                     </div>
 
 
-                    <div class="col-md-4 mb-4" id=fecha name=fecha>
+                    <div class="col-md-4 mb-4" id=fecha name=fecha style="display: none">
                         <label for="cc">Ingrese Fecha Manual </label>
                         <div class="input-group">
                             <div class="input-group-prepend" class="accordion-icon fa fa-calendar-o">
@@ -114,7 +114,7 @@
 
 
                    
-                    <div class="col-md-6 mb-4 " id="abono" name="abono" >
+                    <div class="col-md-6 mb-4 " id="abono" name="abono" style="display: none" >
                         <label for="">Ingrese Abono</label>
                         <div class="input-group">
                             <input type="text" class="form-control" id="abono" name="abono" placeholder="" value="" >

@@ -87,7 +87,7 @@
                         foreach ($precio as $precio) {
 
                         ?>
-                           <option value="<?php echo $precio->id; ?>"><?php echo $precio->nombre; ?></option>
+                           <option value="<?php echo $precio->id; ?>"><?php echo $precio->nombre." -> ".$precio->precio; ?></option>
                         <?php } ?>
                      </select>
                   </div>

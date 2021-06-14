@@ -170,12 +170,12 @@
                         </li>
                      <?php } ?>
 
-                     <li>
+                     <!-- li>
                         <a href="#"><i data-feather="file"></i>
                            <span>Administracion GYM</span><i class="accordion-icon fa fa-angle-left"></i></a>
                         <ul class="sub-menu">
                            <li><a href="index.php?view=Administracion/ViewIngresos">Ingresos</a></li>
-                        </ul >
+                        </ul -->
                         
                      </ul>
                      </li>
