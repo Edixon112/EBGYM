@@ -83,7 +83,6 @@
                                 <label>No</label>
                             </div>
                         </div>
-
                     </div>
 
 
@@ -141,15 +140,6 @@
 <script>
 
 function cambios2(sel) {
-        /*
-                var tabla = $.ajax({
-                    url: './?action=Asistencia/Validacion',
-                    type: 'post',
-                    dataType: 'text',
-                    async: false,
-                    data: parametros
-                }).responseText;
-        */
 
         var x = document.getElementById("abono");
 

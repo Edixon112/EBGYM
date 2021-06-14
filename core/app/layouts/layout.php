@@ -131,7 +131,6 @@
                            <li><a href="index.php?view=Asistencia/AddAsistencia">Agregar Entrada</a></li>
                            <li><a href="index.php?view=Asistencia/ViewAsistencia">Clientes Dentro del GYM</a></li>
                            <li><a href="index.php?view=Asistencia/ViewSalidas">Clientes Fuera Del GYM</a></li>
-                           <li><a href="index.php?view=Pago/ViewPagoMora">Ver Clientes en Mora</a></li>
                         </ul>
                      </li>
 
@@ -141,6 +140,7 @@
                         <ul class="sub-menu">
                            <li><a href="index.php?view=Pago/AddPago">Agregar Pago mensual</a></li>
                            <li><a href="index.php?view=Pago/ViewPago">ver Pago mensual</a></li>
+                           <li><a href="index.php?view=Pago/ViewPagoMora">Ver Clientes en Mora</a></li>
                         </ul>
                      </li>
 
