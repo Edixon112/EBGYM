@@ -21,6 +21,8 @@
                      <th>ID</th>
                      <th>Cliente</th>
                      <th>Fecha De Inicio</th>
+                     <th>Abono</th>
+                     <th>Debe</th>
                      <th>Opciones</th>
                   </tr>
                </thead>
@@ -28,6 +30,8 @@
                   <?php
                   foreach ($pagos as $pago) :
                      $cliente = PersonaData::getById($pago->idcliente);
+                     $plan=PlanData::getByIdCliente($cliente->id);
+                     $precio=PrecioData::getbyId($plan->idprecio);
                      $estado = $pago->estado;
                      if ($estado == 2) {
                   ?>
@@ -35,6 +39,9 @@
                            <td class="text-dark"><?php echo $pago->id; ?></td>
                            <td class="text-danger"><?php echo $cliente->nombre; ?></td>
                            <td class="text-danger"><?php echo $pago->fechainicio; ?></td>
+                           <td class="text-danger"><?php echo $pago->abono; ?></td>
+                           <td class="text-danger"><?php echo $precio->precio - $pago->abono; ?></td>
+
                            <td class="text-Center table-actions">
                               <div class="btn-group ">
 
@@ -56,6 +63,61 @@
                                     <button class="btn btn-success mg-r-5 mg-b-10" onclick="return pregunta()"><a data-toggle="tooltip" data-placement="top" title="Pagar"><i class="fa fa-money"></i></a></button>
                                  </form>
 
+                                 <form action="index.php?action=Pago/Abono" method="post">
+                                    <input type="hidden" name="id" value=<?php echo $pago->id; ?>>
+                                    <input type="hidden" name="view" value=<?php echo $_GET["view"]; ?>>
+                                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#m_modal_4"><a data-toggle="tooltip" data-placement="top" title="Pagar"><i class="fa fa-money"></i></a></button>
+
+
+                                    <!--   ---------------------------            MODAL             ----------------------     -->
+                                    <div class="modal" id="m_modal_4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel_4" aria-hidden="true">
+                                       <div class="modal-dialog modal-lg" role="document">
+                                          <div class="modal-content">
+                                             <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel_4">Añadir Abono</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                   <span aria-hidden="true"><i class="ion-ios-close-empty"></i></span>
+                                                </button>
+                                             </div>
+                                             <div class="modal-body">
+
+
+
+
+
+
+
+                                                <!--   ---------------------------                         ----------------------     -->
+                                                <div class="col-md-6 mb-4 " id="abono" name="abono">
+                                                   <label for="">Ingrese Abono</label>
+                                                   <div class="input-group">
+                                                      <input type="text" class="form-control" id="abono" name="abono" placeholder="" value="">
+                                                      <div class="valid-feedback">
+                                                         abono valido
+                                                      </div>
+                                                      <div class="invalid-feedback">
+                                                         Por favor ingrese un abono
+                                                      </div>
+                                                   </div>
+                                                </div>
+
+
+                                                <!--   ---------------------------                         ----------------------     -->
+
+
+
+                                             </div>
+                                             <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-primary">ABONAR</button>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+
+                                    <!--   ---------------------------          MODAL               ----------------------     -->
+                                 </form>
+
                               </div>
                            </td>
                         </tr>
@@ -69,6 +131,8 @@
                      <th>ID</th>
                      <th>Cliente</th>
                      <th>Fecha De Inicio</th>
+                     <th>Abono</th>
+                     <th>Debe</th>
                      <th>Opciones</th>
                   </tr>
                </tfoot>
@@ -78,3 +142,9 @@
    </div>
 </div>
 <!--/ Scrollable Table End -->
+
+<!--   ---------------------------                         ----------------------     -->
+<div class="col-md-6 mb-3">
+   <p>Añadir mas</p>
+   <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#m_modal_4">Añadir mas Trabajos</button>
+</div>

@@ -24,7 +24,8 @@ class PagoData
 
 	public function updateEstado(){
 		$sql = "update ".self::$tablename." set 
-        estado=\"$this->estado\" 
+        estado=\"$this->estado\",
+		abono=\"$this->abono\" 
         where id=$this->id";
 		return Executor::doit($sql);
 	}

@@ -1,8 +1,6 @@
 <?php
 
-echo  $_POST["validacionabono"];
 echo  $_POST["abono"];
-
 
 date_default_timezone_set("America/Bogota");
 
@@ -15,7 +13,7 @@ $pago = new PagoData();
 $pago->idcliente = $_POST["idcliente"];
 
 
-if ($_POST["validacion"] == "si") {
+if ($_POST["validacion"] == "si") { //validacion de fecha manual
 
 
    $fecha2 = new DateTime($_POST["fecha1"]);
@@ -31,43 +29,40 @@ if ($_POST["validacion"] == "si") {
 $pago->idgym = $gym->id;
 $pago->estado = intval($_POST["pago"]);
 
-$abono = $_POST["abono"];
 
-if ($_POST["validacionabono"] == "si") {
+if ($pago->estado == 2 &&  $_POST["abono"] != "") {
+
+$cliente = PersonaData::getById($pago->idcliente);
+$plan=PlanData::getByIdCliente($cliente->id);
+$precio=PrecioData::getbyId($plan->idprecio);
 
 
-   if ($pago->abono == null || $pago->abono == 0 and $abono <= 50000) {
+   $abono = intval($_POST["abono"]);
 
+   if ($abono == $precio->precio) {
 
+      $pago->estado = 1;
       $pago->abono = $abono;
+
+
    } else {
-      if (($pago->abono) and ($pago->abono + $abono) <= 50000 ) {
-
-
-         $pago->abono + $abono;
-      }
+      $pago->abono = $abono;
    }
-} else {
-
-
-   $pago->abono = 50000;
 }
-
 
 
 
 $aux = $pago->add();
 
 
-
 if ($aux[0] == 1) {
 
    core::alert("Registro Exitoso");
 
-   //core::redir("./?view=Pago/ViewPago");
+   core::redir("./?view=Pago/ViewPago");
 } else {
 
    core::alert("Error al Registrar");
 
-   //core::redir("./?view=Pago/ViewPago");
+   core::redir("./?view=Pago/ViewPago");
 }
