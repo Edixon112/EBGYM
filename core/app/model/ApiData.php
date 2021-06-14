@@ -7,15 +7,15 @@ class ApiData
 	public function ApiData(){
 		$this->id = ""; 
         $this->token = "";
-        $this->idinstance = "";
+        $this->instanceid = "";
 		$this->telefono = "";
         $this->idgym ="";
 	} 
 
 
     public function add(){
-		$sql = "insert into  ".self::$tablename." (token,idinstance,idgym) ";
-		$sql .= "value (\"$this->token\",\"$this->idinstance\",\"$this->idgym\")";
+		$sql = "insert into  ".self::$tablename." (token,instanceid,telefono,idgym) ";
+		$sql .= "value (\"$this->token\",\"$this->instanceid\",\"$this->telefono\",\"$this->idgym\")";
         return Executor::doit($sql);
 	}
 
@@ -23,8 +23,9 @@ class ApiData
     public function update(){
 		$sql = "update ".self::$tablename." set 
         token=\"$this->token\", 
-        idinstance=\"$this->idinstance\", 
-        idgym=\"$this->idgym\"
+        instanceid=\"$this->instanceid\", 
+        telefono=\"$this->telefono\",
+		idgym=\"$this->idgym\"
         where id=$this->id";
 		return Executor::doit($sql);
 	}

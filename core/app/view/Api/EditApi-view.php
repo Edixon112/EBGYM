@@ -19,8 +19,7 @@
                 <div class="form-row">
 
                     <!--info oculta-->
-                    <!--input type="text" style="display: none" id="activo" name="activo" value="<?php //echo $activo=0;
-                                                                                                    ?>" readonly="true"  required /-->
+                    <input type="text" style="display: none" id="id" name="id" value="<?php echo $api->id; ?>" readonly="true" required />
 
                     <div class="col-md-6 mb-3">
                         <label for="token">Token</label>

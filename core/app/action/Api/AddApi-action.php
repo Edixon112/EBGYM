@@ -2,10 +2,10 @@
 
 $api = new ApiData();
 
-$api->token = $_POST["token"];
-$api->instanceid = $_POST["instanceid"];
-$api->telefono = $_POST["telefono"];
-$api->idgym = $_POST["idgym"];
+echo $api->token = $_POST["token"];
+echo $api->instanceid = $_POST["instanceid"];
+echo $api->telefono = $_POST["telefono"];
+echo $api->idgym = $_POST["idgym"];
 
 $aux = $api->add();
 
