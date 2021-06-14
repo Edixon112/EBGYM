@@ -34,6 +34,7 @@
                                         $persona = PersonaData::getById($personas->idpersona);
                                         if ($persona->rol == 3) {
 
+                    
                                             $membresia = PlanData::getByIdCliente($persona->id);
                                             $disponible = AsistenciaData::getByIdClienteLibre($persona->id);
                                             $precio = PrecioData::getById($membresia->idprecio);
