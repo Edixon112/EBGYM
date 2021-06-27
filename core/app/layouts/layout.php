@@ -132,7 +132,7 @@
                            <li><a href="index.php?view=Asistencia/ViewAsistencia">Clientes Dentro del GYM</a></li>
                            <li><a href="index.php?view=Asistencia/ViewSalidas">Clientes Fuera Del GYM</a></li>
                         </ul>
-                     </li>
+                     </li> 
 
                      <li>
                         <a href="#"><i data-feather="tag"></i>
