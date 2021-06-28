@@ -132,7 +132,7 @@
                            <li><a href="index.php?view=Asistencia/ViewAsistencia">Clientes Dentro del GYM</a></li>
                            <li><a href="index.php?view=Asistencia/ViewSalidas">Clientes Fuera Del GYM</a></li>
                         </ul>
-                     </li> 
+                     </li>
 
                      <li>
                         <a href="#"><i data-feather="tag"></i>
@@ -175,8 +175,8 @@
                            <span>Administracion GYM</span><i class="accordion-icon fa fa-angle-left"></i></a>
                         <ul class="sub-menu">
                            <li><a href="index.php?view=Administracion/ViewIngresos">Ingresos</a></li>
-                        </ul >
-                        
+                        </ul>
+
                      </ul>
                      </li>
                      </li>
@@ -539,6 +539,39 @@
             $('.dataTables_length').addClass('bs-select');
          });
       </script>
+
+      <script type="text/javascript"> // Validacion solo permite numeros en el input
+        
+         function ValidacionNumero(evt) {
+
+            // code is the decimal ASCII representation of the pressed key.
+            var code = (evt.which) ? evt.which : evt.keyCode;
+
+            if (code == 8) { // backspace.
+               return true;
+            } else if (code >= 48 && code <= 57) { // is a number.
+               return true;
+            } else { // other keys.
+               return false;
+            }
+         }
+      </script>
+
+      <script type="text/javascript"> // Validacion Solo permite letras en el input
+
+         function ValidacionLetra(evt) {
+
+            // code is the decimal ASCII representation of the pressed key.
+            var code = (evt.which) ? evt.which : evt.keyCode;
+
+            if (code < 48 || code > 57) { // is a number.
+               return true;
+            } else { // other keys.
+               return false;
+            }
+         }
+      </script>
+
 
       <script>
          function eliminar1() {

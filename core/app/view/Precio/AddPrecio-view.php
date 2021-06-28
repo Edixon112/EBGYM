@@ -33,7 +33,7 @@
 
                <div class="col-md-6 mb-3">
                   <label for="precio">Precio</label>
-                  <input type="text" class="form-control" id="precio" name="precio" placeholder="Ingrese Precio" value="" required>
+                  <input type="text" class="form-control" id="precio" name="precio" placeholder="Ingrese Precio" value="" onkeypress="return ValidacionNumero(event);" required>
                   <div class="valid-feedback">
                      Monto valido
                   </div>

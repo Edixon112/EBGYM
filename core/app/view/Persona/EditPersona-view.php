@@ -24,7 +24,7 @@
                     
                     <div class="col-md-6 mb-3">
                        <label for="nombre">Nombre</label>
-                       <input onkeyup="javascript:this.value=this.value.toUpperCase();" type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su nombre" value="<?php echo $persona->nombre ?>" required>
+                       <input onkeyup="javascript:this.value=this.value.toUpperCase();" type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su nombre" value="<?php echo $persona->nombre ?>"  onkeypress="return ValidacionLetra(event);" required>
                        <div class="valid-feedback">
                           Nombre valido
                        </div>
@@ -35,7 +35,7 @@
 
                     <div class="col-md-6 mb-3">
                        <label for="apellido">Apellido</label>
-                       <input onkeyup="javascript:this.value=this.value.toUpperCase();"  type="text" class="form-control" id="apellido" name="apellido"placeholder="ingrese su apellido" value="<?php echo $persona->apellido ?>" required>
+                       <input onkeyup="javascript:this.value=this.value.toUpperCase();"  type="text" class="form-control" id="apellido" name="apellido"placeholder="ingrese su apellido" value="<?php echo $persona->apellido ?>"  onkeypress="return ValidacionLetra(event);" required>
                        <div class="valid-feedback">
                           Apellido valido
                        </div>
@@ -46,7 +46,7 @@
 
                     <div class="col-md-6 mb-3">
                        <label for="apellido">Numero de Cedula</label>
-                       <input  type="text" class="form-control" id="cedula" name="cedula"placeholder="ingrese su cedula" value="<?php echo $persona->cedula ?>" required>
+                       <input  type="text" class="form-control" id="cedula" name="cedula"placeholder="ingrese su cedula" value="<?php echo $persona->cedula ?>"  onkeypress="return ValidacionNumero(event);" required>
                        <div class="valid-feedback">
                           Numero de cedula valido
                        </div>
@@ -57,7 +57,7 @@
 
                     <div class="col-md-6 mb-3">
                        <label for="apellido">telefono</label>
-                       <input  type="text" class="form-control" id="telefono" name="telefono"placeholder="ingrese su telefono" value="<?php echo $persona->telefono ?>" required>
+                       <input  type="text" class="form-control" id="telefono" name="telefono"placeholder="ingrese su telefono" value="<?php echo $persona->telefono ?>" onkeypress="return ValidacionNumero(event);" required>
                        <div class="valid-feedback">
                           Numero valido 
                        </div>
@@ -66,20 +66,6 @@
                        </div>
                     </div>
 
-                    <!--div class="col-md-6 mb-3">
-		                  <p>selecione Gym </p>
-                        <div class="input-group mb-6">
-                           <select class="selectpicker form-control" data-hide-disabled="true" data-live-search="true" name="idgym" id="idgym" id="inputGroupSelect01" required>
-                              <option > </option>
-                              <?php 
-                                 //$idgyms=GymData::getAll();
-                                 //foreach ($idgyms as $idgym) {
-                              ?>                
-                              <option   value="<?php //echo $idgym->id;?>" ><?php //echo $idgym->nombre;?></option>
-                              <?php //} ?>               
-                           </select>
-                        </div>
-                     </div-->  
                 </div>   
                 <button class="btn btn-custom-primary" type="submit">Editar</button> 
             </form>

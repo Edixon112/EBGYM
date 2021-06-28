@@ -117,7 +117,7 @@
                     <div class="col-md-6 mb-4 " id="abono" name="abono" style="display: none" >
                         <label for="">Ingrese Abono</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" id="abono" name="abono" placeholder="" value="" >
+                            <input type="text" class="form-control" id="abono" name="abono" placeholder="" value="" onkeypress="return ValidacionNumero(event);" >
                             <div class="valid-feedback">
                                 abono valido
                             </div>
