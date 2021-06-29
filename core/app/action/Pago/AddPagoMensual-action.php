@@ -32,9 +32,9 @@ $pago->estado = intval($_POST["pago"]);
 
 if ($pago->estado == 2 &&  $_POST["abono"] != "") {
 
-$cliente = PersonaData::getById($pago->idcliente);
-$plan=PlanData::getByIdCliente($cliente->id);
-$precio=PrecioData::getbyId($plan->idprecio);
+   $cliente = PersonaData::getById($pago->idcliente);
+   $plan = PlanData::getByIdCliente($cliente->id);
+   $precio = PrecioData::getbyId($plan->idprecio);
 
 
    $abono = intval($_POST["abono"]);
@@ -44,15 +44,27 @@ $precio=PrecioData::getbyId($plan->idprecio);
       $pago->estado = 1;
       $pago->abono = $abono;
 
+     
 
    } else {
       $pago->abono = $abono;
+
+     
    }
 }
 
 
 
 $aux = $pago->add();
+
+
+$abono_add = new AbonoData();
+
+$abono_add->idpago = $aux[1];
+$abono_add->monto = $abono;
+$abono_add->fecha = date("Y-m-d H:i:s");
+$abono->idgym=$gym->id;
+$abono_add->add();
 
 
 if ($aux[0] == 1) {

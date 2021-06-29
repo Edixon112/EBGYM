@@ -16,8 +16,20 @@ $aux = $asistencia->Out();
 
 if ($aux[0] == 1) {
 
+    /*$cliente = PersonaData::getById($asistencia->idcliente);
+    $api = ApiData::getInstance();
+    $nombre = $cliente->nombre;
+    $gyms = $gym->nombre;
+    $hora = $asistencia->fechafin;
+    $celular = $cliente->telefono;
+ 
+    $mensaje = " *" . $nombre . "* GRACIAS POR VISITAR *" . $gyms . "* HORA DE SALIDA *" . $hora . "* ";
+    
+ 
+    $api->enviarMensajeGeneral($mensaje,$celular);*/
 
     core::redir("./?view=Asistencia/ViewAsistencia");
+
 } else {
 
     core::alert("Error al Registrar salida");

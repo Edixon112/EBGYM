@@ -131,7 +131,7 @@
 
         var x = document.getElementById("pagos");
 
-        if (tabla == "DIARIO" || tabla == "DIARIO_5MIL" || tabla == "DIARIO_3MIL" ) {
+        if (tabla == "DIARIO" ) {
 
             x.style.display = "inline";
 

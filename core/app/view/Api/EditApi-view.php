@@ -58,14 +58,14 @@
                         <label for="idempresa">Seleccione Empresa</label>
                         <div class="input-group mb-6">
                             <select class="selectpicker form-control" data-hide-disabled="true" data-live-search="true" name="idgym" id="idgym" id="inputGroupSelect01" required>
-                                <option> </option>
+                               
                                 <?php
-                                $gym = GymData::getAll();
-                                foreach ($gym as $gym) {
-                                ?>
-                                    <option value="<?php echo $gym->id; ?>"><?php echo "$gym->nombre"; ?></option>
+                                $gym = GymData::getById($api->idgym);
+                                
+                                ?>  
+                                    <option selected value="<?php echo $gym->id; ?>"><?php echo "$gym->nombre"; ?></option>
                                 <?php
-                                } ?>
+                             ?>
                             </select>
                         </div>
                     </div>

@@ -7,7 +7,7 @@ date_default_timezone_set("America/Bogota");
 $membresia = PlanData::getByIdCliente($_POST["idcliente"]);
 $precio = PrecioData::getById($membresia->idprecio);
 
-if ($precio->nombre == "DIARIO" || $precio->nombre == "DIARIO_3MIL" || $precio->nombre == "DIARIO_5MIL" ) {
+if ($precio->nombre == "DIARIO" ) {
 
 
     if ($_POST["pago"] == "si") {
@@ -19,6 +19,16 @@ if ($precio->nombre == "DIARIO" || $precio->nombre == "DIARIO_3MIL" || $precio->
         $pago->idgym = $gym->id;
         $pago->estado=1;
         $aux = $pago->add();
+
+        $abono=New AbonoData();
+        
+        $abono->idpago=$aux[1];
+        $abono->monto=$precio->precio;
+        $abono->fecha= date("Y-m-d H:i:s");
+        $abono->idgym=$gym->id;
+        $abono->add();
+
+
     }
 
 
@@ -32,7 +42,6 @@ if ($precio->nombre == "DIARIO" || $precio->nombre == "DIARIO_3MIL" || $precio->
 
     if ($_POST["pago"] == "si") {
         $asistencia->idpago = $aux[1];
-
         $asistencia->add();
     }
     if ($_POST["pago"] == "no") {
@@ -42,6 +51,7 @@ if ($precio->nombre == "DIARIO" || $precio->nombre == "DIARIO_3MIL" || $precio->
 
 
     core::redir("./?view=Asistencia/ViewAsistencia");
+
 } else {
 
 
@@ -59,6 +69,7 @@ if ($precio->nombre == "DIARIO" || $precio->nombre == "DIARIO_3MIL" || $precio->
     $asistencia->idpago = $pago->id;
 
     $asistencia->add();
+    
     
 
     core::redir("./?view=Asistencia/ViewAsistencia");

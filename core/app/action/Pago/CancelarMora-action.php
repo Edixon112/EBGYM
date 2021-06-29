@@ -5,6 +5,14 @@ $cliente = PersonaData::getById($pago->idcliente);
 $plan=PlanData::getByIdCliente($cliente->id);
 $precio=PrecioData::getbyId($plan->idprecio);
 
+$abono_add = new AbonoData();
+
+$abono_add->idpago = $pago->id;
+$abono_add->monto = $precio->precio-($pago->abono);
+$abono_add->fecha = date("Y-m-d H:i:s");
+$abono->idgym=$gym->id;
+$abono_add->add();
+
 
 $pago->estado=1;
 $pago->abono=$precio->precio;

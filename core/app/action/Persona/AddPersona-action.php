@@ -34,6 +34,15 @@ $Aux2=$plan->add();
 
 if($Aux2[0]==1){
 
+   /*$api = ApiData::getInstance();
+   $nombre = $_POST["nombre"];
+   $gyms = $gym->nombre;
+   $celular = $_POST["telefono"];
+
+   $mensaje = "*" . $nombre . "* BIENVENIDO/A AL GYM *" . $gyms . "*";
+
+   $api->enviarMensajeGeneral($mensaje,$celular);*/
+
     core::alert("Registro Exitoso");
    
     core::redir("./?view=Persona/ViewPersona");

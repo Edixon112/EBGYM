@@ -134,13 +134,24 @@
                         </ul>
                      </li>
 
-                     <li>
+
+                     <li class="<?php if ($_GET['view'] == 'Pago/AddPago' || $_GET['view'] == 'Pago/ViewPago' || $_GET['view'] == 'Pago/ViewPagoMora') {
+                                    echo 'open active';
+                                 } ?>">
                         <a href="#"><i data-feather="tag"></i>
                            <span>Pago mensual</span><i class="accordion-icon fa fa-angle-left"></i></a>
-                        <ul class="sub-menu">
-                           <li><a href="index.php?view=Pago/AddPago">Agregar Pago mensual</a></li>
-                           <li><a href="index.php?view=Pago/ViewPago">Ver Pago mensual</a></li>
-                           <li><a href="index.php?view=Pago/ViewPagoMora">Ver Clientes en Mora</a></li>
+
+                        <ul class="sub-menu" style="display: block;">
+
+                           <li class="<?php if ($_GET['view'] == 'Pago/AddPago') {
+                                          echo 'active';
+                                       } ?>"><a href="index.php?view=Pago/AddPago">Agregar Pago mensual</a></li>
+                           <li class="<?php if ($_GET['view'] == 'Pago/ViewPago') {
+                                          echo 'active';
+                                       } ?>"><a href="index.php?view=Pago/ViewPago">Ver Pago mensual</a></li>
+                           <li class="<?php if ($_GET['view'] == 'Pago/ViewPagoMora') {
+                                          echo 'active';
+                                       } ?>"><a href="index.php?view=Pago/ViewPagoMora">Ver Clientes en Mora</a></li>
                         </ul>
                      </li>
 
@@ -540,8 +551,9 @@
          });
       </script>
 
-      <script type="text/javascript"> // Validacion solo permite numeros en el input
-        
+      <script type="text/javascript">
+         // Validacion solo permite numeros en el input
+
          function ValidacionNumero(evt) {
 
             // code is the decimal ASCII representation of the pressed key.
@@ -557,14 +569,17 @@
          }
       </script>
 
-      <script type="text/javascript"> // Validacion Solo permite letras en el input
+      <script type="text/javascript">
+         // Validacion Solo permite letras en el input
 
          function ValidacionLetra(evt) {
 
             // code is the decimal ASCII representation of the pressed key.
             var code = (evt.which) ? evt.which : evt.keyCode;
 
-            if (code < 48 || code > 57) { // is a number.
+            if (code == 32) { // is a number.
+               return false;
+            } else if (code < 48 || code > 57) {
                return true;
             } else { // other keys.
                return false;
