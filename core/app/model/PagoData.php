@@ -78,13 +78,13 @@ class PagoData
 				
 		$sql = " select * from ".self::$tablename."  where fechainicio between '$fecha1' and '$fecha2' and idgym='".$gym->id."' ";
 		$query = Executor::doit($sql);
-		return Model::many($query[0],new AsistenciaData());
+		return Model::many($query[0],new PagoData());
 
 		}else if ($user->rol==1) {
 
 			$sql = " select * from ".self::$tablename."  where fechainicio between '$fecha1' and '$fecha2' ";
 			$query = Executor::doit($sql);
-			return Model::many($query[0],new AsistenciaData());
+			return Model::many($query[0],new PagoData());
 		}
 	}
 

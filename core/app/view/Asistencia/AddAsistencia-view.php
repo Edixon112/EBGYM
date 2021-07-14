@@ -21,7 +21,7 @@
                     <div class="col-md-6 mb-3">
                         <p>selecione Cliente </p>
                         <div class="input-group mb-6">
-                            <select onChange="cambios(this)" class="selectpicker form-control" data-hide-disabled="true" data-live-search="true" name="idcliente" id="idcliente" id="inputGroupSelect01" required>
+                            <select onChange="cambios3(this)" class="selectpicker form-control" data-hide-disabled="true" data-live-search="true" name="idcliente" id="idcliente" id="inputGroupSelect01" required>
 
                                 <?php
 
@@ -85,7 +85,7 @@
                     </div>
 
 
-                    <div class="col-md-6 mb-3" id=pagos name=pagos>
+                    <div class="col-md-6 mb-3" id=pagos2 name=pagos2 >
                         <div class="col-md-4 mb-3">
                             <label for="">Pago</label>
                         </div>
@@ -113,14 +113,14 @@
 </div>
 
 <script>
-    function cambios(sel) {
+    function cambios3(sel) {
 
         var parametros = {
             "id": sel.value
 
         };
 
-        var tabla = $.ajax({
+        var tabla2 = $.ajax({
             url: './?action=Asistencia/Validacion',
             type: 'post',
             dataType: 'text',
@@ -129,9 +129,10 @@
         }).responseText;
 
 
-        var x = document.getElementById("pagos");
+        var x = document.getElementById("pagos2");
+        
 
-        if (tabla == "DIARIO" ) {
+        if (tabla2 == "DIARIO" ) {
 
             x.style.display = "inline";
 

@@ -186,6 +186,8 @@
                            <span>Administracion GYM</span><i class="accordion-icon fa fa-angle-left"></i></a>
                         <ul class="sub-menu">
                            <li><a href="index.php?view=Administracion/ViewIngresos">Ingresos</a></li>
+                           <li><a href="index.php?view=Administracion/ViewGasto">Gastos</a></li>
+                           <li><a href="index.php?view=Administracion/AddGasto">Agregar Gastos</a></li>
                         </ul>
 
                      </ul>
@@ -601,6 +603,52 @@
             }
          }
       </script>
+
+      
+<script> // ocultar cuadros de la vista y sacarlos si los selecionan
+
+function cambios2(sel) {
+
+        var x = document.getElementById("abono");
+
+        if (sel.value == "2") {
+
+            x.style.display = "inline";
+
+        } else {
+
+            x.style.display = "none";
+
+        }
+        //document.getElementById("divprueba2").innerHTML = tabla;
+    }
+
+    function cambios(sel) {
+        /*
+                var tabla = $.ajax({
+                    url: './?action=Asistencia/Validacion',
+                    type: 'post',
+                    dataType: 'text',
+                    async: false,
+                    data: parametros
+                }).responseText;
+        */
+
+        var x = document.getElementById("fecha");
+
+        if (sel.value == "si") {
+
+            x.style.display = "inline";
+
+        } else {
+
+            x.style.display = "none";
+
+        }
+        //document.getElementById("divprueba2").innerHTML = tabla;
+    }
+
+</script>
 
    </body>
 

@@ -42,6 +42,33 @@ class ApiData
     }
 
 
+    public function SendFilePdf($telefono)
+    { //METODO PARA AÑADIR 
+
+        $data = [
+            "body" => "https://ebgym.s3.us-east-2.amazonaws.com/doc.pdf",
+            "filename" => "doc.pdf",
+            "caption" => "",
+            "phone" => $telefono
+        ];
+        $json = json_encode($data); // Encode data to JSON
+        // URL for request POST /message
+        $token = $this->token;
+        $instanceId = $this->instanceid;
+        $url = 'https://api.chat-api.com/instance' . $instanceId . '/sendFile?token=' . $token;
+        // Make a POST request
+        $options = stream_context_create([
+            'http' => [
+                'method'  => 'POST',
+                'header'  => 'Content-type: application/json',
+                'content' => $json
+            ]
+        ]);
+
+        // Send a request
+        $result = file_get_contents($url, false, $options);
+    }
+
     public function add()
     {
         $sql = "insert into  " . self::$tablename . " (token,instanceid,telefono,idgym) ";
@@ -74,7 +101,7 @@ class ApiData
         $user = UserData::getById($_SESSION["user_id"]);
         $gym = GymData::getByIdUser($user->id);
 
-        $sql = "select * from " . self::$tablename . " where idgym='".$gym->id."' order by id desc";
+        $sql = "select * from " . self::$tablename . " where idgym='" . $gym->id . "' order by id desc";
         $query = Executor::doit($sql);
         return Model::one($query[0], new ApiData());
     }
