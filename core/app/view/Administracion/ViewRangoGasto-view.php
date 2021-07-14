@@ -134,7 +134,7 @@ $ganancia = ($sumaTotal1) - ($sumaTotal);
       <div class="mg-t-20 mg-sm-t-0">
          <h5 class="mg-b-2 tx-success">Enviar informacion por whatsapp</h5>
 
-         <form class="needs-validation" action="index.php?action=Administracion/Mensaje" method="post" novalidate>
+         <form class="needs-validation" action="index.php?action=Reporte/Reporte" method="post" novalidate>
 
          <input type="text" style="display: none" id="fechainicio" name="fechainicio" value="<?php echo $fecha1;?>" readonly="true" required />
          <input type="text" style="display: none" id="fechafinal" name="fechafinal" value="<?php echo $fecha2;?>" readonly="true" required />

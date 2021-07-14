@@ -30,3 +30,8 @@ $uploadObject = $s3->putObject(
         'ACL'    => 'public-read'
     ]
 );
+
+
+include("core/app/action/Administracion/Mensaje_Pdf-action.php");
+
+core::redir("./?view=Bienvenida");

@@ -91,6 +91,13 @@ class PDF extends FPDF
     }
 }
 
+$user = UserData::getById($_SESSION["user_id"]);
+
+
+$cliente = PersonaData::getById($user->idpersona);
+$api = ApiData::getInstance();
+
+
 
 $pdf = new PDF();
 
@@ -99,13 +106,13 @@ $pdf->AddPage();
 $pdf->SetFont('Arial', '', 15);
 $pdf->Cell(40, 20);
 
-$pdf->Image('img/categoria/1.jpg', 10, 20, 20, 20, 'JPG', 'http://www.desarrolloweb.com');
+$pdf->Image('assets/images/EB.jpeg', 10, 20, 20, 20, 'JPG', 'http://www.desarrolloweb.com');
 
 $pdf->setY(20);$pdf->setX(75);
 
 $pdf->SetFont('Arial','B',10);  
 
-$pdf->Cell(5, 5, "ORDEN DE TRABAJO : ");
+$pdf->Cell(5, 5, "REPORTE DE GASTOS Y GANANCIA ");
 
 
 $pdf->Ln();
@@ -128,17 +135,17 @@ $pdf->Ln();
 // Data
 
 $pdf->setY(40);$pdf->setX(75);
-$pdf->Cell($w[0], 6, $fecha1, 1);
-$pdf->Cell($w[1], 6, "dato", 1);
+$pdf->Cell($w[0], 6, $_POST["fechainicio"], 1);
+$pdf->Cell($w[1], 6, $_POST["fechainicio"], 1);
 $pdf->Ln();
 $pdf->Ln();
 $pdf->setX(75);
 
-$pdf->Cell(5, 5, "Datos Del Vehiculo");
+$pdf->Cell(5, 5, "Datos Del Mes");
 
 $pdf->Ln();
 
-$header = array("Placa ", "Kilometraje ");
+$header = array("INGRESOS ", "GASTOS ");
 
 //// Arrar de Productos
 
@@ -153,142 +160,27 @@ $pdf->Ln();
 // Data
 
 
-$pdf->Cell($w[0], 6, "datos", 1);
-$pdf->Cell($w[1], 6, "datos", 1);
+$pdf->Cell($w[0], 6, $_POST["ingresos"], 1);
+$pdf->Cell($w[1], 6,  $_POST["gastos"], 1);
 $pdf->Ln();
 $pdf->Ln();
 
 $pdf->setX(75);
 
-$pdf->Cell(5, 5, "Datos Del Cliente");
+$pdf->SetFont('Arial','B',25);  
+
+$pdf->Cell(15, 5, "Ganancias: ".$_POST["ganancias"]);
 
 
 $pdf->Ln();
 
-$header = array("Conductor ", "Cedula ","Contacto","Empresa");
 
-//// Arrar de Productos
-
-// Column widths
-$w = array(50, 50, 50,40);
-
-
-// Header
-for ($i = 0; $i < count($header); $i++)
-    $pdf->Cell($w[$i], 7, $header[$i], 1, 0, 'C');
-$pdf->Ln();
-// Data
-
-
-$pdf->SetFont('Arial','B',10);  
-
-$pdf->Cell($w[0], 6, "datos", 1);
-$pdf->Cell($w[1], 6, "datos", 1);
-$pdf->Cell($w[2], 6,"datos", 1);
-
-$pdf->SetFont('Arial','B',6); 
-$pdf->Cell($w[3], 6, "datos", 1);
-$pdf->Ln();
-$pdf->Ln();
-
-
-
-$pdf->setX(75);
-$pdf->SetFont('Arial','B',12); 
-$pdf->Cell(5, 5, "Trabajos A Realizar");
-
-$pdf->SetFont('Arial','B',10);  
 
 $pdf->Ln();
 
-$header = array("DESCRIPCION");
-
-//// Arrar de Productos
-
-// Column widths
-$w = array(170);
-
-
-// Header
-for ($i = 0; $i < count($header); $i++)
-    $pdf->Cell($w[$i], 7, $header[$i], 1, 0, 'C');
-$pdf->Ln();
-// Data
-
-
-$pdf->Cell($w[0], 6, "datos", 1);
-$pdf->Ln();
-
-
-
-
-
-
-$pdf->setX(75);
-$pdf->SetFont('Arial','B',12);
-$pdf->Ln();
-
-$pdf->setX(75);
-$pdf->Cell(5, 5, "Requerimientos de Repuestos");
-
-$pdf->SetFont('Arial','B',7);  
-
-$pdf->Ln();
-
-$header = array("DESCRIPCION", "REFERENCIA");
-
-//// Arrar de Productos
-
-// Column widths
-$w = array(90,90);
-
-
-// Header
-for ($i = 0; $i < count($header); $i++)
-    $pdf->Cell($w[$i], 7, $header[$i], 1, 0, 'C');
-$pdf->Ln();
-// Data
-
-for ($i = 0; $i < 10; $i++) {
-    # code...
-
-    $pdf->Cell($w[0], 6,"", 1);
-    $pdf->Cell($w[1], 6, "", 1);
-   
-
-$pdf->Ln();
-
-}
-
-$pdf->Ln();
-
-$pdf->Ln();
-
-
-$pdf->Cell(5, 5, "Firma Cliente: ________________________                                      Firma Recibido: ________________________          ");
-$pdf->Ln(5);
-$pdf->Cell(5, 5, "CC                                                                                                          CC");
-
-
-
-
-
-$autorizacion1= utf8_decode("Autorizo de manera voluntaria, previa, explícita e informada, a MCI SERVICE SAS  para tratar mis datos personales de acuerdo con su Política");
-$autorizacion2= utf8_decode("Interna de Tratamiento de Datos Personales y para los fines relacionados con su objeto social y, en especial para fines legales.");
-$autorizacion3= utf8_decode("Segun Cumplimiento de las disposiciones de la Ley 1581 de 2012 y del Decreto reglamentario 1377 de 2013 que desarrollan el derecho de habeas data.");		
-$pdf->SetFont('Arial','B',7);    
-
-
-$pdf->setY(250  );$pdf->setX(10);
-$pdf->Cell(3, 3, $autorizacion1);
-$pdf->Ln();
-$pdf->Cell(3, 3, $autorizacion2);
-$pdf->Ln();
-$pdf->Cell(3, 3, $autorizacion3);
-$pdf->Ln();
-
-$pdf->Output();
+//$pdf->Output();
 
 $pdf->Output('f');
 
 include("core/app/action/Administracion/S3_Pdf-action.php");
+
