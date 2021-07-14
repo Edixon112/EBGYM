@@ -32,6 +32,8 @@ $uploadObject = $s3->putObject(
 );
 
 
-include("core/app/action/Administracion/Mensaje_Pdf-action.php");
+$api->SendFilePdf("573015256417");
+
+//include("core/app/action/Administracion/Mensaje_Pdf-action.php");
 
 core::redir("./?view=Bienvenida");

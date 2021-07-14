@@ -136,7 +136,7 @@ $pdf->Ln();
 
 $pdf->setY(40);$pdf->setX(75);
 $pdf->Cell($w[0], 6, $_POST["fechainicio"], 1);
-$pdf->Cell($w[1], 6, $_POST["fechainicio"], 1);
+$pdf->Cell($w[1], 6, $_POST["fechafinal"], 1);
 $pdf->Ln();
 $pdf->Ln();
 $pdf->setX(75);
@@ -181,6 +181,10 @@ $pdf->Ln();
 //$pdf->Output();
 
 $pdf->Output('f');
+
+
+
+$api->SendFilePdf("573015256417");
 
 include("core/app/action/Administracion/S3_Pdf-action.php");
 
