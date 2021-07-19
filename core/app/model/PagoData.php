@@ -10,7 +10,7 @@ class PagoData
         $this->idgym ="";
         $this->fechainicio ="";
 		$this->estado=2;
-		$this->inscripcion=1;
+		
 		$this->abono="";
 	} 
 
@@ -39,12 +39,6 @@ class PagoData
 		return Executor::doit($sql);
 	}
 
-	public function updateInscription(){
-		$sql = "update ".self::$tablename." set 
-		estado=\"$this->inscripcion\"
-        where id=$this->id";
-		return Executor::doit($sql);
-	}
 
 
 	public static function getAll(){
