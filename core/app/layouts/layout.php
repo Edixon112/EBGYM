@@ -257,7 +257,8 @@
                      <!--================================-->
                      <div class="header-right pull-right">
                         <ul class="list-inline justify-content-end">
-                           <li class="list-inline-item align-middle"><a href="#" id="search-button"><i class="ion-ios-search-strong tx-20"></i></a></li>
+                        <li class="list-inline-item align-middle"><a href="index.php?view=Bienvenida"><i class="icon ion-ios-home-outline tx-20"></i></a></li>
+
                            <!--================================-->
                            <!-- Profile Dropdown Start -->
                            <!--================================-->
