@@ -21,6 +21,7 @@
                      <th>ID</th>
                      <th>Nombre</th>
                      <th>Apellido</th>
+                     <th>Plan</th>
                      <th>Numero de Cedula</th>
                      <th>Numero de telefono</th>
                      <th>Gym</th>
@@ -32,11 +33,14 @@
                   foreach ($personass as $personas) :
                      $persona = PersonaData::getById($personas->idpersona);
                      $gym = GymData::getById($personas->idgym);
+                     $plan=PlanData::getByIdCliente($persona->id);
+                     $precio = PrecioData::getById($plan->idprecio);
                   ?>
                      <tr>
                         <td><?php echo $persona->id;  ?></td>
                         <td><?php echo $persona->nombre; ?></td>
                         <td><?php echo $persona->apellido; ?></td>
+                        <td><?php echo $precio->precio; ?></td>
                         <td><?php echo $persona->cedula; ?></td>
                         <td><?php echo $persona->telefono; ?></td>
                         <td><?php echo $gym->nombre; ?></td>
@@ -67,6 +71,7 @@
                      <th>ID</th>
                      <th>Nombre</th>
                      <th>Apellido</th>
+                     <th>Plan</th>
                      <th>Numero de Cedula</th>
                      <th>Numero de telefono</th>
                      <th>Gym</th>

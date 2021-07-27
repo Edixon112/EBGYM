@@ -1,6 +1,6 @@
 <?php
 
-echo  $_POST["abono"];
+ $_POST["abono"];
 
 date_default_timezone_set("America/Bogota");
 
@@ -39,7 +39,7 @@ if ($pago->estado == 2 &&  $_POST["abono"] != "") {
 
    $abono = intval($_POST["abono"]);
 
-   if ($abono == $precio->precio) {
+   if ($abono >= $precio->precio) {
 
       $pago->estado = 1;
       $pago->abono = $abono;
@@ -63,7 +63,7 @@ $abono_add = new AbonoData();
 $abono_add->idpago = $aux[1];
 $abono_add->monto = $abono;
 $abono_add->fecha = date("Y-m-d H:i:s");
-$abono->idgym=$gym->id;
+//$abono->idgym=$gym->id;
 $abono_add->add();
 
 
