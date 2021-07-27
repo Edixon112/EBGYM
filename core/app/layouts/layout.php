@@ -295,7 +295,7 @@
                <!--================================-->
                <!-- Page Inner Start -->
                <!--================================-->
-               <div class="page-inner">
+             
                   <!--================================-->
                   <!-- Main Wrapper Start -->
                   <!--==============LAS LLAMADAS A LOS DEMAS==================-->
@@ -303,7 +303,7 @@
                   <?php View::load("Bienvenida"); ?>
 
                   <!--/ Main Wrapper End -->
-               </div>
+  
                <!--/ Page Inner End -->
                <!--================================-->
                <!-- Page Footer Start -->

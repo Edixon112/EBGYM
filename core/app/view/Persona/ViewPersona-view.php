@@ -1,7 +1,7 @@
 <?php $personass = Persona_GymData::getAll(); ?>
 <!-- Scrollable Table Start -->
 <div class="col-md-12 col-lg-12">
-   <div class="card mg-b-20">
+   <div class="card mg-b-12">
       <div class="card-header">
          <h4 class="card-header-title">
             Tabla de todos los Clientes registrados
