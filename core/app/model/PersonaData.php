@@ -11,6 +11,7 @@ class PersonaData
         $this->apellido = "";
         $this->telefono = "";
 		$this->rol= "";
+		$this->inscripcion=null;
 	} 
 
 
@@ -30,6 +31,17 @@ class PersonaData
         where id=$this->id";
 		return Executor::doit($sql);
 	}
+
+	
+    public function updateInscripcion(){
+		$sql = "update ".self::$tablename." set 
+        inscripcion=\"$this->inscripcion\"   
+        where id=$this->id";
+		return Executor::doit($sql);
+	}
+
+	
+  
 
 	public static function getAll(){	
 		$sql = "select * from ".self::$tablename." order by id desc";

@@ -135,11 +135,11 @@
                      </li>
 
 
-                     <li class="<?php if ($_GET['view'] == 'Pago/AddPago' || $_GET['view'] == 'Pago/ViewPago' || $_GET['view'] == 'Pago/ViewPagoMora') {
+                     <li class="<?php if ($_GET['view'] == 'Pago/AddPago' || $_GET['view'] == 'Pago/ViewPago' || $_GET['view'] == 'Pago/ViewPagoMora'|| $_GET['view'] == 'Pago/AddInscripcion') {
                                     echo 'open active';
                                  } ?>">
                         <a href="#"><i data-feather="tag"></i>
-                           <span>Pago mensual</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <span>Pagos</span><i class="accordion-icon fa fa-angle-left"></i></a>
 
                         <ul class="sub-menu" style="display: block;">
 
@@ -152,6 +152,9 @@
                            <li class="<?php if ($_GET['view'] == 'Pago/ViewPagoMora') {
                                           echo 'active';
                                        } ?>"><a href="index.php?view=Pago/ViewPagoMora">Ver Clientes en Mora</a></li>
+                           <li class="<?php if ($_GET['view'] == 'Pago/AddInscripcion') {
+                                          echo 'active';
+                                       } ?>"><a href="index.php?view=Pago/AddInscripcion">Agregar Inscripciones</a></li>
                         </ul>
                      </li>
 
@@ -257,7 +260,7 @@
                      <!--================================-->
                      <div class="header-right pull-right">
                         <ul class="list-inline justify-content-end">
-                        <li class="list-inline-item align-middle"><a href="index.php?view=Bienvenida"><i class="icon ion-ios-home-outline tx-20"></i></a></li>
+                           <li class="list-inline-item align-middle"><a href="index.php?view=Bienvenida"><i class="icon ion-ios-home-outline tx-20"></i></a></li>
 
                            <!--================================-->
                            <!-- Profile Dropdown Start -->
@@ -295,15 +298,15 @@
                <!--================================-->
                <!-- Page Inner Start -->
                <!--================================-->
-             
-                  <!--================================-->
-                  <!-- Main Wrapper Start -->
-                  <!--==============LAS LLAMADAS A LOS DEMAS==================-->
 
-                  <?php View::load("Bienvenida"); ?>
+               <!--================================-->
+               <!-- Main Wrapper Start -->
+               <!--==============LAS LLAMADAS A LOS DEMAS==================-->
 
-                  <!--/ Main Wrapper End -->
-  
+               <?php View::load("Bienvenida"); ?>
+
+               <!--/ Main Wrapper End -->
+
                <!--/ Page Inner End -->
                <!--================================-->
                <!-- Page Footer Start -->
@@ -605,51 +608,51 @@
          }
       </script>
 
-      
-<script> // ocultar cuadros de la vista y sacarlos si los selecionan
 
-function cambios2(sel) {
+      <script>
+         // ocultar cuadros de la vista y sacarlos si los selecionan
 
-        var x = document.getElementById("abono");
+         function cambios2(sel) {
 
-        if (sel.value == "2") {
+            var x = document.getElementById("abono");
 
-            x.style.display = "inline";
+            if (sel.value == "2") {
 
-        } else {
+               x.style.display = "inline";
 
-            x.style.display = "none";
+            } else {
 
-        }
-        //document.getElementById("divprueba2").innerHTML = tabla;
-    }
+               x.style.display = "none";
 
-    function cambios(sel) {
-        /*
-                var tabla = $.ajax({
-                    url: './?action=Asistencia/Validacion',
-                    type: 'post',
-                    dataType: 'text',
-                    async: false,
-                    data: parametros
-                }).responseText;
-        */
+            }
+            //document.getElementById("divprueba2").innerHTML = tabla;
+         }
 
-        var x = document.getElementById("fecha");
+         function cambios(sel) {
+            /*
+                    var tabla = $.ajax({
+                        url: './?action=Asistencia/Validacion',
+                        type: 'post',
+                        dataType: 'text',
+                        async: false,
+                        data: parametros
+                    }).responseText;
+            */
 
-        if (sel.value == "si") {
+            var x = document.getElementById("fecha");
 
-            x.style.display = "inline";
+            if (sel.value == "si") {
 
-        } else {
+               x.style.display = "inline";
 
-            x.style.display = "none";
+            } else {
 
-        }
-        //document.getElementById("divprueba2").innerHTML = tabla;
-    }
+               x.style.display = "none";
 
-</script>
+            }
+            //document.getElementById("divprueba2").innerHTML = tabla;
+         }
+      </script>
 
    </body>
 
