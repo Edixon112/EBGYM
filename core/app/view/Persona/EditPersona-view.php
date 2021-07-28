@@ -46,7 +46,7 @@
 
                     <div class="col-md-6 mb-3">
                        <label for="apellido">Numero de Cedula</label>
-                       <input  type="text" class="form-control" id="cedula" name="cedula"placeholder="ingrese su cedula" value="<?php echo $persona->cedula ?>"  onkeypress="return ValidacionNumero(event);" required>
+                       <input  type="text"  disabled="" class="form-control" id="cedula" name="cedula"placeholder="ingrese su cedula" value="<?php echo $persona->cedula ?>"  onkeypress="return ValidacionNumero(event);" required>
                        <div class="valid-feedback">
                           Numero de cedula valido
                        </div>
