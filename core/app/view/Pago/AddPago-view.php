@@ -52,7 +52,7 @@
 
                                         if ($pago == null || ($fecha >= $fecha_fin)) {
                                 ?>
-                                            <option value="<?php echo $cliente->id; ?>"><?php echo $cliente->nombre ." -> ".$precio->precio; ?></option>
+                                            <option value="<?php echo $cliente->id; ?>"><?php echo $cliente->nombre ." ".$cliente->apellido." ".$cliente->telefono." -> ".$precio->precio; ?></option>
 
                                 <?php
                                         }

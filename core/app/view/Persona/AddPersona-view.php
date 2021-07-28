@@ -46,7 +46,7 @@
 
                <div class="col-md-6 mb-3">
                   <label for="apellido">Numero de Cedula</label>
-                  <input type="text" class="form-control" id="cedula" name="cedula" placeholder="ingrese su cedula" value="" onkeypress="return ValidacionNumero(event);" required>
+                  <input type="text" class="form-control" id="cedula" name="cedula" placeholder="ingrese su cedula" value=""  required>
                   <div class="valid-feedback">
                      Numero de cedula valido
                   </div>
@@ -58,7 +58,7 @@
 
                <div class="col-md-6 mb-3">
                   <label for="apellido">telefono</label>
-                  <input type="text" class="form-control" id="telefono" name="telefono" placeholder="ingrese su telefono" value=""  onkeypress="return ValidacionNumero(event);" required>
+                  <input type="text" class="form-control" id="telefono" name="telefono" placeholder="ingrese su telefono" value=""  required>
                   <div class="valid-feedback">
                      Numero valido
                   </div>
