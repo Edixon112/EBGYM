@@ -46,11 +46,8 @@ $gasto = GastoData::getFecha($fecha1, $fecha2);
 
                   <?php
                   $sumaTotal = 0;
-                  if($gasto){
-
-                  
                   foreach ($gasto as $gasto) :
-                     $sumaTotal = ($sumaTotal) + (intval($gasto->gasto));
+                     $sumaTotal = ($sumaTotal) + ($gasto->gasto);
                   ?>
 
                      <tr>
@@ -61,8 +58,7 @@ $gasto = GastoData::getFecha($fecha1, $fecha2);
                      </tr>
 
                   <?php
-                  endforeach; 
-               }?>
+                  endforeach; ?>
 
                </tbody>
                <tfoot class="thead-colored thead-primary">
@@ -98,7 +94,7 @@ $gasto = GastoData::getFecha($fecha1, $fecha2);
 
 $sumaTotal1 = 0;
 foreach ($abono as $abono) {
-   $sumaTotal1 = ($sumaTotal1) + (intval($abono->monto));
+   $sumaTotal1 = ($sumaTotal1) + ($abono->monto);
 }
 
 $ganancia = ($sumaTotal1) - ($sumaTotal);

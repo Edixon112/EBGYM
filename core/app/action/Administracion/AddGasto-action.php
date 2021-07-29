@@ -30,10 +30,10 @@ if ($aux[0] == 1) {
 
     core::alert("Gasto Registrado");
 
-    //core::redir("./?view=Gasto/ViewGasto");
+    core::redir("./?view=Gasto/ViewGasto");
 } else {
 
     core::alert("Error al Registrar Gasto");
 
-    //core::redir("./?view=Gasto/ViewGasto");
+    core::redir("./?view=Gasto/ViewGasto");
 }
