@@ -64,16 +64,16 @@ if ($direccion == 'Asistencia/ViewAsistencia') {
         core::alert("Error al Pagar");
     }
 
-    core::redir("./?view=Asistencia/ViewAsistencia");
+ //   core::redir("./?view=Asistencia/ViewAsistencia");
 } else {
 
     if ($aux[0] == 1) {
 
-        core::alert("direccion perdida = $direccion");
+   //        core::alert("direccion perdida = $direccion");
     } else {
 
-        core::alert("direccion perdida = $direccion");
+  //         core::alert("direccion perdida = $direccion");
     }
 
-    core::redir("./?view=Pago/ViewPago");
+  //     core::redir("./?view=Pago/ViewPago");
 }

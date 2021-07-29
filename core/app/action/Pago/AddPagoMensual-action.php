@@ -51,6 +51,13 @@ if ($pago->estado == 2 &&  $_POST["abono"] != "") {
 
      
    }
+}else{
+   $cliente = PersonaData::getById($pago->idcliente);
+   $plan = PlanData::getByIdCliente($cliente->id);
+   $precio = PrecioData::getbyId($plan->idprecio);
+
+   $pago->abono = $precio->precio;
+
 }
 
 
@@ -61,20 +68,30 @@ $aux = $pago->add();
 $abono_add = new AbonoData();
 
 $abono_add->idpago = $aux[1];
-$abono_add->monto = $abono;
+if ($pago->estado == 1 ) {
+
+   $abono_add->monto = $precio->precio;
+
+}
+ if($pago->estado == 2 ){
+
+   $abono_add->monto = $abono ;
+
+}
 $abono_add->fecha = date("Y-m-d H:i:s");
+$abono_add->idgym= $gym->id;
 //$abono->idgym=$gym->id;
 $abono_add->add();
 
 
 if ($aux[0] == 1) {
 
-   core::alert("Registro Exitoso");
+  // core::alert("Registro Exitoso");
 
-   core::redir("./?view=Pago/ViewPago");
+ //  core::redir("./?view=Pago/ViewPago");
 } else {
 
-   core::alert("Error al Registrar");
+ //  core::alert("Error al Registrar");
 
-   core::redir("./?view=Pago/ViewPago");
+ //  core::redir("./?view=Pago/ViewPago");
 }

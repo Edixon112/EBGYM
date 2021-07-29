@@ -5,6 +5,10 @@ $cliente = PersonaData::getById($pago->idcliente);
 $plan = PlanData::getByIdCliente($cliente->id);
 $precio = PrecioData::getbyId($plan->idprecio);
 
+$user = UserData::getById($_SESSION["user_id"]);
+
+$gym = GymData::getByIdUser($user->id);
+
 if ($pago->abono + intval($_POST["abono"]) == $precio->precio) {
     $pago->estado = 1;
 
@@ -39,12 +43,12 @@ if ($pago->abono + intval($_POST["abono"]) == $precio->precio) {
 
 if ($aux[0] == 1) {
 
-    core::alert("Pago Exitoso");
+//    core::alert("Pago Exitoso");
 
-    core::redir("./?view=Pago/ViewPagoMora");
+  //  core::redir("./?view=Pago/ViewPagoMora");
 } else {
 
-    core::alert("Error al Pagar");
+ //   core::alert("Error al Pagar");
 
-    core::redir("./?view=Pago/ViewPagoMora");
+ //   core::redir("./?view=Pago/ViewPagoMora");
 }
