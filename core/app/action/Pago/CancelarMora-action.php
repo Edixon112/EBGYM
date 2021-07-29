@@ -31,13 +31,13 @@ if($aux[0]==1){
 
     core::alert("Pago Exitoso");
    
- //  core::redir("./?view=Pago/ViewPagoMora");
+   core::redir("./?view=Pago/ViewPagoMora");
  
  }else{
  
     core::alert("Error al Pagar");
  
-  // core::redir("./?view=Pago/ViewPagoMora");
+   core::redir("./?view=Pago/ViewPagoMora");
  }
 
 ?>

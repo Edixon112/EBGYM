@@ -86,12 +86,12 @@ $abono_add->add();
 
 if ($aux[0] == 1) {
 
-  // core::alert("Registro Exitoso");
+  core::alert("Registro Exitoso");
 
- //  core::redir("./?view=Pago/ViewPago");
+   core::redir("./?view=Pago/ViewPago");
 } else {
 
- //  core::alert("Error al Registrar");
+   core::alert("Error al Registrar");
 
- //  core::redir("./?view=Pago/ViewPago");
+  core::redir("./?view=Pago/ViewPago");
 }
