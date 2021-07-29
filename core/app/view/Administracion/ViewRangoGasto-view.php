@@ -1,4 +1,10 @@
 <?php
+$i=true;
+if($i==true){
+
+}else{
+
+
 $user = UserData::getById($_SESSION["user_id"]);
 $gym = GymData::getByIdUser($user->id);
 
@@ -150,3 +156,6 @@ $ganancia = ($sumaTotal1) - ($sumaTotal);
    </div>
    
 </div>
+<?php
+}
+?>
