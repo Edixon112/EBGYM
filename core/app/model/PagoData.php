@@ -62,6 +62,28 @@ class PagoData
 	}
 
 
+	
+	public static function getAllMora(){
+
+		$user = UserData::getById($_SESSION["user_id"]);
+		$gym = GymData::getByIdUser($user->id);
+
+		
+		if(($user->rol==2 && $gym!=null)) {
+				
+		$sql = "select * from ".self::$tablename." where idgym='".$gym->id."' and estado='2' order by id desc";
+		$query = Executor::doit($sql);
+		return Model::many($query[0],new PagoData());
+
+		}else if ($user->rol==1) {
+
+			$sql = "select * from ".self::$tablename." order by id desc";
+			$query = Executor::doit($sql);
+			return Model::many($query[0],new PagoData());
+		}
+	}
+
+
 	public static function getFecha($fecha1,$fecha2){
 
 		$user = UserData::getById($_SESSION["user_id"]);

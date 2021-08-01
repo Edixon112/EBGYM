@@ -16,7 +16,8 @@
                 <div class="form-row">
 
                     <!--info oculta-->
-                    <!--input type="text" style="display: none" id="activo" name="activo" value="<?php //echo $activo=0;?>" readonly="true"  required /-->
+                    <!--input type="text" style="display: none" id="activo" name="activo" value="<?php //echo $activo=0;
+                                                                                                    ?>" readonly="true"  required /-->
 
                     <div class="col-md-6 mb-3">
                         <p>selecione Cliente </p>
@@ -34,7 +35,7 @@
                                         $persona = PersonaData::getById($personas->idpersona);
                                         if ($persona->rol == 3) {
 
-                    
+
                                             $membresia = PlanData::getByIdCliente($persona->id);
                                             $disponible = AsistenciaData::getByIdClienteLibre($persona->id);
                                             $precio = PrecioData::getById($membresia->idprecio);
@@ -62,18 +63,52 @@
                                                         if (($fecha >= $fecha_inicio) && ($fecha <= $fecha_fin)) {
 
                                 ?>
-                                                            <option  value="<?php echo $persona->id; ?>"><?php echo $persona->nombre . " - " . $precio->nombre; ?></option>
+                                                            <option value="<?php echo $persona->id; ?>"><?php echo $persona->nombre . " - " . $precio->nombre; ?></option>
 
-                                                    <?php
+                                                        <?php
                                                         } else {
+
                                                             echo "fuera";
                                                         }
                                                     }
                                                 } else {
-                                                    ?>
-                                                    <option  value="<?php echo $persona->id; ?>"><?php echo $persona->nombre . " - " . $precio->nombre;; ?></option>
+                                                    if ($precio->nombre == "DIARIO") {
+
+
+                                                        ?>
+                                                        <option value="<?php echo $persona->id; ?>"><?php echo $persona->nombre . " - " . $precio->nombre;; ?></option>
+
+                                                        <?php
+                                                    } else {
+
+                                                        $pago = PagoData::getByIdCliente2($persona->id);
+
+                                                        if ($pago) {
+
+
+                                                            $ahora = date("Y-m-d H:i:s");
+
+                                                             $fechaPAGO = $pago->fechainicio;
+                                                            //sumo 1 mes
+                                                              $unmesdespues = date("d-m-Y", strtotime($fechaPAGO . "+ 15 days"));
+
+
+                                                            $fecha_inicio = strtotime($pago->fechainicio);
+                                                            $fecha_fin = strtotime($unmesdespues);
+                                                            $fecha = strtotime($ahora);
+
+                                                            if (($fecha >= $fecha_inicio) && ($fecha <= $fecha_fin)) {
+
+                                                        ?>
+                                                                <option value="<?php echo $persona->id; ?>"><?php echo $persona->nombre . " - " . $precio->nombre; ?></option>
 
                                 <?php
+                                                            } else {
+
+                                                                echo "fuera";
+                                                            }
+                                                        }
+                                                    }
                                                 }
                                             }
                                         }
@@ -85,7 +120,7 @@
                     </div>
 
 
-                    <div class="col-md-6 mb-3" id=pagos2 name=pagos2 >
+                    <div class="col-md-6 mb-3" id=pagos2 name=pagos2>
                         <div class="col-md-4 mb-3">
                             <label for="">Pago</label>
                         </div>
@@ -130,9 +165,9 @@
 
 
         var x = document.getElementById("pagos2");
-        
 
-        if (tabla2 == "DIARIO" ) {
+
+        if (tabla2 == "DIARIO") {
 
             x.style.display = "inline";
 

@@ -135,7 +135,7 @@
                      </li>
 
 
-                     <li class="<?php if ($_GET['view'] == 'Pago/AddPago' || $_GET['view'] == 'Pago/ViewPago' || $_GET['view'] == 'Pago/ViewPagoMora'|| $_GET['view'] == 'Pago/AddInscripcion') {
+                     <li class="<?php if ($_GET['view'] == 'Pago/AddPago' || $_GET['view'] == 'Pago/ViewPago' || $_GET['view'] == 'Pago/ViewPagoMora' || $_GET['view'] == 'Pago/AddInscripcion' || $_GET['view'] == 'Pago/AddPago15nal') {
                                     echo 'open active';
                                  } ?>">
                         <a href="#"><i data-feather="tag"></i>
@@ -146,6 +146,9 @@
                            <li class="<?php if ($_GET['view'] == 'Pago/AddPago') {
                                           echo 'active';
                                        } ?>"><a href="index.php?view=Pago/AddPago">Agregar Pago mensual</a></li>
+                           <li class="<?php if ($_GET['view'] == 'Pago/AddPago15nal') {
+                                          echo 'active';
+                                       } ?>"><a href="index.php?view=Pago/AddPago15nal">Agregar Pago 15nal</a></li>
                            <li class="<?php if ($_GET['view'] == 'Pago/ViewPago') {
                                           echo 'active';
                                        } ?>"><a href="index.php?view=Pago/ViewPago">Ver Pago mensual</a></li>

@@ -56,8 +56,13 @@ if ($pago->estado == 2 &&  $_POST["abono"] != "") {
    $plan = PlanData::getByIdCliente($cliente->id);
    $precio = PrecioData::getbyId($plan->idprecio);
 
-   $pago->abono = $precio->precio;
+   if($_POST["abono"] == ""){
+      $pago->abono = 0;
+   }else{
+      $pago->abono = $precio->precio;
 
+   }
+  
 }
 
 
@@ -74,8 +79,13 @@ if ($pago->estado == 1 ) {
 
 }
  if($pago->estado == 2 ){
+   if($_POST["abono"] == ""){
+      $abono_add->monto = 0;
+   }else{
+       $abono_add->monto = $abono ;
+   }
+  
 
-   $abono_add->monto = $abono ;
 
 }
 
@@ -116,5 +126,5 @@ if ($aux[0] == 1) {
 
    core::alert("Error al Registrar");
 
-  core::redir("./?view=Pago/ViewPago");
+ core::redir("./?view=Pago/ViewPago");
 }
