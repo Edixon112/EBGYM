@@ -1,4 +1,5 @@
 <?php 
+date_default_timezone_set("America/Bogota");
 
 $pago=PagoData::getById($_POST["id"]);
 $cliente = PersonaData::getById($pago->idcliente);
