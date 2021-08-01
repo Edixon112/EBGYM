@@ -57,7 +57,7 @@
 
 
                <div class="col-md-6 mb-3">
-                  <label for="apellido">telefono</label>
+                  <label for="apellido">Telefono</label>
                   <input type="text" class="form-control" id="telefono" name="telefono" placeholder="ingrese su telefono" value=""  required>
                   <div class="valid-feedback">
                      Numero valido

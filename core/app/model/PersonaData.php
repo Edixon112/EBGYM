@@ -64,6 +64,14 @@ class PersonaData
 
 	}
 
+	public static function getByTel($id){
+		$sql = "select * from ".self::$tablename." where telefono=".$id."";
+		$query = Executor::doit($sql);
+		return Model::one($query[0],new PersonaData());
+
+	}
+
+
 
     public static function delById($id){
 		$sql = "delete from ".self::$tablename." where id=$id";
