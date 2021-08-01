@@ -78,7 +78,30 @@ if ($pago->estado == 1 ) {
    $abono_add->monto = $abono ;
 
 }
-$abono_add->fecha = date("Y-m-d H:i:s");
+
+
+
+
+if ($_POST["validacion"] == "si") { //validacion de fecha manual
+
+
+   $fecha2 = new DateTime($_POST["fecha1"]);
+   $fechamanual = $fecha2->format('Y-m-d H:i:s');
+
+   $abono_add->fecha= $fechamanual;
+} else {
+
+   $abono_add->fecha = date("Y-m-d H:i:s");
+}
+
+
+
+
+
+
+
+
+
 $abono_add->idgym= $gym->id;
 //$abono->idgym=$gym->id;
 $abono_add->add();
