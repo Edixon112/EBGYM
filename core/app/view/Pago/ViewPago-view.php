@@ -20,6 +20,8 @@
                   <tr>
                      <th>ID</th>
                      <th>Cliente</th>
+                     <th>Apellido</th>
+                     <th>CC</th>
                      <th>Fecha De Inicio</th>
                      <th>Estado Del Pago</th>
                    
@@ -33,6 +35,8 @@
                      <tr>
                         <td><?php echo $pago->id; ?></td>
                         <td><?php echo $cliente->nombre; ?></td>
+                        <td><?php echo $cliente->apellido; ?></td>
+                        <td><?php echo $cliente->telefono; ?></td>
                         <td><?php echo $pago->fechainicio; ?></td>
                         <td><?php if ($pago->estado == 1) {
                                  echo '<a class="text-success">pagado</a>';
@@ -53,6 +57,8 @@
                   <tr>
                      <th>ID</th>
                      <th>Cliente</th>
+                     <th>Apellido</th>
+                     <th>CC</th>
                      <th>Fecha De Inicio</th>
                      <th>Estado Del Pago</th>
                 
