@@ -111,7 +111,7 @@
                         <ul class="sub-menu">
                            <li><a href="index.php?view=Persona/AddPersona">Registrar Clientes</a></li>
                            <li><a href="index.php?view=Persona/ViewPersona">Ver Clientes Registrados</a></li>
-                           <li><a href="index.php?view=Plan/ViewPlan">Modificar registro</a></li>
+                           <li><a href="index.php?view=Plan/ViewPlan">Registro Total</a></li>
                         </ul>
                      </li>
 
