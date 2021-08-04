@@ -20,9 +20,11 @@
                   <tr>
                      <th>ID</th>
                      <th>Cliente</th>
+                     <th>Apellido</th>
+                     <th>Telefono</th>
                      <th>Plan</th>
                      <th>Precio</th>
-                     <th>Opciones</th>
+                  
                   </tr>
                </thead>
                <tbody>
@@ -34,15 +36,11 @@
                      <tr>
                         <td><?php echo $plan->id;  ?></td>
                         <td><?php echo $cliente->nombre; ?></td>
+                        <td><?php echo $cliente->apellido; ?></td>
+                        <td><?php echo $cliente->telefono; ?></td>
                         <td><?php echo $precio->nombre; ?></td>
                         <td><?php echo $precio->precio; ?></td>
-                        <td class="text-Center table-actions">
-                           <div class="btn-group mg-t-5">
-
-                           
-
-                           </div>
-                        </td>
+                      
                      </tr>
                   <?php
                   endforeach;
@@ -52,9 +50,11 @@
                   <tr>
                      <th>ID</th>
                      <th>Cliente</th>
+                     <th>Apellido</th>
+                     <th>Telefono</th>
                      <th>Plan</th>
                      <th>Precio</th>
-                     <th>Opciones</th>
+                 
                   </tr>
                </tfoot>
             </table>
