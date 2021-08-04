@@ -23,6 +23,7 @@
                      <th>Apellido</th>
                      <th>CC</th>
                      <th>Fecha De Inicio</th>
+                     <th>Monto</th>
                      <th>Estado Del Pago</th>
                    
                   </tr>
@@ -38,6 +39,7 @@
                         <td><?php echo $cliente->apellido; ?></td>
                         <td><?php echo $cliente->telefono; ?></td>
                         <td><?php echo $pago->fechainicio; ?></td>
+                        <td><?php echo $pago->abono; ?></td>
                         <td><?php if ($pago->estado == 1) {
                                  echo '<a class="text-success">pagado</a>';
                               } else {
@@ -60,6 +62,7 @@
                      <th>Apellido</th>
                      <th>CC</th>
                      <th>Fecha De Inicio</th>
+                     <th>Monto</th>
                      <th>Estado Del Pago</th>
                 
                   </tr>
