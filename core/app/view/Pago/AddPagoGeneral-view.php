@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="card-body collapse show" id="collapse7">
-            <form class="needs-validation" action="index.php?action=Pago/AddPagoMensual" method="post" novalidate>
+            <form class="needs-validation" action="index.php?action=Pago/AddPagoGeneral" method="post" novalidate>
                 <div class="form-row">
 
                     <!--info oculta-->
@@ -40,22 +40,24 @@
                                     $membresia = PlanData::getByIdCliente($cliente->id);
                                     $precio = PrecioData::getById($membresia->idprecio);
 
-                                    if ($precio->nombre == "15_DIAS" ) {
+                                    if ($precio->nombre != "DIARIO" ) {
 
                                         $ahora = date("Y-m-d H:i:s");
                                         $fechaPAGO = $pago->fechainicio;
-                                        $unmesdespues = date("d-m-Y", strtotime($fechaPAGO . "+ 15 days"));
+                                        $unmesdespues = date("Y-m-d H:i:s", strtotime($fechaPAGO . "+ 1 month"));
 
                                         $fecha_inicio = strtotime($pago->fechainicio);
                                         $fecha_fin = strtotime($unmesdespues);
                                         $fecha = strtotime($ahora);
 
-                                        if ($pago == null || ($fecha >= $fecha_fin)) {
+                                        if($pago!=null){
+
+                                        
                                 ?>
                                             <option value="<?php echo $cliente->id; ?>"><?php echo $cliente->nombre ." ".$cliente->apellido." - ".$cliente->telefono." -> ".$precio->precio; ?></option>
 
                                 <?php
-                                        }
+                                       } 
                                     }
                                 endforeach;
                                 ?>
@@ -81,33 +83,6 @@
                             <div class="custom-control custom-radio">
                                 <input onChange="cambios2(this)" name="pago"  type="radio" value="2">
                                 <label>No</label>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-5 mb-2 ">
-                        <div class="col-md-5 mb-2">
-                            <label for="">Colocar Fecha Manual <a class="text-danger"> Maximo un mes antes </a> </label>
-                        </div>
-
-                        <div class="col-md-5">
-                            <select onChange="cambios(this)" class="selectpicker form-control" data-hide-disabled="true" data-live-search="true" name="validacion" id="validacion" id="inputGroupSelect01" required>
-                                <option value="si"> si </option>
-                                <option value="no" selected > no </option>
-                            </select>
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-4 mb-4" id=fecha name=fecha style="display: none">
-                        <label for="cc">Ingrese Fecha Manual </label>
-                        <div class="input-group">
-                            <div class="input-group-prepend" class="accordion-icon fa fa-calendar-o">
-                            </div>
-                            <input autocomplete="off" type="text" id="fecha1" name="fecha1" class="form-control datepicker-here" placeholder="Ingrese fecha" data-timepicker="true" data-time-format="hh:ii ">
-                            <div class="invalid-feedback">
-                                por favor ingrese una fecha.
                             </div>
                         </div>
                     </div>

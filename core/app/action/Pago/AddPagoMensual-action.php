@@ -55,8 +55,14 @@ if ($pago->estado == 2 &&  $_POST["abono"] != "") {
    $cliente = PersonaData::getById($pago->idcliente);
    $plan = PlanData::getByIdCliente($cliente->id);
    $precio = PrecioData::getbyId($plan->idprecio);
+   if ($pago->estado == 1 ) {
+      $pago->abono = $precio->precio;
 
-   if($_POST["abono"] == ""){
+   }
+
+
+
+   if($pago->estado == 2 && $_POST["abono"] == ""){
       $pago->abono = 0;
    }else{
       $pago->abono = $precio->precio;

@@ -142,7 +142,9 @@
                            <span>Pagos</span><i class="accordion-icon fa fa-angle-left"></i></a>
 
                         <ul class="sub-menu" style="display: block;">
-
+                           <li class="<?php if ($_GET['view'] == 'Pago/AddPago') {
+                                          echo 'active';
+                                       } ?>"><a href="index.php?view=Pago/AddPagoGeneral">Agregar Pago General</a></li>
                            <li class="<?php if ($_GET['view'] == 'Pago/AddPago') {
                                           echo 'active';
                                        } ?>"><a href="index.php?view=Pago/AddPago">Agregar Pago mensual</a></li>
@@ -151,7 +153,7 @@
                                        } ?>"><a href="index.php?view=Pago/AddPago15nal">Agregar Pago 15nal</a></li>
                            <li class="<?php if ($_GET['view'] == 'Pago/ViewPago') {
                                           echo 'active';
-                                       } ?>"><a href="index.php?view=Pago/ViewPago">Ver Pago mensual</a></li>
+                                       } ?>"><a href="index.php?view=Pago/ViewPago">Ver Pagos</a></li>
                            <li class="<?php if ($_GET['view'] == 'Pago/ViewPagoMora') {
                                           echo 'active';
                                        } ?>"><a href="index.php?view=Pago/ViewPagoMora">Ver Clientes en Mora</a></li>
